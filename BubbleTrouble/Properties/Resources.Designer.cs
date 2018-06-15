@@ -101,15 +101,6 @@ namespace BubbleTrouble.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
-        /// </summary>
-        public static System.IO.UnmanagedMemoryStream bullet {
-            get {
-                return ResourceManager.GetStream("bullet", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         public static System.Drawing.Bitmap coins {
@@ -264,25 +255,6 @@ namespace BubbleTrouble.Properties {
         public static System.IO.UnmanagedMemoryStream spongebob_bgmusc {
             get {
                 return ResourceManager.GetStream("spongebob_bgmusc", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
-        /// </summary>
-        public static System.IO.UnmanagedMemoryStream Suspence_wav {
-            get {
-                return ResourceManager.GetStream("Suspence_wav", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Byte[].
-        /// </summary>
-        public static byte[] suspense {
-            get {
-                object obj = ResourceManager.GetObject("suspense", resourceCulture);
-                return ((byte[])(obj));
             }
         }
         

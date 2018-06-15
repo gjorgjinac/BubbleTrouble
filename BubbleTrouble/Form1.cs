@@ -28,7 +28,7 @@ namespace BubbleTrouble
         int totalPoints;
         List<PictureBox> goodies;
         System.Media.SoundPlayer bgmusic = new System.Media.SoundPlayer(Properties.Resources.spongebob_bgmusc);
-        System.Media.SoundPlayer bomb = new System.Media.SoundPlayer(Properties.Resources.bullet);
+       
         System.Media.SoundPlayer sad_violin = new System.Media.SoundPlayer(Properties.Resources.sad_violin);
         Boolean musicOn;
         int shieldTime;
@@ -196,7 +196,7 @@ namespace BubbleTrouble
                     if (game.AddBomb(player.Location) && musicOn)
                     {
                         System.Threading.Thread.Sleep(500);
-                        bomb.Play();
+                       
                     }
 
 

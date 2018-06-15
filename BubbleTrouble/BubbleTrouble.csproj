@@ -113,11 +113,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\sad violin.wav" />
-    <None Include="Resources\bullet.wav" />
-    <None Include="Resources\Suspence wav.wav" />
     <None Include="Resources\spongebob bgmusc.wav" />
-    <None Include="img\suspense.mp3" />
+    <None Include="Resources\sad violin.wav" />
+    <None Include="Resources\Suspence wav.wav" />
     <None Include="img\pizza.png" />
     <None Include="img\time.png" />
     <None Include="img\shield.png" />
@@ -137,7 +135,6 @@
     <None Include="img\gradient1.jpg" />
     <None Include="img\bg music.mp3" />
     <Content Include="img\money.png" />
-    <None Include="Resources\dollars.bmp" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
