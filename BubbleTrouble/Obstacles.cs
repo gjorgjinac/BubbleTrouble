@@ -36,8 +36,8 @@ namespace BubbleTrouble
             ObstacleList = new List<Obstacle>();
             if (level == 1)
             {
-                ObstacleList.Add(new Obstacle(40, Color.Red, new Point(600, 300), -1, 1));
-                ObstacleList.Add(new Obstacle(60, Color.Magenta, new Point(100, 100), 1, 1));
+                ObstacleList.Add(new Obstacle(60, Color.Red, new Point(600, 300), -1, 1));
+                ObstacleList.Add(new Obstacle(40, Color.Magenta, new Point(100, 100), 1, 1));
             specialObstacle = new Obstacle(20, Color.Aqua, new Point(40,40), 1, -1);
             }
             if (level == 2)
@@ -50,8 +50,6 @@ namespace BubbleTrouble
             }
 
 
-
-            
         }
 
         public void Move (int width, int height, List<int> barriers)

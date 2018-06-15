@@ -188,22 +188,19 @@ namespace BubbleTrouble
 
         }
         private void Form1_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (!controlLock)
+        {// Ako na igracot mu e dozvoleno da go pomrdne coveceto 
+         //(Pri paganje od skala ili od platforma mora da poceka da stigne do zemjata, ne moze da "leta")
+            if (!controlLock) 
             {
+                //Ako pristisnatoto kopce e kopceto nameneto za pukanje, se dodava bomba
                 if (e.KeyCode == shoot)
                 {
-                    if (game.AddBomb(player.Location) && musicOn)
-                    {
-                        System.Threading.Thread.Sleep(500);
-                       
-                    }
-
-
+                    game.AddBomb(player.Location);
                 }
-
+                //Postojat razlicini implementacii za prvo i vtoro nivo bidejki ima razlicni barieri
                 if (level == 1)
-                {
+                {  
+                    //Pri dvizenje levo ili desno na prvo nivo, samo treba da se onevozmozi izleguvanjeto na coveceto od prozorecot
                     if (e.KeyCode == left && player.Location.X > 0)
                     {
                         player.Location = new Point(player.Location.X - 10, player.Location.Y);
@@ -214,39 +211,31 @@ namespace BubbleTrouble
                         player.Location = new Point(player.Location.X + 10, player.Location.Y);
 
                     }
+                    //
 
-                    if (player.Location.X - ladder.Location.X < 100 && player.Location.Y + 70 > platform.Location.Y)
+                    if (player.Location.X - ladder.Location.X < 100 && player.Location.Y + 80 >= platform.Location.Y)
                     {
                         if (e.KeyCode == up)
                         {
                             player.Location = new Point(player.Location.X, player.Location.Y - 10);
-                        }
-
-
+                        }                 
                     }
-                    if (player.Location.X - ladder.Location.X < 100 && player.Location.Y + 70 < Height - 100)
+                    if (player.Location.X - ladder.Location.X < 100 && player.Location.Y + 80 <= Height - 100)
                     {
                         if (e.KeyCode == down)
                         {
                             player.Location = new Point(player.Location.X, player.Location.Y + 10);
                         }
-
-
                     }
 
                     if ((player.Location.Y < platform.Location.Y && player.Location.X > 300)
                         || (player.Location.Y > platform.Location.Y && player.Location.Y < Height - 175 && player.Location.X > ladder.Location.X + ladder.Width - 30))
-
-
                     {
                         if (e.KeyCode == right)
                         {
                             controlLock = true;
-                           
                             player.Image = Properties.Resources.minion_screaming;
-
-                            
-
+                        
                         }
 
 
@@ -258,7 +247,6 @@ namespace BubbleTrouble
                     if (e.KeyCode == left && player.Location.X > 0)
                     {
                         player.Location = new Point(player.Location.X - 10, player.Location.Y);
-
                     }
                     if (e.KeyCode == right && player.Location.X < Width - 80)
                     {
@@ -267,8 +255,6 @@ namespace BubbleTrouble
                         if (player.Location.X < barrier1_1.Location.X - barrier1_1.Width - 40) canMove = true;
 
                         if ((!barrier1_1.Visible && !barrier2_1.Visible)) canMove = true;
-
-
 
                         if ((player.Location.X < barrier2_1.Location.X - barrier2_1.Width - 40 && !barrier1_1.Visible))
                             canMove = true;
