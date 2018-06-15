@@ -16,10 +16,15 @@ namespace BubbleTrouble
         public int livesLeft;
         public int timeMili;
         public List<Bomb> bombs;
-
+        public List<Bullet> bullets;
         public int points;
         public int level;
         public Boolean specialObstaclePassed;
+
+        public void AddBullet (int width, int height)
+        {
+            bullets.Add(new Bullet(10, Color.Yellow, new Point(width, height), 1));
+        }
 
 
         public Game(int level)
@@ -30,7 +35,7 @@ namespace BubbleTrouble
             timeMili = 300;
 
             bombs = new List<Bomb>();
-
+            bullets = new List<Bullet>();
             points = 0;
 
         }
@@ -48,6 +53,13 @@ namespace BubbleTrouble
                 if (level == 2) b.Move();
 
             }
+
+            foreach (Bullet b in bullets)
+            {
+                b.Move();
+            }
+
+
         }
 
 
@@ -70,6 +82,12 @@ namespace BubbleTrouble
             {
                 if (b.HitsPlayer(p)) return true;
             }
+            foreach (Bullet b in bullets)
+            {
+                if (b.HitsPlayer(p)) return true;
+            }
+
+
             return false|| obstacles.isPlayerHit(p, width, height);
 
         }
@@ -125,7 +143,10 @@ namespace BubbleTrouble
 
             obstacles.Draw(g, (!specialObstaclePassed && level == 1));
 
-
+            for (int i = 0; i < bullets.Count; i++)
+            {
+                bullets.ElementAt(i).Draw(g);
+            }
 
 
 

@@ -34,7 +34,19 @@ namespace BubbleTrouble
 
 
         }
+        public void Draw (Graphics g)
+        {
+            base.Draw(g);
+            Pen pen = new Pen(Color.White, 3);
+            g.DrawLine(pen, new Point((int) (Position.X - Radius / 2), (int) (Position.Y - Radius / 2)), 
+                new Point((int)(Position.X + Radius / 2), (int) ( Position.Y + Radius / 2)));
+            g.DrawLine(pen, new Point((int)(Position.X + Radius / 2), (int)(Position.Y - Radius / 2)),
+               new Point((int)(Position.X - Radius / 2), (int)(Position.Y + Radius / 2)));
 
+
+            pen.Dispose();
+
+        }
         
 
 

@@ -52,6 +52,7 @@
       <DependentUpon>AddPlayer.cs</DependentUpon>
     </Compile>
     <Compile Include="Bomb.cs" />
+    <Compile Include="Bullet.cs" />
     <Compile Include="Circle.cs" />
     <Compile Include="Controls.cs">
       <SubType>Form</SubType>
@@ -113,6 +114,12 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\bullet.wav" />
+    <None Include="img\soldier screaming.png" />
+    <None Include="img\soldier with shield.png" />
+    <None Include="img\soldier dead.png" />
+    <None Include="img\soldier.png" />
+    <None Include="img\Tank.gif" />
     <None Include="Resources\spongebob bgmusc.wav" />
     <None Include="Resources\sad violin.wav" />
     <None Include="Resources\Suspence wav.wav" />
@@ -134,6 +141,12 @@
     <None Include="img\minion shield.png" />
     <None Include="img\gradient1.jpg" />
     <None Include="img\bg music.mp3" />
+    <None Include="img\military base.png" />
+    <None Include="img\ambulance.png" />
+    <None Include="img\ambulance dead.png" />
+    <None Include="img\ambulance screaming.png" />
+    <None Include="img\ambulance with shield.png" />
+    <None Include="img\hospital scene.jpg" />
     <Content Include="img\money.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

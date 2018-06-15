@@ -15,11 +15,16 @@ namespace BubbleTrouble
 {
     public partial class Form1 : Form
     {
+        Dictionary<String, List<Bitmap>> minions;
+
         Keys left = Keys.Left, right = Keys.Right, up = Keys.Up, down = Keys.Down, shoot = Keys.Space;
         String FileName;
         Game game;
-        List<PictureBox> money;
+        String selectedPlayer;
         Boolean goodieUnique;
+        Rectangle playground;
+
+
         Boolean controlLock;
         PictureBox activeGoodie;
         int goodieStand;
@@ -28,7 +33,7 @@ namespace BubbleTrouble
         int totalPoints;
         List<PictureBox> goodies;
         System.Media.SoundPlayer bgmusic = new System.Media.SoundPlayer(Properties.Resources.spongebob_bgmusc);
-
+        System.Media.SoundPlayer bulletSound = new System.Media.SoundPlayer(Properties.Resources.bullet);
         System.Media.SoundPlayer sad_violin = new System.Media.SoundPlayer(Properties.Resources.sad_violin);
         Boolean musicOn;
         int shieldTime;
@@ -36,6 +41,11 @@ namespace BubbleTrouble
         {
 
             InitializeComponent();
+            playground = new Rectangle(10, 10, Width - 40, 380);
+            minions = new Dictionary<string, List<Bitmap>>();
+            minions.Add("soldier", new List<Bitmap> () { Properties.Resources.soldier, Properties.Resources.soldier_dead, Properties.Resources.soldier_with_shield, Properties.Resources.soldier_screaming , Properties.Resources.military_base});
+            minions.Add("ambulance", new List<Bitmap>() { Properties.Resources.ambulance, Properties.Resources.ambulance_dead, Properties.Resources.ambulance_with_shield, Properties.Resources.ambulance_screaming, Properties.Resources.hospital_scene });
+
             musicOn = true;
             this.Text = "Bubble Trouble";
 
@@ -43,13 +53,19 @@ namespace BubbleTrouble
             level = 1;
             DoubleBuffered = true;
             goodies = new List<PictureBox>() { money1, pizza, coins, time, shield };
-            newGame();
+          
             player.BackColor = Color.Transparent;
             ladder.BackColor = Color.Transparent;
+            tank.BackColor = Color.Transparent;
             FormBorderStyle = FormBorderStyle.FixedSingle;
             StartPosition = FormStartPosition.CenterScreen;
             totalPoints = 0;
             FileName = null;
+            selectedPlayer = "soldier";
+            this.BackgroundImage = minions[selectedPlayer].ElementAt(4);
+            player.Image = minions[selectedPlayer].ElementAt(4);
+            player.BackColor = Color.Transparent;
+              newGame();
         }
         public void resetGoodies()
         {
@@ -89,7 +105,9 @@ namespace BubbleTrouble
                 barrier1_1.Visible = false;
                 barrier2.Visible = false;
                 barrier2_1.Visible = false;
-
+                tank.Visible = true;
+                tankStand.Visible = true;
+                
             }
             if (level == 2)
             {
@@ -99,12 +117,13 @@ namespace BubbleTrouble
                 barrier2.Visible = true;
                 barrier2_1.Visible = true;
                 barrier1_1.Visible = true;
-
+                tank.Visible = false;
+                tankStand.Visible = false;
             }
             resetGoodies();
             shieldTime = 0;
             controlLock = false;
-            player.Image = Properties.Resources.minion;
+            player.Image = minions[selectedPlayer].ElementAt(0);
             activeGoodie = null;
             timer1.Start();
 
@@ -164,7 +183,7 @@ namespace BubbleTrouble
             if (musicOn) sad_violin.Play();
 
             timer1.Stop();
-            player.Image = Properties.Resources.minion_dead;
+            player.Image = minions[selectedPlayer].ElementAt(1);
             livesLeft--;
             String msg = "";
 
@@ -196,7 +215,10 @@ namespace BubbleTrouble
                 //Ako pristisnatoto kopce e kopceto nameneto za pukanje, se dodava bomba
                 if (e.KeyCode == shoot)
                 {
-                    game.AddBomb(player.Location);
+                    if (game.AddBomb(player.Location))
+                        bulletSound.Play();
+                
+               
                 }
                 //Postojat razlicini implementacii za prvo i vtoro nivo bidejki ima razlicni barieri
                 if (level == 1)
@@ -252,9 +274,9 @@ namespace BubbleTrouble
                         if (e.KeyCode == right)
                         {
                             //Se zaklucuvaat kontrolite se dodeka coveceto ne padne na zemjata
-                            controlLock = true; 
+                            controlLock = true;
                             //Se menuva izgledot na coveceto so otvorena usta kako da vreska
-                            player.Image = Properties.Resources.minion_screaming;
+                            player.Image = minions[selectedPlayer].ElementAt(3);
 
                         }
 
@@ -370,10 +392,12 @@ namespace BubbleTrouble
             {
                 progressBarTime.Value--;
                 shieldTime--;
-
+               
 
             }
-            if (shieldTime <= 0 && !controlLock) player.Image = Properties.Resources.minion;
+            if (game.timeMili % 20 == 0 && tank.Visible)
+            { game.AddBullet(tank.Location.X, tank.Location.Y + 30); }
+        //    if (shieldTime <= 0 && !controlLock) player.Image = Properties.Resources.minion;
             if (random.Next(10) == 1 && goodieUnique)
             { throwGoodie(random.NextDouble(), 0, random.Next(5)); }
 
@@ -395,7 +419,7 @@ namespace BubbleTrouble
                 if (activeGoodie == shield)
                 {
                     shieldTime = 10;
-                    player.Image = Properties.Resources.minion_shield;
+                    player.Image = minions[selectedPlayer].ElementAt(2);
                 }
                 else if (activeGoodie == pizza)
                 {
@@ -560,7 +584,8 @@ namespace BubbleTrouble
         private void newGameToolStripMenuItem_Click(object sender, EventArgs e)
         {
             level = 1;
-            newGame();
+            livesLeft = 5;
+            lifeLost();
 
         }
 
@@ -625,7 +650,8 @@ namespace BubbleTrouble
         {
             //endGame();
             level = 2;
-            newGame();
+            livesLeft = 5;
+            lifeLost();
         }
 
         private void highScoresToolStripMenuItem_Click(object sender, EventArgs e)

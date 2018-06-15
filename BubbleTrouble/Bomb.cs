@@ -13,7 +13,7 @@ namespace BubbleTrouble
         Point StartPosition;
         int height;
         int width;
-        public Bomb(Point position) : base (10, Color.Black, position, -1)
+        public Bomb(Point position) : base (10, Color.Red, position, -1)
         {
             StartPosition = position;
         }

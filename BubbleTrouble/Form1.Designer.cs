@@ -46,6 +46,10 @@
             this.level2ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.highScoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.optionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.changeControlsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pauseToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.muteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.ladder = new System.Windows.Forms.PictureBox();
             this.platform = new System.Windows.Forms.PictureBox();
@@ -57,10 +61,8 @@
             this.shield = new System.Windows.Forms.PictureBox();
             this.time = new System.Windows.Forms.PictureBox();
             this.coins = new System.Windows.Forms.PictureBox();
-            this.optionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.changeControlsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.pauseToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.muteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tankStand = new System.Windows.Forms.PictureBox();
+            this.tank = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.player)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.money1)).BeginInit();
             this.statusStrip1.SuspendLayout();
@@ -75,11 +77,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.shield)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.time)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.coins)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tankStand)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tank)).BeginInit();
             this.SuspendLayout();
             // 
             // player
             // 
-            this.player.Image = ((System.Drawing.Image)(resources.GetObject("player.Image")));
+            this.player.Image = global::BubbleTrouble.Properties.Resources.soldier;
             this.player.InitialImage = ((System.Drawing.Image)(resources.GetObject("player.InitialImage")));
             this.player.Location = new System.Drawing.Point(126, 313);
             this.player.Name = "player";
@@ -108,9 +112,9 @@
             this.labelTime,
             this.progressBarTime,
             this.labelPoints});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 406);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 431);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(808, 36);
+            this.statusStrip1.Size = new System.Drawing.Size(819, 36);
             this.statusStrip1.TabIndex = 7;
             this.statusStrip1.Text = "statusStrip1";
             this.statusStrip1.Paint += new System.Windows.Forms.PaintEventHandler(this.statusStrip1_Paint);
@@ -155,7 +159,7 @@
             this.optionsToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(808, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(819, 24);
             this.menuStrip1.TabIndex = 8;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -172,21 +176,21 @@
             // openGameToolStripMenuItem1
             // 
             this.openGameToolStripMenuItem1.Name = "openGameToolStripMenuItem1";
-            this.openGameToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.openGameToolStripMenuItem1.Size = new System.Drawing.Size(137, 22);
             this.openGameToolStripMenuItem1.Text = "Open Game";
             this.openGameToolStripMenuItem1.Click += new System.EventHandler(this.openGameToolStripMenuItem1_Click);
             // 
             // saveGameToolStripMenuItem
             // 
             this.saveGameToolStripMenuItem.Name = "saveGameToolStripMenuItem";
-            this.saveGameToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.saveGameToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
             this.saveGameToolStripMenuItem.Text = "Save Game";
             this.saveGameToolStripMenuItem.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
             // 
             // newGameToolStripMenuItem1
             // 
             this.newGameToolStripMenuItem1.Name = "newGameToolStripMenuItem1";
-            this.newGameToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.newGameToolStripMenuItem1.Size = new System.Drawing.Size(137, 22);
             this.newGameToolStripMenuItem1.Text = "New Game";
             this.newGameToolStripMenuItem1.Click += new System.EventHandler(this.newGameToolStripMenuItem_Click);
             // 
@@ -208,6 +212,37 @@
             this.highScoresToolStripMenuItem.Size = new System.Drawing.Size(81, 20);
             this.highScoresToolStripMenuItem.Text = "High scores";
             this.highScoresToolStripMenuItem.Click += new System.EventHandler(this.highScoresToolStripMenuItem_Click);
+            // 
+            // optionsToolStripMenuItem
+            // 
+            this.optionsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.changeControlsToolStripMenuItem,
+            this.pauseToolStripMenuItem1,
+            this.muteToolStripMenuItem});
+            this.optionsToolStripMenuItem.Name = "optionsToolStripMenuItem";
+            this.optionsToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
+            this.optionsToolStripMenuItem.Text = "Options";
+            // 
+            // changeControlsToolStripMenuItem
+            // 
+            this.changeControlsToolStripMenuItem.Name = "changeControlsToolStripMenuItem";
+            this.changeControlsToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
+            this.changeControlsToolStripMenuItem.Text = "Change controls";
+            this.changeControlsToolStripMenuItem.Click += new System.EventHandler(this.controlsToolStripMenuItem_Click);
+            // 
+            // pauseToolStripMenuItem1
+            // 
+            this.pauseToolStripMenuItem1.Name = "pauseToolStripMenuItem1";
+            this.pauseToolStripMenuItem1.Size = new System.Drawing.Size(161, 22);
+            this.pauseToolStripMenuItem1.Text = "Pause";
+            this.pauseToolStripMenuItem1.Click += new System.EventHandler(this.pauseToolStripMenuItem_Click);
+            // 
+            // muteToolStripMenuItem
+            // 
+            this.muteToolStripMenuItem.Name = "muteToolStripMenuItem";
+            this.muteToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
+            this.muteToolStripMenuItem.Text = "Mute";
+            this.muteToolStripMenuItem.Click += new System.EventHandler(this.muteToolStripMenuItem_Click);
             // 
             // timer1
             // 
@@ -303,43 +338,33 @@
             this.coins.TabIndex = 20;
             this.coins.TabStop = false;
             // 
-            // optionsToolStripMenuItem
+            // tankStand
             // 
-            this.optionsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.changeControlsToolStripMenuItem,
-            this.pauseToolStripMenuItem1,
-            this.muteToolStripMenuItem});
-            this.optionsToolStripMenuItem.Name = "optionsToolStripMenuItem";
-            this.optionsToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
-            this.optionsToolStripMenuItem.Text = "Options";
+            this.tankStand.Image = global::BubbleTrouble.Properties.Resources.platform;
+            this.tankStand.Location = new System.Drawing.Point(708, 161);
+            this.tankStand.Name = "tankStand";
+            this.tankStand.Size = new System.Drawing.Size(100, 36);
+            this.tankStand.TabIndex = 21;
+            this.tankStand.TabStop = false;
             // 
-            // changeControlsToolStripMenuItem
+            // tank
             // 
-            this.changeControlsToolStripMenuItem.Name = "changeControlsToolStripMenuItem";
-            this.changeControlsToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
-            this.changeControlsToolStripMenuItem.Text = "Change controls";
-            this.changeControlsToolStripMenuItem.Click += new System.EventHandler(this.controlsToolStripMenuItem_Click);
-            // 
-            // pauseToolStripMenuItem1
-            // 
-            this.pauseToolStripMenuItem1.Name = "pauseToolStripMenuItem1";
-            this.pauseToolStripMenuItem1.Size = new System.Drawing.Size(161, 22);
-            this.pauseToolStripMenuItem1.Text = "Pause";
-            this.pauseToolStripMenuItem1.Click += new System.EventHandler(this.pauseToolStripMenuItem_Click);
-            // 
-            // muteToolStripMenuItem
-            // 
-            this.muteToolStripMenuItem.Name = "muteToolStripMenuItem";
-            this.muteToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
-            this.muteToolStripMenuItem.Text = "Mute";
-            this.muteToolStripMenuItem.Click += new System.EventHandler(this.muteToolStripMenuItem_Click);
+            this.tank.Image = global::BubbleTrouble.Properties.Resources.Tank;
+            this.tank.Location = new System.Drawing.Point(708, 99);
+            this.tank.Name = "tank";
+            this.tank.Size = new System.Drawing.Size(100, 61);
+            this.tank.TabIndex = 22;
+            this.tank.TabStop = false;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::BubbleTrouble.Properties.Resources.gradient;
-            this.ClientSize = new System.Drawing.Size(808, 442);
+            this.BackgroundImage = global::BubbleTrouble.Properties.Resources.military_base;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(819, 467);
+            this.Controls.Add(this.tank);
+            this.Controls.Add(this.tankStand);
             this.Controls.Add(this.barrier2_1);
             this.Controls.Add(this.barrier1_1);
             this.Controls.Add(this.barrier2);
@@ -354,6 +379,7 @@
             this.Controls.Add(this.shield);
             this.Controls.Add(this.coins);
             this.Controls.Add(this.pizza);
+            this.DoubleBuffered = true;
             this.Name = "Form1";
             this.Text = "Bubble trouble";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -376,6 +402,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.shield)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.time)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.coins)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tankStand)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tank)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -414,5 +442,7 @@
         private System.Windows.Forms.ToolStripMenuItem changeControlsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem pauseToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem muteToolStripMenuItem;
+        private System.Windows.Forms.PictureBox tankStand;
+        private System.Windows.Forms.PictureBox tank;
     }
 }
