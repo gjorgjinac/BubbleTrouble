@@ -56,10 +56,11 @@ namespace BubbleTrouble
             return (obstacles.ObstacleList.Count == 0 && level == 2)||(obstacles.ObstacleList.Count == 0 && specialObstaclePassed && level==1) || livesLeft == 0 || timeMili < 10;
         }
 
-        public void AddBomb(Point p)
+        public Boolean AddBomb(Point p)
         {
             if (bombs.Count <= 3)
-                bombs.Add(new Bomb(new Point(p.X + 40, p.Y - 40)));
+            { bombs.Add(new Bomb(new Point(p.X + 40, p.Y - 40))); return true; }
+            return false;
 
         }
 

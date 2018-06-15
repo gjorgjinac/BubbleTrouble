@@ -26,10 +26,8 @@ namespace BubbleTrouble
             openFile();
             Players = Players.OrderByDescending(x => x.Points).ToList();
            
-
-               
-              
-                for (int i = 0; i < Players.Count; i++)
+  
+                for (int i = 0; i < 10; i++)
                 {
                     playerList.Items.Add(Players.ElementAt(i));
 
@@ -89,20 +87,7 @@ namespace BubbleTrouble
 
         private void openFile()
         {
-          /*  if (FileName == null)
-            {
-                OpenFileDialog openFileDialog = new OpenFileDialog();
-                openFileDialog.Filter = "High scores file (*.hsf)|*.hsf";
-                openFileDialog.Title = "Open High Scores";
-
-                if (openFileDialog.ShowDialog() == DialogResult.OK)
-                {
-                    FileName = openFileDialog.FileName;
-
-                }
-            }
-
-    */
+         
             try
             {
                 using (FileStream stream = new FileStream(FileName, FileMode.Open))
@@ -117,11 +102,15 @@ namespace BubbleTrouble
             {
                 MessageBox.Show("Unable to complete opening");
             }
-           // FileName = null;
+           
             Invalidate(true);
 
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            DialogResult = DialogResult.OK;
+        }
     }
     }
     

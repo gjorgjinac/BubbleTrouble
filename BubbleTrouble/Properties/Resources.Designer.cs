@@ -22,7 +22,7 @@ namespace BubbleTrouble.Properties {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class Resources {
+    public class Resources {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
@@ -36,7 +36,7 @@ namespace BubbleTrouble.Properties {
         ///   Returns the cached ResourceManager instance used by this class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Resources.ResourceManager ResourceManager {
+        public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
                     global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("BubbleTrouble.Properties.Resources", typeof(Resources).Assembly);
@@ -51,7 +51,7 @@ namespace BubbleTrouble.Properties {
         ///   resource lookups using this strongly typed resource class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Globalization.CultureInfo Culture {
+        public static global::System.Globalization.CultureInfo Culture {
             get {
                 return resourceCulture;
             }
@@ -63,7 +63,7 @@ namespace BubbleTrouble.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap barrier1 {
+        public static System.Drawing.Bitmap barrier1 {
             get {
                 object obj = ResourceManager.GetObject("barrier1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -73,7 +73,7 @@ namespace BubbleTrouble.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap barrier2 {
+        public static System.Drawing.Bitmap barrier2 {
             get {
                 object obj = ResourceManager.GetObject("barrier2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -81,9 +81,19 @@ namespace BubbleTrouble.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        public static byte[] bg_music {
+            get {
+                object obj = ResourceManager.GetObject("bg_music", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap bomb {
+        public static System.Drawing.Bitmap bomb {
             get {
                 object obj = ResourceManager.GetObject("bomb", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -91,9 +101,18 @@ namespace BubbleTrouble.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        public static System.IO.UnmanagedMemoryStream bullet {
+            get {
+                return ResourceManager.GetStream("bullet", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap coins {
+        public static System.Drawing.Bitmap coins {
             get {
                 object obj = ResourceManager.GetObject("coins", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -103,7 +122,7 @@ namespace BubbleTrouble.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap gradient {
+        public static System.Drawing.Bitmap gradient {
             get {
                 object obj = ResourceManager.GetObject("gradient", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -113,7 +132,7 @@ namespace BubbleTrouble.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap gradient1 {
+        public static System.Drawing.Bitmap gradient1 {
             get {
                 object obj = ResourceManager.GetObject("gradient1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -123,7 +142,7 @@ namespace BubbleTrouble.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap grenade {
+        public static System.Drawing.Bitmap grenade {
             get {
                 object obj = ResourceManager.GetObject("grenade", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -133,7 +152,7 @@ namespace BubbleTrouble.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap grenade1 {
+        public static System.Drawing.Bitmap grenade1 {
             get {
                 object obj = ResourceManager.GetObject("grenade1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -143,7 +162,7 @@ namespace BubbleTrouble.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap ladder {
+        public static System.Drawing.Bitmap ladder {
             get {
                 object obj = ResourceManager.GetObject("ladder", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -153,7 +172,7 @@ namespace BubbleTrouble.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap minion {
+        public static System.Drawing.Bitmap minion {
             get {
                 object obj = ResourceManager.GetObject("minion", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -163,7 +182,7 @@ namespace BubbleTrouble.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap minion_dead {
+        public static System.Drawing.Bitmap minion_dead {
             get {
                 object obj = ResourceManager.GetObject("minion_dead", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -173,7 +192,7 @@ namespace BubbleTrouble.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap minion_screaming {
+        public static System.Drawing.Bitmap minion_screaming {
             get {
                 object obj = ResourceManager.GetObject("minion_screaming", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -183,7 +202,7 @@ namespace BubbleTrouble.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap minion_shield {
+        public static System.Drawing.Bitmap minion_shield {
             get {
                 object obj = ResourceManager.GetObject("minion_shield", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -193,7 +212,7 @@ namespace BubbleTrouble.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap money {
+        public static System.Drawing.Bitmap money {
             get {
                 object obj = ResourceManager.GetObject("money", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -203,7 +222,7 @@ namespace BubbleTrouble.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap pizza {
+        public static System.Drawing.Bitmap pizza {
             get {
                 object obj = ResourceManager.GetObject("pizza", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -213,7 +232,7 @@ namespace BubbleTrouble.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap platform {
+        public static System.Drawing.Bitmap platform {
             get {
                 object obj = ResourceManager.GetObject("platform", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -221,9 +240,18 @@ namespace BubbleTrouble.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        public static System.IO.UnmanagedMemoryStream sad_violin {
+            get {
+                return ResourceManager.GetStream("sad_violin", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap shield {
+        public static System.Drawing.Bitmap shield {
             get {
                 object obj = ResourceManager.GetObject("shield", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -231,9 +259,37 @@ namespace BubbleTrouble.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        public static System.IO.UnmanagedMemoryStream spongebob_bgmusc {
+            get {
+                return ResourceManager.GetStream("spongebob_bgmusc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        public static System.IO.UnmanagedMemoryStream Suspence_wav {
+            get {
+                return ResourceManager.GetStream("Suspence_wav", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        public static byte[] suspense {
+            get {
+                object obj = ResourceManager.GetObject("suspense", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap time {
+        public static System.Drawing.Bitmap time {
             get {
                 object obj = ResourceManager.GetObject("time", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));

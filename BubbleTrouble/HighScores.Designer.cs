@@ -30,6 +30,7 @@
         {
             this.playerList = new System.Windows.Forms.ListBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // playerList
@@ -39,7 +40,7 @@
             this.playerList.ItemHeight = 16;
             this.playerList.Location = new System.Drawing.Point(34, 83);
             this.playerList.Name = "playerList";
-            this.playerList.Size = new System.Drawing.Size(238, 244);
+            this.playerList.Size = new System.Drawing.Size(238, 212);
             this.playerList.TabIndex = 0;
             // 
             // label1
@@ -52,12 +53,23 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Top 10 scores:";
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(109, 310);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 2;
+            this.button1.Text = "Go back";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // HighScores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::BubbleTrouble.Properties.Resources.gradient1;
-            this.ClientSize = new System.Drawing.Size(630, 362);
+            this.ClientSize = new System.Drawing.Size(320, 359);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.playerList);
             this.Name = "HighScores";
@@ -71,5 +83,6 @@
 
         private System.Windows.Forms.ListBox playerList;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button button1;
     }
 }

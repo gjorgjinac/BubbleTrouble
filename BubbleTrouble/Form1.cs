@@ -27,11 +27,18 @@ namespace BubbleTrouble
         int level;
         int totalPoints;
         List<PictureBox> goodies;
-       
+        System.Media.SoundPlayer bgmusic = new System.Media.SoundPlayer(Properties.Resources.spongebob_bgmusc);
+        System.Media.SoundPlayer bomb = new System.Media.SoundPlayer(Properties.Resources.bullet);
+        System.Media.SoundPlayer sad_violin = new System.Media.SoundPlayer(Properties.Resources.sad_violin);
+        Boolean musicOn;
         int shieldTime;
         public Form1()
         {
+            
             InitializeComponent();
+            musicOn = true;
+            this.Text = "Bubble Trouble";
+         
             livesLeft = 5;
             level = 1;
             DoubleBuffered = true;
@@ -72,6 +79,8 @@ namespace BubbleTrouble
 
         public void resetEnv()
         {
+            if (musicOn) bgmusic.Play();
+
             if (level == 1)
             {
                 platform.Visible = true;
@@ -112,6 +121,8 @@ namespace BubbleTrouble
 
         public void lifeLost()
         {
+
+
             game = new Game(level);
             if (livesLeft > 0) resetEnv();
             else
@@ -150,10 +161,13 @@ namespace BubbleTrouble
 
         public void endGame()
         {
+            if (musicOn ) sad_violin.Play();
+
             timer1.Stop();
             player.Image = Properties.Resources.minion_dead;
             livesLeft--;
             String msg = "";
+          
             if (progressBarTime.Value > 0 && game.timeMili>10) msg = "Player killed.";
             else msg = "Time ran out.";
 
@@ -164,8 +178,9 @@ namespace BubbleTrouble
 
                 form.AddPlayer(game.points);
                 form.ShowDialog();
+               
             }
-
+ sad_violin.Stop();
 
 
             progressBarLives.Value = game.livesLeft;
@@ -178,7 +193,11 @@ namespace BubbleTrouble
             {
                 if (e.KeyCode == shoot)
                 {
-                    game.AddBomb(player.Location);
+                    if (game.AddBomb(player.Location) && musicOn)
+                    {
+                        System.Threading.Thread.Sleep(500);
+                        bomb.Play();
+                    }
 
 
                 }
@@ -223,9 +242,10 @@ namespace BubbleTrouble
                         if (e.KeyCode == right)
                         {
                             controlLock = true;
+                           
                             player.Image = Properties.Resources.minion_screaming;
 
-
+                            
 
                         }
 
@@ -287,7 +307,7 @@ namespace BubbleTrouble
         {
             game.MoveBombs(platform.Width, platform.Location.Y);
             game.CheckHits();
-
+          
             Random random = new Random();
             if (shieldTime <= 0 && game.PlayerHit(player.Location, Width, this.Height))
             {
@@ -333,7 +353,7 @@ namespace BubbleTrouble
 
 
             }
-            if (shieldTime <= 0) player.Image = Properties.Resources.minion;
+            if (shieldTime <= 0 && !controlLock) player.Image = Properties.Resources.minion;
             if (random.Next(10) == 1 && goodieUnique)
             { throwGoodie(random.NextDouble(), 0, random.Next(5)); }
 
@@ -512,9 +532,9 @@ namespace BubbleTrouble
         private void pauseToolStripMenuItem_Click(object sender, EventArgs e)
         {
             timer1.Enabled = !timer1.Enabled;
-            if (pauseToolStripMenuItem.Text.Equals("Pause"))
-                pauseToolStripMenuItem.Text = "Start";
-            else pauseToolStripMenuItem.Text = "Pause";
+            if (pauseToolStripMenuItem1.Text.Equals("Pause"))
+                pauseToolStripMenuItem1.Text = "Start";
+            else pauseToolStripMenuItem1.Text = "Pause";
         }
 
         private void newGameToolStripMenuItem_Click(object sender, EventArgs e)
@@ -566,16 +586,24 @@ namespace BubbleTrouble
             timer1.Start();
         }
 
-        private void openGameToolStripMenuItem_Click(object sender, EventArgs e)
+        private void muteToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            timer1.Stop();
+            musicOn = !musicOn;
+            if (muteToolStripMenuItem.Text.Equals("Mute")) { muteToolStripMenuItem.Text = "Unmute"; bgmusic.Stop(); }
+            else { muteToolStripMenuItem.Text = "Mute"; bgmusic.Play(); }
+        }
+
+        private void openGameToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+ timer1.Stop();
             openFile();
             timer1.Start();
         }
 
+
         private void level2ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            endGame();
+            //endGame();
             level = 2;
             newGame();
         }
@@ -584,11 +612,14 @@ namespace BubbleTrouble
         {
             timer1.Stop();
             HighScores form = new HighScores();
-            form.Show();
+            DialogResult d = form.ShowDialog();
+            if ( d== DialogResult.OK  || d==DialogResult.Cancel )
+                timer1.Start();
         }
 
         private void controlsToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            timer1.Stop();
             Controls form = new Controls(left, right, up, down, shoot);
             if (form.ShowDialog() == DialogResult.OK)
 
@@ -601,7 +632,7 @@ namespace BubbleTrouble
 
             }
 
-
+            timer1.Start();
 
         }
     }

@@ -77,7 +77,6 @@
     <Compile Include="Player.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ShootingLine.cs" />
     <EmbeddedResource Include="AddPlayer.resx">
       <DependentUpon>AddPlayer.cs</DependentUpon>
     </EmbeddedResource>
@@ -91,7 +90,7 @@
       <DependentUpon>HighScores.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
+      <Generator>PublicResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
@@ -114,6 +113,11 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\sad violin.wav" />
+    <None Include="Resources\bullet.wav" />
+    <None Include="Resources\Suspence wav.wav" />
+    <None Include="Resources\spongebob bgmusc.wav" />
+    <None Include="img\suspense.mp3" />
     <None Include="img\pizza.png" />
     <None Include="img\time.png" />
     <None Include="img\shield.png" />
@@ -131,6 +135,7 @@
     <None Include="img\coins.png" />
     <None Include="img\minion shield.png" />
     <None Include="img\gradient1.jpg" />
+    <None Include="img\bg music.mp3" />
     <Content Include="img\money.png" />
     <None Include="Resources\dollars.bmp" />
   </ItemGroup>
