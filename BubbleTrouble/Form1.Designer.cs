@@ -45,6 +45,7 @@
             this.openGameToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.level2ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.highScoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.ladder = new System.Windows.Forms.PictureBox();
             this.platform = new System.Windows.Forms.PictureBox();
@@ -56,7 +57,7 @@
             this.shield = new System.Windows.Forms.PictureBox();
             this.time = new System.Windows.Forms.PictureBox();
             this.coins = new System.Windows.Forms.PictureBox();
-            this.highScoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.controlsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.player)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.money1)).BeginInit();
             this.statusStrip1.SuspendLayout();
@@ -126,12 +127,12 @@
             // labelTime
             // 
             this.labelTime.Name = "labelTime";
-            this.labelTime.Size = new System.Drawing.Size(77, 31);
-            this.labelTime.Text = "Time left: 60s";
+            this.labelTime.Size = new System.Drawing.Size(65, 31);
+            this.labelTime.Text = "Time left: s";
             // 
             // progressBarTime
             // 
-            this.progressBarTime.Maximum = 60;
+            this.progressBarTime.Maximum = 30;
             this.progressBarTime.Name = "progressBarTime";
             this.progressBarTime.Size = new System.Drawing.Size(300, 30);
             // 
@@ -150,7 +151,8 @@
             this.openGameToolStripMenuItem,
             this.level2ToolStripMenuItem,
             this.toolStripMenuItem2,
-            this.highScoresToolStripMenuItem});
+            this.highScoresToolStripMenuItem,
+            this.controlsToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(808, 24);
@@ -196,6 +198,13 @@
             // 
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
             this.toolStripMenuItem2.Size = new System.Drawing.Size(12, 20);
+            // 
+            // highScoresToolStripMenuItem
+            // 
+            this.highScoresToolStripMenuItem.Name = "highScoresToolStripMenuItem";
+            this.highScoresToolStripMenuItem.Size = new System.Drawing.Size(81, 20);
+            this.highScoresToolStripMenuItem.Text = "High scores";
+            this.highScoresToolStripMenuItem.Click += new System.EventHandler(this.highScoresToolStripMenuItem_Click);
             // 
             // timer1
             // 
@@ -291,12 +300,12 @@
             this.coins.TabIndex = 20;
             this.coins.TabStop = false;
             // 
-            // highScoresToolStripMenuItem
+            // controlsToolStripMenuItem
             // 
-            this.highScoresToolStripMenuItem.Name = "highScoresToolStripMenuItem";
-            this.highScoresToolStripMenuItem.Size = new System.Drawing.Size(81, 20);
-            this.highScoresToolStripMenuItem.Text = "High scores";
-            this.highScoresToolStripMenuItem.Click += new System.EventHandler(this.highScoresToolStripMenuItem_Click);
+            this.controlsToolStripMenuItem.Name = "controlsToolStripMenuItem";
+            this.controlsToolStripMenuItem.Size = new System.Drawing.Size(64, 20);
+            this.controlsToolStripMenuItem.Text = "Controls";
+            this.controlsToolStripMenuItem.Click += new System.EventHandler(this.controlsToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -374,5 +383,6 @@
         private System.Windows.Forms.PictureBox coins;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
         private System.Windows.Forms.ToolStripMenuItem highScoresToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem controlsToolStripMenuItem;
     }
 }

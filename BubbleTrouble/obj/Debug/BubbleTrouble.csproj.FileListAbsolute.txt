@@ -11,3 +11,4 @@ C:\Users\Dell\source\repos\BubbleTrouble\BubbleTrouble\obj\Debug\BubbleTrouble.p
 C:\Users\Dell\source\repos\BubbleTrouble\BubbleTrouble\obj\Debug\BubbleTrouble.Level2.resources
 C:\Users\Dell\source\repos\BubbleTrouble\BubbleTrouble\obj\Debug\BubbleTrouble.HighScores.resources
 C:\Users\Dell\source\repos\BubbleTrouble\BubbleTrouble\obj\Debug\BubbleTrouble.AddPlayer.resources
+C:\Users\Dell\source\repos\BubbleTrouble\BubbleTrouble\obj\Debug\BubbleTrouble.Controls.resources

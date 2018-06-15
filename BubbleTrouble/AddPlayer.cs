@@ -24,7 +24,7 @@ namespace BubbleTrouble
 
         private void textBox1_Validating(object sender, CancelEventArgs e)
         {
-            if (textBox1.Text == "") errorProvider1.SetError(textBox1, "Name can't be empty");
+            if (textBox1.Text == "") { errorProvider1.SetError(textBox1, "Name can't be empty"); e.Cancel = true; }
             else errorProvider1.SetError(textBox1, null);
         }
 

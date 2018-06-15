@@ -15,6 +15,7 @@ namespace BubbleTrouble
 {
     public partial class Form1 : Form
     {
+        Keys left = Keys.Left, right = Keys.Right, up = Keys.Up, down = Keys.Down, shoot = Keys.Space;
         String FileName;
         Game game;
         List<PictureBox> money;
@@ -77,7 +78,7 @@ namespace BubbleTrouble
                 barrier1_1.Visible = false;
                 barrier2.Visible = false;
                 barrier2_1.Visible = false;
-               
+
             }
             if (level == 2)
             {
@@ -87,7 +88,7 @@ namespace BubbleTrouble
                 barrier2.Visible = true;
                 barrier2_1.Visible = true;
                 barrier1_1.Visible = true;
-               
+
             }
             resetGoodies();
             shieldTime = 0;
@@ -95,10 +96,10 @@ namespace BubbleTrouble
             player.Image = Properties.Resources.minion;
             activeGoodie = null;
             timer1.Start();
- progressBarTime.Maximum = 60;
-                progressBarTime.Value = 60;
+
+            progressBarTime.Value = progressBarTime.Maximum;
             progressBarLives.Value = livesLeft;
-            
+
 
             goodieUnique = true;
             goodieStand = 0;
@@ -151,7 +152,7 @@ namespace BubbleTrouble
             player.Image = Properties.Resources.minion_dead;
             livesLeft--;
             String msg = "";
-            if (progressBarTime.Value > 0) msg = "Player killed.";
+            if (progressBarTime.Value > 0 && game.timeMili>10) msg = "Player killed.";
             else msg = "Time ran out.";
 
 
@@ -173,7 +174,7 @@ namespace BubbleTrouble
         {
             if (!controlLock)
             {
-                if (e.KeyCode == Keys.Space)
+                if (e.KeyCode == shoot)
                 {
                     game.AddBomb(player.Location);
 
@@ -182,12 +183,12 @@ namespace BubbleTrouble
 
                 if (level == 1)
                 {
-                    if (e.KeyCode == Keys.Left && player.Location.X > 0)
+                    if (e.KeyCode == left && player.Location.X > 0)
                     {
                         player.Location = new Point(player.Location.X - 10, player.Location.Y);
 
                     }
-                    if (e.KeyCode == Keys.Right && player.Location.X < Width - 80)
+                    if (e.KeyCode == right && player.Location.X < Width - 80)
                     {
                         player.Location = new Point(player.Location.X + 10, player.Location.Y);
 
@@ -195,7 +196,7 @@ namespace BubbleTrouble
 
                     if (player.Location.X - ladder.Location.X < 100 && player.Location.Y + 70 > platform.Location.Y)
                     {
-                        if (e.KeyCode == Keys.Up)
+                        if (e.KeyCode == up)
                         {
                             player.Location = new Point(player.Location.X, player.Location.Y - 10);
                         }
@@ -204,7 +205,7 @@ namespace BubbleTrouble
                     }
                     if (player.Location.X - ladder.Location.X < 100 && player.Location.Y + 70 < Height - 100)
                     {
-                        if (e.KeyCode == Keys.Down)
+                        if (e.KeyCode == down)
                         {
                             player.Location = new Point(player.Location.X, player.Location.Y + 10);
                         }
@@ -217,7 +218,7 @@ namespace BubbleTrouble
 
 
                     {
-                        if (e.KeyCode == Keys.Right)
+                        if (e.KeyCode == right)
                         {
                             controlLock = true;
                             player.Image = Properties.Resources.minion_screaming;
@@ -232,12 +233,12 @@ namespace BubbleTrouble
 
                 if (level == 2)
                 {
-                    if (e.KeyCode == Keys.Left && player.Location.X > 0)
+                    if (e.KeyCode == left && player.Location.X > 0)
                     {
                         player.Location = new Point(player.Location.X - 10, player.Location.Y);
 
                     }
-                    if (e.KeyCode == Keys.Right && player.Location.X < Width - 80)
+                    if (e.KeyCode == right && player.Location.X < Width - 80)
                     {
                         Boolean canMove = false;
 
@@ -321,8 +322,8 @@ namespace BubbleTrouble
                 }
                 else endGame();
             }
-            
-game.decreaseTime();
+
+            game.decreaseTime();
             if (game.timeMili % 10 == 0 && progressBarTime.Value > 0)
             {
                 progressBarTime.Value--;
@@ -341,7 +342,7 @@ game.decreaseTime();
             }
             else
             {
-                if (goodieStand > 300)
+                if (goodieStand > 30)
                 { enableGoodie(); }
                 goodieStand++;
             }
@@ -360,8 +361,8 @@ game.decreaseTime();
                 }
                 else if (activeGoodie == time)
                 {
-                    game.timeMili += 100;
-                    progressBarTime.Value += 10;
+                    if (progressBarTime.Value > 19) { progressBarTime.Value = 30; game.timeMili = 300; }
+                    else { progressBarTime.Value += 10; game.timeMili += 100; }
                 }
                 else if (activeGoodie == money1)
                 {
@@ -408,13 +409,15 @@ game.decreaseTime();
         public void enableGoodie()
         {
 
-
-
-            activeGoodie.Visible = false;
+            if (activeGoodie != null)
+            {
+                activeGoodie.Location = new Point(0, 0);
+                activeGoodie.Visible = false;
+                activeGoodie = null;
+            }
             goodieUnique = true;
             goodieStand = 0;
-            activeGoodie.Location = new Point(0, 0);
-            activeGoodie = null;
+            
         }
 
 
@@ -580,6 +583,24 @@ game.decreaseTime();
             timer1.Stop();
             HighScores form = new HighScores();
             form.Show();
+        }
+
+        private void controlsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Controls form = new Controls(left, right, up, down, shoot);
+            if (form.ShowDialog() == DialogResult.OK)
+
+            {
+                left = form.keys.ElementAt(0);
+                right = form.keys.ElementAt(1);
+                up = form.keys.ElementAt(2);
+                down = form.keys.ElementAt(3);
+                shoot = form.keys.ElementAt(4);
+
+            }
+
+
+
         }
     }
 }

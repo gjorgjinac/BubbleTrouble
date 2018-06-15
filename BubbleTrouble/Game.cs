@@ -12,39 +12,39 @@ namespace BubbleTrouble
     {
 
         public Point playerPosition;
-      public  Obstacles obstacles;
-       public int livesLeft;
+        public Obstacles obstacles;
+        public int livesLeft;
         public int timeMili;
         public List<Bomb> bombs;
-       
+
         public int points;
         public int level;
         public Boolean specialObstaclePassed;
-      
+
 
         public Game(int level)
         {
             this.level = level;
             obstacles = new Obstacles(level);
             specialObstaclePassed = false;
-           timeMili = 6000;
-            
+            timeMili = 300;
+
             bombs = new List<Bomb>();
-            
+
             points = 0;
-            
+
         }
-        public void decreaseTime ()
+        public void decreaseTime()
         {
-            timeMili-=1;
-           
+            timeMili -= 1;
+
         }
 
         public void MoveBombs(int width, int height)
         {
             foreach (Bomb b in bombs)
             {
-                if (level==1) b.Move(width, height);
+                if (level == 1) b.Move(width, height);
                 if (level == 2) b.Move();
 
             }
@@ -53,32 +53,33 @@ namespace BubbleTrouble
 
         public Boolean checkEnd()
         {
-            return obstacles.ObstacleList.Count == 0 || livesLeft == 0 || timeMili < 10;
+            return (obstacles.ObstacleList.Count == 0 && level == 2)||(obstacles.ObstacleList.Count == 0 && specialObstaclePassed && level==1) || livesLeft == 0 || timeMili < 10;
         }
-        
+
         public void AddBomb(Point p)
-        {if (bombs.Count<=3)
-            bombs.Add(new Bomb(new Point(p.X+40, p.Y)));
-            
+        {
+            if (bombs.Count <= 3)
+                bombs.Add(new Bomb(new Point(p.X + 40, p.Y - 40)));
+
         }
 
         public Boolean PlayerHit(Point p, int width, int height)
         {
-            foreach(Bomb b in bombs)
+          foreach (Bomb b in bombs)
             {
                 if (b.HitsPlayer(p)) return true;
             }
-            return false || obstacles.isPlayerHit(p, width, height);
+            return false|| obstacles.isPlayerHit(p, width, height);
 
         }
-        
+
         public void CheckHits()
         {
             for (int j = 0; j < bombs.Count; j++)
             {
                 Boolean hit = false;
                 Bomb b = bombs.ElementAt(j);
-                for(int i = 0; i < obstacles.ObstacleList.Count; i++)
+                for (int i = 0; i < obstacles.ObstacleList.Count; i++)
                 {
                     Obstacle c = obstacles.ObstacleList.ElementAt(i);
                     if (c.Hits(b.Position))
@@ -91,7 +92,7 @@ namespace BubbleTrouble
                                 obstacles.AddObstacle(new Obstacle(c.Radius / 2, c.Color, new Point(c.Position.X + 20, c.Position.Y - 20), 1, -1));
                             }
 
-                            if (level==2)
+                            if (level == 2)
                             {
                                 obstacles.AddObstacle(new Obstacle(c.Radius / 2, c.Color, new Point(c.Position.X - 20, c.Position.Y - 20), -1, -1, c.Parent));
                                 obstacles.AddObstacle(new Obstacle(c.Radius / 2, c.Color, new Point(c.Position.X + 20, c.Position.Y - 20), 1, -1, c.Parent));
@@ -104,28 +105,29 @@ namespace BubbleTrouble
                     }
 
                 }
-          if (hit)  bombs.Remove(b);
-                if (level==1 && obstacles.specialObstacle.Hits(b.Position))
+                if (hit) bombs.RemoveAt(j);
+                if (level == 1 && obstacles.specialObstacle.Hits(b.Position))
                 { specialObstaclePassed = true; }
             }
-            
+
         }
 
         public void updateBombs(Graphics g, int height)
         {
             for (int i = 0; i < bombs.Count; i++)
-            { Bomb b = bombs.ElementAt(i);
-                if (b.Position.Y < 0 || b.Position.Y>height)
+            {
+                Bomb b = bombs.ElementAt(i);
+                if (b.Position.Y < 0 || b.Position.Y > height)
                     bombs.RemoveAt(i);
                 else b.Draw(g);
             }
 
             obstacles.Draw(g, (!specialObstaclePassed && level == 1));
-            
 
-           
 
-           
+
+
+
 
         }
 
