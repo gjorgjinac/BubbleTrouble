@@ -41,9 +41,16 @@ namespace BubbleTrouble
             if (form.ShowDialog() == DialogResult.OK)
             {
                 Players.Add(form.newPlayer);
-                playerList.Items.Add(form.newPlayer);
+           
             }
             Players = Players.OrderByDescending(x => x.Points).ToList();
+
+            playerList.Items.Clear();
+            for (int i = 0; i < 10; i++)
+            {
+                playerList.Items.Add(Players.ElementAt(i));
+
+            }
             saveFile();
 
         }
