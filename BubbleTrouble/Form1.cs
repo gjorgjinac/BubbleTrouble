@@ -360,17 +360,7 @@ namespace BubbleTrouble
                 }
 
 
-
-
-
-
-
-
-
-
-
-
-                }
+     }
 
 
             Invalidate(true);
@@ -513,7 +503,7 @@ namespace BubbleTrouble
             if (level == 3)
             {
                 brickWallUp.Location = new Point(brickWallUp.Location.X, brickWallUp.Location.Y + 5);
-              
+              //  game.obstacles.Move(Width, Height, brickWallUp.Location.X+brickWallUp.Width, brickWallUp.Location.Y+brickWallUp.Height);
 
 
             }
@@ -655,7 +645,7 @@ namespace BubbleTrouble
 
         private void statusStrip1_Paint(object sender, PaintEventArgs e)
         {
-            //progressBarTime.Value--;
+           
             progressBarLives.Value = livesLeft;
             labelPoints.Text = String.Format("Points: {0} ", game.points);
             labelTime.Text = String.Format("Time left: {0}s", progressBarTime.Value);

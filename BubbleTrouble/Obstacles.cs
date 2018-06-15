@@ -115,9 +115,19 @@ namespace BubbleTrouble
 
             return false;
         }
+        public void Move3(int width, int height, int barrierX, int barrierY)
+        {
+            foreach (Obstacle c in ObstacleList)
+            {
+                c.Move(width, height - 70, 10);
 
 
-        public void Move (int width, int height, int specialWidth, int specialHeight)
+
+
+            }
+        }
+
+            public void Move (int width, int height, int specialWidth, int specialHeight)
         {foreach (Obstacle c in ObstacleList)
             {
                 c.Move(width, height-70,10);
