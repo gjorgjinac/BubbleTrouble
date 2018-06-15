@@ -27,6 +27,7 @@ namespace BubbleTrouble
         int level;
         int totalPoints;
         List<PictureBox> goodies;
+       
         int shieldTime;
         public Form1()
         {
@@ -38,7 +39,8 @@ namespace BubbleTrouble
             newGame();
             player.BackColor = Color.Transparent;
             ladder.BackColor = Color.Transparent;
-
+            FormBorderStyle = FormBorderStyle.FixedSingle;
+            StartPosition = FormStartPosition.CenterScreen;
             totalPoints = 0;
             FileName = null;
         }

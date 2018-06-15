@@ -8,7 +8,6 @@ C:\Users\Dell\source\repos\BubbleTrouble\BubbleTrouble\obj\Debug\BubbleTrouble.c
 C:\Users\Dell\source\repos\BubbleTrouble\BubbleTrouble\obj\Debug\BubbleTrouble.csproj.CoreCompileInputs.cache
 C:\Users\Dell\source\repos\BubbleTrouble\BubbleTrouble\obj\Debug\BubbleTrouble.exe
 C:\Users\Dell\source\repos\BubbleTrouble\BubbleTrouble\obj\Debug\BubbleTrouble.pdb
-C:\Users\Dell\source\repos\BubbleTrouble\BubbleTrouble\obj\Debug\BubbleTrouble.Level2.resources
 C:\Users\Dell\source\repos\BubbleTrouble\BubbleTrouble\obj\Debug\BubbleTrouble.HighScores.resources
 C:\Users\Dell\source\repos\BubbleTrouble\BubbleTrouble\obj\Debug\BubbleTrouble.AddPlayer.resources
 C:\Users\Dell\source\repos\BubbleTrouble\BubbleTrouble\obj\Debug\BubbleTrouble.Controls.resources
