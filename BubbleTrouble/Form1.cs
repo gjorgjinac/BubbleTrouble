@@ -61,9 +61,9 @@ namespace BubbleTrouble
             StartPosition = FormStartPosition.CenterScreen;
             totalPoints = 0;
             FileName = null;
-            selectedPlayer = "soldier";
+            selectedPlayer = "ambulance";
             this.BackgroundImage = minions[selectedPlayer].ElementAt(4);
-            player.Image = minions[selectedPlayer].ElementAt(4);
+            player.Image = minions[selectedPlayer].ElementAt(0);
             player.BackColor = Color.Transparent;
               newGame();
         }
