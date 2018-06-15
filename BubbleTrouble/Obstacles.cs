@@ -59,18 +59,18 @@ namespace BubbleTrouble
 
         }
 
-        public void Move (int width, int height, List<int> barriers)
+        public void Move(int width, int height, List<int> barriers)
         {
 
-            for(int i = 0; i < ObstacleList.Count; i++)
+            for (int i = 0; i < ObstacleList.Count; i++)
             {
                 Obstacle obstacle = ObstacleList.ElementAt(i);
-                
-                obstacle.Move(barriers.ElementAt(2 * obstacle.Parent + 1), height-150, 10, barriers.ElementAt(2 * obstacle.Parent));
+
+                obstacle.Move(barriers.ElementAt(2 * obstacle.Parent + 1) - (int)obstacle.Radius, height - 150, barriers.ElementAt(2 * obstacle.Parent) + (int)obstacle.Radius, 0, 10);
+
+
 
             }
-
-
         }
 
 
@@ -98,7 +98,7 @@ namespace BubbleTrouble
                 if (c.HitsPlayer(x)) {
                     c.DirectionHorizontal *= -1;
                     c.DirectionVertical *= -1;
-                    c.Move(width, height - 50, 10);
+                    c.Move(width, height - 50, 0,0,10);
                     return true; }
             }
             if (level == 1)
@@ -107,7 +107,7 @@ namespace BubbleTrouble
                 {
                     specialObstacle.DirectionHorizontal *= -1;
                     specialObstacle.DirectionVertical *= -1;
-                    specialObstacle.Move(width, height - 50, 10);
+                    specialObstacle.Move(width, height - 50,0,0, 10);
                     return true;
                 }
             }
@@ -119,7 +119,7 @@ namespace BubbleTrouble
         {
             foreach (Obstacle c in ObstacleList)
             {
-                c.Move(width, height - 70, 10);
+                c.Move(width, height - 70,0,0, 10);
 
 
 
@@ -130,12 +130,12 @@ namespace BubbleTrouble
             public void Move (int width, int height, int specialWidth, int specialHeight)
         {foreach (Obstacle c in ObstacleList)
             {
-                c.Move(width, height-70,10);
+                c.Move(width-70, height-70-70,0,0,10);
 
 
 
             }
-            if (level==1) specialObstacle.Move(specialWidth, specialHeight + 50 , 10);
+            if (level==1) specialObstacle.Move(specialWidth-70, specialHeight + 50 -70,0,0, 10);
         }
     }
 }

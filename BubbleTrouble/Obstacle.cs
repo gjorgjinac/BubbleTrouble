@@ -49,51 +49,9 @@ namespace BubbleTrouble
         }
 
 
-
-
-        public void Move(int width, int height, int speed)
-        {
-            height -= 70;
-            width -= 70;
-            int X = Position.X;
-            int Y = Position.Y;
-
-            if (DirectionHorizontal == 1)
-            {
-                if (X < width && X > 0) X += speed;
-                else if (X >= width - 2 * Radius) { X -= speed; DirectionHorizontal *= -1; }
-
-
-            }
-            else if (DirectionHorizontal == -1)
-            {
-                if (X < width && X > 0) X -= speed;
-                else if (X <= 0) { X += speed; DirectionHorizontal *= -1; }
-
-
-            }
-
-            if (DirectionVertical == 1)
-            {
-                if (Y < height && Y > 0) Y += speed;
-                else if (Y >= height - 190) { Y -= speed; DirectionVertical *= -1; }
-
-
-            }
-            else if (DirectionVertical == -1)
-            {
-                if (Y < height && Y > 0) Y -= speed;
-                else if (Y <= 200 + Radius) { Y += speed; DirectionVertical *= -1; }
-
-
-            }
-            Position = new Point(X, Y);
-
-        }
         public void Move(int right, int bottom, int left, int top, int speed)
         {
-         //   bottom -= 70;
-          //  right -= 70;
+         
             int X = Position.X;
             int Y = Position.Y;
 
@@ -132,49 +90,7 @@ namespace BubbleTrouble
 
 
 
-        public void Move(int width, int height, int speed, int leftWidth)
-        {
-            Move(width-(int)Radius, height, leftWidth+(int)Radius, 0, speed);
-            // height -= 70;
-            /*    width -= (int)Radius;
-                leftWidth += (int)Radius;
-                int X = Position.X;
-                int Y = Position.Y;
-
-                if (DirectionHorizontal == 1)
-                {
-                    if (X < width && X > leftWidth) X += speed;
-                    else if (X >= width - 2 * Radius) { X -= speed; DirectionHorizontal *= -1; }
-
-
-                }
-                else if (DirectionHorizontal == -1)
-                {
-                    if (X < width && X > leftWidth) X -= speed;
-                    else if (X <= leftWidth) { X += speed; DirectionHorizontal *= -1; }
-
-
-                }
-
-                if (DirectionVertical == 1)
-                {
-                    if (Y < height && Y > 0) Y += speed;
-                    else if (Y >= height - 190) { Y -= speed; DirectionVertical *= -1; }
-
-
-                }
-                else if (DirectionVertical == -1)
-                {
-                    if (Y < height && Y > 0) Y -= speed;
-                    else if (Y <= 200 + Radius) { Y += speed; DirectionVertical *= -1; }
-
-
-                }
-                Position = new Point(X, Y);
-
-            }
-
-        */
-        }
+       
+        
     }
 }
