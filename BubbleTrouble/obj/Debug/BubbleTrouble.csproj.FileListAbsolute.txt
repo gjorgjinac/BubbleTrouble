@@ -1,0 +1,13 @@
+C:\Users\Dell\source\repos\BubbleTrouble\BubbleTrouble\bin\Debug\BubbleTrouble.exe.config
+C:\Users\Dell\source\repos\BubbleTrouble\BubbleTrouble\bin\Debug\BubbleTrouble.exe
+C:\Users\Dell\source\repos\BubbleTrouble\BubbleTrouble\bin\Debug\BubbleTrouble.pdb
+C:\Users\Dell\source\repos\BubbleTrouble\BubbleTrouble\obj\Debug\BubbleTrouble.csprojResolveAssemblyReference.cache
+C:\Users\Dell\source\repos\BubbleTrouble\BubbleTrouble\obj\Debug\BubbleTrouble.Form1.resources
+C:\Users\Dell\source\repos\BubbleTrouble\BubbleTrouble\obj\Debug\BubbleTrouble.Properties.Resources.resources
+C:\Users\Dell\source\repos\BubbleTrouble\BubbleTrouble\obj\Debug\BubbleTrouble.csproj.GenerateResource.Cache
+C:\Users\Dell\source\repos\BubbleTrouble\BubbleTrouble\obj\Debug\BubbleTrouble.csproj.CoreCompileInputs.cache
+C:\Users\Dell\source\repos\BubbleTrouble\BubbleTrouble\obj\Debug\BubbleTrouble.exe
+C:\Users\Dell\source\repos\BubbleTrouble\BubbleTrouble\obj\Debug\BubbleTrouble.pdb
+C:\Users\Dell\source\repos\BubbleTrouble\BubbleTrouble\obj\Debug\BubbleTrouble.Level2.resources
+C:\Users\Dell\source\repos\BubbleTrouble\BubbleTrouble\obj\Debug\BubbleTrouble.HighScores.resources
+C:\Users\Dell\source\repos\BubbleTrouble\BubbleTrouble\obj\Debug\BubbleTrouble.AddPlayer.resources
