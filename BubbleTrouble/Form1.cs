@@ -28,17 +28,17 @@ namespace BubbleTrouble
         int totalPoints;
         List<PictureBox> goodies;
         System.Media.SoundPlayer bgmusic = new System.Media.SoundPlayer(Properties.Resources.spongebob_bgmusc);
-       
+
         System.Media.SoundPlayer sad_violin = new System.Media.SoundPlayer(Properties.Resources.sad_violin);
         Boolean musicOn;
         int shieldTime;
         public Form1()
         {
-            
+
             InitializeComponent();
             musicOn = true;
             this.Text = "Bubble Trouble";
-         
+
             livesLeft = 5;
             level = 1;
             DoubleBuffered = true;
@@ -161,14 +161,14 @@ namespace BubbleTrouble
 
         public void endGame()
         {
-            if (musicOn ) sad_violin.Play();
+            if (musicOn) sad_violin.Play();
 
             timer1.Stop();
             player.Image = Properties.Resources.minion_dead;
             livesLeft--;
             String msg = "";
-          
-            if (progressBarTime.Value > 0 && game.timeMili>10) msg = "Player killed.";
+
+            if (progressBarTime.Value > 0 && game.timeMili > 10) msg = "Player killed.";
             else msg = "Time ran out.";
 
 
@@ -178,9 +178,9 @@ namespace BubbleTrouble
 
                 form.AddPlayer(game.points);
                 form.ShowDialog();
-               
+
             }
- sad_violin.Stop();
+            sad_violin.Stop();
 
 
             progressBarLives.Value = game.livesLeft;
@@ -189,8 +189,9 @@ namespace BubbleTrouble
         }
         private void Form1_KeyDown(object sender, KeyEventArgs e)
         {// Ako na igracot mu e dozvoleno da go pomrdne coveceto 
-         //(Pri paganje od skala ili od platforma mora da poceka da stigne do zemjata, ne moze da "leta")
-            if (!controlLock) 
+         //(Pri paganje od skala ili od platforma mora da poceka da stigne do zemjata, ne moze da "leta",
+         //togas controlLock se postavuva na true i se zaklucuvaat kontrolite)
+            if (!controlLock)
             {
                 //Ako pristisnatoto kopce e kopceto nameneto za pukanje, se dodava bomba
                 if (e.KeyCode == shoot)
@@ -199,8 +200,8 @@ namespace BubbleTrouble
                 }
                 //Postojat razlicini implementacii za prvo i vtoro nivo bidejki ima razlicni barieri
                 if (level == 1)
-                {  
-                    //Pri dvizenje levo ili desno na prvo nivo, samo treba da se onevozmozi izleguvanjeto na coveceto od prozorecot
+                {
+                    //Pri dvizenje levo ili desno na prvo nivo, samo treba da se onevozmozi izleguvanjeto na igracot od prozorecot
                     if (e.KeyCode == left && player.Location.X > 0)
                     {
                         player.Location = new Point(player.Location.X - 10, player.Location.Y);
@@ -211,53 +212,86 @@ namespace BubbleTrouble
                         player.Location = new Point(player.Location.X + 10, player.Location.Y);
 
                     }
-                    //
+                    /*Igracot e pictureBox so visina 80
+                    Za dvizenje nagore se proveruva dali igracot se naogja pod ili na skalata (razlikata megju X koordinatite da bide pomala od 100)
+                   Vtoriot del od uslovot (player.Location.Y + 70 > platform.Location.Y) go sprecuva igracot da se iskaci nad nivoto na platformata, da ne lebdi
+                     
+                     */
 
-                    if (player.Location.X - ladder.Location.X < 100 && player.Location.Y + 80 >= platform.Location.Y)
+                    if (player.Location.X - ladder.Location.X < 100 && player.Location.Y + 70 > platform.Location.Y)
                     {
                         if (e.KeyCode == up)
                         {
                             player.Location = new Point(player.Location.X, player.Location.Y - 10);
-                        }                 
+                        }
                     }
-                    if (player.Location.X - ladder.Location.X < 100 && player.Location.Y + 80 <= Height - 100)
+                    /*
+                     * Za dvizenje nadolu isto taka se proveruva dali igracot se naogja na skalata 
+                     *  Vtoriot del od uslovot (player.Location.Y + 70 < Height - 100) go sprecuva igracot da se spusti premnogu nisko vo prozorecot
+                     */
+
+                    if (player.Location.X - ladder.Location.X < 100 && player.Location.Y + 70 < Height - 100)
                     {
                         if (e.KeyCode == down)
                         {
                             player.Location = new Point(player.Location.X, player.Location.Y + 10);
                         }
                     }
+                    /*
+                     * Sledniot uslov go ovozmozuva pagjaneto na igracot ako toj pri simnuvanjeto izleze od granicite na skalata
+                     * ili pri dvizenjeto desno na platformata izleze od nejziniot rab 
+                     * 
+                  **/
 
+                    // Coveceto se naogja nad platformata i negovata X koordianta e pogolema od sirinata na platformata
                     if ((player.Location.Y < platform.Location.Y && player.Location.X > 300)
+                    //Coveceto se naogja pod platformata, a nad zemjata, a X koordinatata mu e pogolema od krajnata tocka na skalata 
+                    //Izlezeno e od rabot na skalata
                         || (player.Location.Y > platform.Location.Y && player.Location.Y < Height - 175 && player.Location.X > ladder.Location.X + ladder.Width - 30))
                     {
                         if (e.KeyCode == right)
                         {
-                            controlLock = true;
+                            //Se zaklucuvaat kontrolite se dodeka coveceto ne padne na zemjata
+                            controlLock = true; 
+                            //Se menuva izgledot na coveceto so otvorena usta kako da vreska
                             player.Image = Properties.Resources.minion_screaming;
-                        
+
                         }
 
 
                     }
                 }
-
+                //Vtoro nivo
                 if (level == 2)
-                {
+                { //Na vtoroto nivo ima samo dvizenja na levo i desno, poradi toa sto nema skali
+                    //Za dvizenja na levata strana nema ogranicuvanja poradi toa sto barierite se naogjaat na desnata strana
+                    // i istite ne se zatvoraat otkako ednas ke se otvorat
+                    //Edinstveno samo se onevozmozuva coveceto da izleze od leviot rab na prozorecot
+                    //Igracot samo se pridvizuva za 10 tocki na levo
                     if (e.KeyCode == left && player.Location.X > 0)
                     {
                         player.Location = new Point(player.Location.X - 10, player.Location.Y);
                     }
+                    //Za dvizenja na desnata strana treba da se razgleda sostojbata na preprekite
                     if (e.KeyCode == right && player.Location.X < Width - 80)
                     {
+                        //Voveduvame boolean promenliva sto ke odluci dali coveceto moze da se pomrdne nadesno
+                        //Ja inicijalizirame na false bidejki ima pomalku situacii koga coveceto moze da se dvizi
                         Boolean canMove = false;
-
+                        //Ako coveceto se naogja pred prvata prepreka, ne ne interesira sostojbata na preprekite
+                        //I coveceto moze da se pomrdne na desno
                         if (player.Location.X < barrier1_1.Location.X - barrier1_1.Width - 40) canMove = true;
 
+                        //Ako dvete prepreki se otvoreni, coveceto moze da se pomrdne
                         if ((!barrier1_1.Visible && !barrier2_1.Visible)) canMove = true;
 
+                        //Ako prvata prepreka e otvorena, a coveceto se naogja pomegju prvata i vtorata prepreka ili pred prvata prepreka
+                        //Toa moze da se pomrdne, i ne ne interesira sostojbata na 
+                        //barrier2_1.Location.X - barrier2_1.Width - 40 e pozicijata na vtorata prepreka (-40 poradi radiusot na coveceto)
                         if ((player.Location.X < barrier2_1.Location.X - barrier2_1.Width - 40 && !barrier1_1.Visible))
                             canMove = true;
+
+                        //Coveceto se pomrdnuva na desno
                         if (canMove)
                             player.Location = new Point(player.Location.X + 10, player.Location.Y);
 
@@ -293,7 +327,7 @@ namespace BubbleTrouble
         {
             game.MoveBombs(platform.Width, platform.Location.Y);
             game.CheckHits();
-          
+
             Random random = new Random();
             if (shieldTime <= 0 && game.PlayerHit(player.Location, Width, this.Height))
             {
@@ -425,7 +459,7 @@ namespace BubbleTrouble
             }
             goodieUnique = true;
             goodieStand = 0;
-            
+
         }
 
 
@@ -581,7 +615,7 @@ namespace BubbleTrouble
 
         private void openGameToolStripMenuItem1_Click(object sender, EventArgs e)
         {
- timer1.Stop();
+            timer1.Stop();
             openFile();
             timer1.Start();
         }
@@ -599,7 +633,7 @@ namespace BubbleTrouble
             timer1.Stop();
             HighScores form = new HighScores();
             DialogResult d = form.ShowDialog();
-            if ( d== DialogResult.OK  || d==DialogResult.Cancel )
+            if (d == DialogResult.OK || d == DialogResult.Cancel)
                 timer1.Start();
         }
 
