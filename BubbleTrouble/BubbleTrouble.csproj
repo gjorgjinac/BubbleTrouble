@@ -114,6 +114,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="img\soldier female.png" />
+    <None Include="img\soldier female shield.png" />
+    <None Include="img\soldier female screaming.png" />
+    <None Include="img\soldier female dead.png" />
     <None Include="Resources\bullet.wav" />
     <None Include="img\soldier screaming.png" />
     <None Include="img\soldier with shield.png" />

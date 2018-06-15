@@ -44,6 +44,9 @@
             this.saveGameToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.newGameToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.level2ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.level1ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.level2ToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.level3ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.highScoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.optionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -200,10 +203,34 @@
             // 
             // level2ToolStripMenuItem
             // 
+            this.level2ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.level1ToolStripMenuItem,
+            this.level2ToolStripMenuItem1,
+            this.level3ToolStripMenuItem});
             this.level2ToolStripMenuItem.Name = "level2ToolStripMenuItem";
-            this.level2ToolStripMenuItem.Size = new System.Drawing.Size(55, 20);
-            this.level2ToolStripMenuItem.Text = "Level 2";
-            this.level2ToolStripMenuItem.Click += new System.EventHandler(this.level2ToolStripMenuItem_Click);
+            this.level2ToolStripMenuItem.Size = new System.Drawing.Size(87, 20);
+            this.level2ToolStripMenuItem.Text = "Change level";
+            // 
+            // level1ToolStripMenuItem
+            // 
+            this.level1ToolStripMenuItem.Name = "level1ToolStripMenuItem";
+            this.level1ToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
+            this.level1ToolStripMenuItem.Text = "level 1";
+            this.level1ToolStripMenuItem.Click += new System.EventHandler(this.level1ToolStripMenuItem_Click);
+            // 
+            // level2ToolStripMenuItem1
+            // 
+            this.level2ToolStripMenuItem1.Name = "level2ToolStripMenuItem1";
+            this.level2ToolStripMenuItem1.Size = new System.Drawing.Size(107, 22);
+            this.level2ToolStripMenuItem1.Text = "level 2";
+            this.level2ToolStripMenuItem1.Click += new System.EventHandler(this.level2ToolStripMenuItem1_Click);
+            // 
+            // level3ToolStripMenuItem
+            // 
+            this.level3ToolStripMenuItem.Name = "level3ToolStripMenuItem";
+            this.level3ToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
+            this.level3ToolStripMenuItem.Text = "level 3";
+            this.level3ToolStripMenuItem.Click += new System.EventHandler(this.level3ToolStripMenuItem_Click);
             // 
             // toolStripMenuItem2
             // 
@@ -363,9 +390,9 @@
             // brickWallUp
             // 
             this.brickWallUp.Image = global::BubbleTrouble.Properties.Resources.brick_wall;
-            this.brickWallUp.Location = new System.Drawing.Point(0, 24);
+            this.brickWallUp.Location = new System.Drawing.Point(0, -558);
             this.brickWallUp.Name = "brickWallUp";
-            this.brickWallUp.Size = new System.Drawing.Size(819, 37);
+            this.brickWallUp.Size = new System.Drawing.Size(820, 610);
             this.brickWallUp.TabIndex = 23;
             this.brickWallUp.TabStop = false;
             // 
@@ -472,5 +499,8 @@
         private System.Windows.Forms.PictureBox tank;
         private System.Windows.Forms.PictureBox brickWallUp;
         private System.Windows.Forms.PictureBox brickWallDown;
+        private System.Windows.Forms.ToolStripMenuItem level1ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem level2ToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem level3ToolStripMenuItem;
     }
 }

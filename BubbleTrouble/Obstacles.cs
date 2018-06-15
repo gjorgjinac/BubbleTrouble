@@ -48,7 +48,14 @@ namespace BubbleTrouble
 
 
             }
+            if (level == 3)
+            {
+                ObstacleList.Add(new Obstacle(20, Color.Black, new Point(100, 100), 1, 1, 0));
+                ObstacleList.Add(new Obstacle(20, Color.Black, new Point(400, 100), 1, 1, 1));
+                ObstacleList.Add(new Obstacle(20, Color.Black, new Point(700, 100), 1, 1, 2));
 
+
+            }
 
         }
 

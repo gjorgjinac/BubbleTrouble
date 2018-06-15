@@ -43,8 +43,8 @@ namespace BubbleTrouble
             InitializeComponent();
             playground = new Rectangle(10, 10, Width - 40, 380);
             minions = new Dictionary<string, List<Bitmap>>();
-            minions.Add("soldier", new List<Bitmap> () { Properties.Resources.soldier, Properties.Resources.soldier_dead, Properties.Resources.soldier_with_shield, Properties.Resources.soldier_screaming , Properties.Resources.military_base});
-            minions.Add("ambulance", new List<Bitmap>() { Properties.Resources.ambulance, Properties.Resources.ambulance_dead, Properties.Resources.ambulance_with_shield, Properties.Resources.ambulance_screaming, Properties.Resources.hospital_scene });
+            minions.Add("soldierMale", new List<Bitmap> () { Properties.Resources.soldier, Properties.Resources.soldier_dead, Properties.Resources.soldier_with_shield, Properties.Resources.soldier_screaming , Properties.Resources.military_base});
+            minions.Add("soldierFemale", new List<Bitmap>() { Properties.Resources.soldier_female, Properties.Resources.soldier_female_dead, Properties.Resources.soldier_female_shield, Properties.Resources.soldier_female_screaming, Properties.Resources.military_base });
 
             musicOn = true;
             this.Text = "Bubble Trouble";
@@ -61,7 +61,7 @@ namespace BubbleTrouble
             StartPosition = FormStartPosition.CenterScreen;
             totalPoints = 0;
             FileName = null;
-            selectedPlayer = "soldier";
+            selectedPlayer = "soldierFemale";
             this.BackgroundImage = minions[selectedPlayer].ElementAt(4);
             player.Image = minions[selectedPlayer].ElementAt(0);
             player.BackColor = Color.Transparent;
@@ -512,6 +512,7 @@ namespace BubbleTrouble
             }
             if (level == 3)
             {
+                brickWallUp.Location = new Point(brickWallUp.Location.X, brickWallUp.Location.Y + 5);
               
 
 
@@ -685,6 +686,28 @@ namespace BubbleTrouble
             else { muteToolStripMenuItem.Text = "Mute"; bgmusic.Play(); }
         }
 
+        private void level1ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            level = 1;
+            livesLeft = 5;
+            lifeLost();
+        }
+
+        private void level2ToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            level = 2;
+            livesLeft = 5;
+            lifeLost();
+        }
+
+        private void level3ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            level = 3;
+            livesLeft = 5;
+            lifeLost();
+
+        }
+
         private void openGameToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             timer1.Stop();
@@ -693,13 +716,7 @@ namespace BubbleTrouble
         }
 
 
-        private void level2ToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            //endGame();
-            level = 2;
-            livesLeft = 5;
-            lifeLost();
-        }
+       
 
         private void highScoresToolStripMenuItem_Click(object sender, EventArgs e)
         {

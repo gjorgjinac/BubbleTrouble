@@ -223,4 +223,16 @@
   <data name="soldier_dead" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\img\soldier dead.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="soldier_female" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\soldier female.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="soldier_female_dead" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\soldier female dead.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="soldier_female_screaming" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\soldier female screaming.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="soldier_female_shield" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\soldier female shield.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>
