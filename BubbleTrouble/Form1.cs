@@ -61,7 +61,7 @@ namespace BubbleTrouble
             StartPosition = FormStartPosition.CenterScreen;
             totalPoints = 0;
             FileName = null;
-            selectedPlayer = "ambulance";
+            selectedPlayer = "soldier";
             this.BackgroundImage = minions[selectedPlayer].ElementAt(4);
             player.Image = minions[selectedPlayer].ElementAt(0);
             player.BackColor = Color.Transparent;
@@ -107,7 +107,8 @@ namespace BubbleTrouble
                 barrier2_1.Visible = false;
                 tank.Visible = true;
                 tankStand.Visible = true;
-                
+                brickWallDown.Visible = false;
+                brickWallUp.Visible = false;
             }
             if (level == 2)
             {
@@ -119,7 +120,28 @@ namespace BubbleTrouble
                 barrier1_1.Visible = true;
                 tank.Visible = false;
                 tankStand.Visible = false;
+                brickWallDown.Visible = false;
+                brickWallUp.Visible = false;
             }
+            if (level == 3)
+            {
+                platform.Visible = false;
+                ladder.Visible = false;
+                barrier1.Visible = false;
+                barrier2.Visible = false;
+                barrier2_1.Visible = false;
+                barrier1_1.Visible = false;
+                tank.Visible = false;
+                tankStand.Visible = false;
+                brickWallDown.Visible = true;
+                brickWallUp.Visible = true;
+            }
+
+
+
+
+
+
             resetGoodies();
             shieldTime = 0;
             controlLock = false;
@@ -266,7 +288,7 @@ namespace BubbleTrouble
                   **/
 
                     // Coveceto se naogja nad platformata i negovata X koordianta e pogolema od sirinata na platformata
-                    if ((player.Location.Y < platform.Location.Y && player.Location.X > 300)
+                    if ((player.Location.Y < platform.Location.Y && player.Location.X > platform.Width)
                     //Coveceto se naogja pod platformata, a nad zemjata, a X koordinatata mu e pogolema od krajnata tocka na skalata 
                     //Izlezeno e od rabot na skalata
                         || (player.Location.Y > platform.Location.Y && player.Location.Y < Height - 175 && player.Location.X > ladder.Location.X + ladder.Width - 30))
@@ -319,6 +341,28 @@ namespace BubbleTrouble
 
                     }
 
+                }
+
+
+                if (level == 3)
+                {
+                    //Pri dvizenje levo ili desno na prvo nivo, samo treba da se onevozmozi izleguvanjeto na igracot od prozorecot
+                    if (e.KeyCode == left && player.Location.X > 0)
+                    {
+                        player.Location = new Point(player.Location.X - 10, player.Location.Y);
+
+                    }
+                    if (e.KeyCode == right && player.Location.X < Width - 80)
+                    {
+                        player.Location = new Point(player.Location.X + 10, player.Location.Y);
+
+                    }
+                }
+
+
+
+
+
 
 
 
@@ -327,8 +371,6 @@ namespace BubbleTrouble
 
 
                 }
-
-            }
 
 
             Invalidate(true);
@@ -452,7 +494,7 @@ namespace BubbleTrouble
 
             if (level == 1)
             { game.obstacles.Move(Width, Height, platform.Width, platform.Location.Y); }
-            else
+            if (level==2)
             {
                 game.obstacles.Move(
 
@@ -468,7 +510,12 @@ namespace BubbleTrouble
                 }
 
             }
+            if (level == 3)
+            {
+              
 
+
+            }
 
             Invalidate(true);
         }

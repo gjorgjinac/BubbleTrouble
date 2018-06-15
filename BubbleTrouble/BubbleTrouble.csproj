@@ -147,6 +147,7 @@
     <None Include="img\ambulance screaming.png" />
     <None Include="img\ambulance with shield.png" />
     <None Include="img\hospital scene.jpg" />
+    <None Include="img\brick wall.jpg" />
     <Content Include="img\money.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

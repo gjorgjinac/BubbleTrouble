@@ -27,7 +27,7 @@ namespace BubbleTrouble
         }
         public Boolean HitsPlayer(Point p)
         {
-            return distance(Position, new Point(p.X + 40, p.Y + 40)) <= Radius *2 && StartPosition.Y>height;
+            return distance(Position, new Point(p.X + 40, p.Y + 40)) <= Radius + Math.Sqrt(3200)  && StartPosition.Y>height;
         }
         public void Move(int width,int height)
         {

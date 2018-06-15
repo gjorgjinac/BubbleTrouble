@@ -63,6 +63,8 @@
             this.coins = new System.Windows.Forms.PictureBox();
             this.tankStand = new System.Windows.Forms.PictureBox();
             this.tank = new System.Windows.Forms.PictureBox();
+            this.brickWallUp = new System.Windows.Forms.PictureBox();
+            this.brickWallDown = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.player)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.money1)).BeginInit();
             this.statusStrip1.SuspendLayout();
@@ -79,6 +81,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.coins)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tankStand)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tank)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.brickWallUp)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.brickWallDown)).BeginInit();
             this.SuspendLayout();
             // 
             // player
@@ -262,7 +266,7 @@
             this.platform.Image = global::BubbleTrouble.Properties.Resources.platform;
             this.platform.Location = new System.Drawing.Point(0, 161);
             this.platform.Name = "platform";
-            this.platform.Size = new System.Drawing.Size(300, 36);
+            this.platform.Size = new System.Drawing.Size(263, 36);
             this.platform.TabIndex = 10;
             this.platform.TabStop = false;
             // 
@@ -356,6 +360,24 @@
             this.tank.TabIndex = 22;
             this.tank.TabStop = false;
             // 
+            // brickWallUp
+            // 
+            this.brickWallUp.Image = global::BubbleTrouble.Properties.Resources.brick_wall;
+            this.brickWallUp.Location = new System.Drawing.Point(0, 24);
+            this.brickWallUp.Name = "brickWallUp";
+            this.brickWallUp.Size = new System.Drawing.Size(819, 37);
+            this.brickWallUp.TabIndex = 23;
+            this.brickWallUp.TabStop = false;
+            // 
+            // brickWallDown
+            // 
+            this.brickWallDown.Image = global::BubbleTrouble.Properties.Resources.brick_wall;
+            this.brickWallDown.Location = new System.Drawing.Point(0, 399);
+            this.brickWallDown.Name = "brickWallDown";
+            this.brickWallDown.Size = new System.Drawing.Size(819, 37);
+            this.brickWallDown.TabIndex = 24;
+            this.brickWallDown.TabStop = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -363,6 +385,8 @@
             this.BackgroundImage = global::BubbleTrouble.Properties.Resources.military_base;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(819, 467);
+            this.Controls.Add(this.brickWallDown);
+            this.Controls.Add(this.brickWallUp);
             this.Controls.Add(this.tank);
             this.Controls.Add(this.tankStand);
             this.Controls.Add(this.barrier2_1);
@@ -404,6 +428,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.coins)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tankStand)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tank)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.brickWallUp)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.brickWallDown)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -444,5 +470,7 @@
         private System.Windows.Forms.ToolStripMenuItem muteToolStripMenuItem;
         private System.Windows.Forms.PictureBox tankStand;
         private System.Windows.Forms.PictureBox tank;
+        private System.Windows.Forms.PictureBox brickWallUp;
+        private System.Windows.Forms.PictureBox brickWallDown;
     }
 }
