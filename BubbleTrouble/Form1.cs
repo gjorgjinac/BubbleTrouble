@@ -16,7 +16,7 @@ namespace BubbleTrouble
     public partial class Form1 : Form
     {
         Dictionary<String, Minion> minions;
-
+        List<PictureBox> lives;
         Keys left = Keys.Left, right = Keys.Right, up = Keys.Up, down = Keys.Down, shoot = Keys.Space;
         String FileName;
         Game game;
@@ -42,7 +42,7 @@ namespace BubbleTrouble
 
             InitializeComponent();
             playground = new Rectangle(10, 10, Width - 40, 380);
-        
+            lives = new List<PictureBox>() { life1, life2, life3, life4, life5, life6, life7, life8, life9, life10 };
             minions = new Dictionary<string, Minion>();
             minions.Add("John", new Minion("John", Properties.Resources.soldier, Properties.Resources.soldier_screaming, Properties.Resources.soldier_dead,Properties.Resources.soldier_with_shield, Properties.Resources.soldier_glow, Properties.Resources.soldier_selected, new List<Image>() { Properties.Resources.military_base }));
             minions.Add("Mary", new Minion("Mary", Properties.Resources.soldier_female, Properties.Resources.soldier_female_screaming, Properties.Resources.soldier_female_dead, Properties.Resources.soldier_female_shield, Properties.Resources.soldier_female_glow, Properties.Resources.soldier_female_selected, new List<Image>() { Properties.Resources.military_base }));
@@ -164,9 +164,9 @@ namespace BubbleTrouble
             player.Image = minions[selectedPlayer].now;
             activeGoodie = null;
             timer1.Start();
-
+            pauseToolStripMenuItem1.Text = "Pause";
             progressBarTime.Value = progressBarTime.Maximum;
-            progressBarLives.Value = livesLeft;
+           // progressBarLives.Value = livesLeft;
 
 
             goodieUnique = true;
@@ -188,9 +188,17 @@ namespace BubbleTrouble
                 {
                     newGame();
                 }
+                else
+                {
+                    this.Close();
+                }
             }
             player.Location = new Point(100, Height - 175);
-
+            for (int i = 0; i < 10; i++)
+            {
+                if (i < livesLeft) lives.ElementAt(i).Visible = true;
+                else lives.ElementAt(i).Visible = false;
+            }
 
 
 
@@ -240,7 +248,10 @@ namespace BubbleTrouble
             sad_violin.Stop();
 
 
-            progressBarLives.Value = game.livesLeft;
+         //   progressBarLives.Value = game.livesLeft;
+       
+
+
             lifeLost();
 
         }
@@ -478,7 +489,10 @@ namespace BubbleTrouble
                 }
                 else if (activeGoodie == pizza)
                 {
+
+                    lives.ElementAt(livesLeft).Visible = true;
                     livesLeft++;
+
                 }
                 else if (activeGoodie == time)
                 {
@@ -681,7 +695,7 @@ namespace BubbleTrouble
         private void statusStrip1_Paint(object sender, PaintEventArgs e)
         {
            
-            progressBarLives.Value = livesLeft;
+          //  progressBarLives.Value = livesLeft;
             labelPoints.Text = String.Format("Points: {0} ", game.points);
             labelTime.Text = String.Format("Time left: {0}s", progressBarTime.Value);
             labelLives.Text = String.Format("Lives left: {0}", livesLeft);

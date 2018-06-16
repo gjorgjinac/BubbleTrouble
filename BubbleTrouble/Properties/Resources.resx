@@ -118,32 +118,59 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="shield" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\img\shield.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="loki" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\loki.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="soldier_with_shield" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\img\soldier with shield.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="arrow_glow" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\arrow glow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="ambulance_screaming" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\img\ambulance screaming.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="minion_shield" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\img\minion shield.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="minion_dead" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\minion dead.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="barrier2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\img\barrier2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="barrier1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\barrier1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="ambulance" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\img\ambulance.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="diana_screaming" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\diana screaming.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Tank1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\Tank.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="flash_shield" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\flash shield.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="ambulance_with_shield" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\img\ambulance with shield.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="soldier" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\img\soldier.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="minion_shield" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\minion shield.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="barrier1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\img\barrier1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="shield" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\shield.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="stark_background" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\stark background.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ladder" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\ladder.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="thor_shield" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\thor shield.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="thor_dead" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\thor dead.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="loki_glow" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\loki glow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="blackwidow_dead" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\blackwidow dead.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="soldier_selected" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\soldier selected.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="money" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\img\money.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -151,230 +178,224 @@
   <data name="bg_music" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\img\bg music.mp3;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="Tank" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\img\Tank.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="soldier_screaming" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\img\soldier screaming.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="grenade" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\img\grenade.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="platform" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\img\platform.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="spongebob_bgmusc" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\spongebob bgmusc.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="minion" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\img\minion.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="time" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\img\time.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="pizza" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\img\pizza.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="bomb" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\img\bomb.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="gradient1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\img\gradient1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="ambulance_dead" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\img\ambulance dead.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="grenade1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\img\grenade1.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="brick_wall" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\img\brick wall.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="gradient" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\img\gradient.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Tank1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\img\Tank.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="ladder" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\img\ladder.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="minion_screaming" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\img\minion screaming.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="military base" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\img\military base.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="bullet" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\bullet.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="coins" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\img\coins.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="minion_dead" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\img\minion dead.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="sad_violin" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\sad violin.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="hospital_scene" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\img\hospital scene.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="soldier_dead" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\img\soldier dead.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="soldier_female" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\img\soldier female.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="soldier_female_dead" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\img\soldier female dead.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="soldier_female_screaming" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\img\soldier female screaming.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="soldier_female_shield" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\img\soldier female shield.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="ancient_background" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\img\ancient-background.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="arrow" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\img\arrow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="arrow_background" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\img\arrow background.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="arrow_dead" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\img\arrow dead.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="arrow_glow" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\img\arrow glow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="arrow_screaming" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\img\arrow screaming.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="arrow_selected" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\img\arrow selected.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="arrow_shield" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\img\arrow shield.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="bat1_background" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\img\bat1 background.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="batman" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\img\batman.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="batman_dead" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\img\batman dead.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="batman_glow" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\img\batman glow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="batman_screaming" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\img\batman screaming.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="batman_selected" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\img\batman selected.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Tank" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\Tank.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="batman_shield" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\img\batman shield.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="arrow" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\arrow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="bat_background" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\img\bat background.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="blackwidow" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\img\blackwidow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="blackwidow_dead" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\img\blackwidow dead.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="blackwidow_glow" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\img\blackwidow glow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="blackwidow_screaming" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\img\blackwidow screaming.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="blackwidow_selected" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\img\blackwidow selected.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="blackwidow_shield" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\img\blackwidow shield.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="canary" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\img\canary.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="canary_dead" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\img\canary dead.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="canary_glow" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\img\canary glow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="canary_screaming" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\img\canary screaming.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="canary_selected" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\img\canary selected.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="canary_shield" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\img\canary shield.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="cave_background" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\img\cave background.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="cave_background1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\img\cave-background.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="darkyard_background" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\img\darkyard-background.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="diana" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\img\diana.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="diana_dead" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\img\diana dead.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="diana_glow" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\img\diana glow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="diana_screaming" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\img\diana screaming.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="diana_selected" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\img\diana selected.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="diana_shield" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\img\diana shield.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="dungeon_background" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\img\dungeon-background.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="flash" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\img\flash.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="flash_dead" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\img\flash dead.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="flash_glow" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\img\flash glow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="flash_screaming" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\img\flash screaming.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="flash_selected" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\img\flash selected.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="flash_shield" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\img\flash shield.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="scarlet" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\scarlet.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="harley" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\img\harley.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="harley_dead" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\img\harley dead.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="loki_shield" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\loki shield.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="superman_glow" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\superman glow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="blackwidow_glow" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\blackwidow glow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="gradient" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\gradient.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="grenade" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\grenade.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="stark" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\stark.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="grenade1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\grenade1.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="canary_dead" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\canary dead.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="blackwidow_screaming" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\blackwidow screaming.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="soldier_female_selected" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\soldier female selected.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="diana_dead" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\diana dead.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="blackwidow" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\blackwidow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="canary_screaming" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\canary screaming.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="soldier_female_glow" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\soldier female glow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="hospital_scene" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\hospital scene.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="bullet" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bullet.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="soldier_female_dead" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\soldier female dead.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="bat1_background" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\bat1 background.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="stark_selected" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\stark selected.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="thor_glow" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\thor glow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="canary_shield" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\canary shield.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ambulance" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\ambulance.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="waterfal_backgound" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\waterfal-backgound.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="thor_screaming" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\thor screaming.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="stark_shield" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\stark shield.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="harley_glow" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\img\harley glow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="soldier_with_shield" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\soldier with shield.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="soldier_glow" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\soldier glow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="diana_selected" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\diana selected.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ambulance_dead" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\ambulance dead.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="superman_selected" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\superman selected.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ancient_background" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\ancient-background.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="soldier_dead" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\soldier dead.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="sad_violin" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\sad violin.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="flash_glow" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\flash glow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="stark_glow" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\stark glow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="thor_selected" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\thor selected.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="coins" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\coins.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="blackwidow_selected" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\blackwidow selected.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="flash_screaming" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\flash screaming.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="scarlet_glow" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\scarlet glow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="arrow_dead" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\arrow dead.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="gradient1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\gradient1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="harley_dead" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\harley dead.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="diana_shield" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\diana shield.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cave_background" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\cave background.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="yard_background" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\yard-background.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="stark_dead" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\stark dead.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="soldier_female" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\soldier female.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="dungeon_background" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\dungeon-background.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="batman_selected" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\batman selected.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="stark_screaming" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\stark screaming.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="diana_glow" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\diana glow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="batman_dead" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\batman dead.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="arrow_background" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\arrow background.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="military base" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\military base.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="diana" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\diana.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="barrier2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\barrier2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="thor" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\thor.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="batman" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\batman.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="flash" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\flash.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="loki_selected" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\loki selected.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="brick_wall" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\brick wall.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="loki_dead" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\loki dead.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cave_background1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\cave-background.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="scarlet_dead" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\scarlet dead.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="soldier_female1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\soldier female.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="harley_screaming" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\img\harley screaming.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -382,115 +403,97 @@
   <data name="harley_selected" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\img\harley selected.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="harley_shield" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\img\harley shield.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="loki" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\img\loki.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="loki_dead" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\img\loki dead.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="loki_glow" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\img\loki glow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="loki_screaming" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\img\loki screaming.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="loki_selected" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\img\loki selected.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="loki_shield" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\img\loki shield.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="nightclub_background" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\img\nightclub-background.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="old_town_background" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\img\old-town-background.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="scarlet" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\img\scarlet.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="scarlet_dead" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\img\scarlet dead.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="scarlet_glow" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\img\scarlet glow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="scarlet_screaming" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\img\scarlet screaming.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="scarlet_selected" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\img\scarlet selected.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="bat_background" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\bat background.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="soldier_female_shield" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\soldier female shield.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="harley_shield" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\harley shield.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="blackwidow_shield" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\blackwidow shield.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pizza" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\pizza.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="soldier" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\soldier.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="flash_selected" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\flash selected.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="minion_screaming" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\minion screaming.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="darkyard_background" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\darkyard-background.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="scarlet_shield" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\img\scarlet shield.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="soldier_female1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\img\soldier female.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="canary_selected" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\canary selected.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="soldier_female_glow" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\img\soldier female glow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="soldier_female_screaming" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\soldier female screaming.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="soldier_female_selected" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\img\soldier female selected.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="flash_dead" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\flash dead.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="soldier_glow" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\img\soldier glow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="bomb" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\bomb.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="soldier_selected" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\img\soldier selected.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="time" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\time.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="stark" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\img\stark.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="canary_glow" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\canary glow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="stark_background" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\img\stark background.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="batman_shield" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\batman shield.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="stark_dead" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\img\stark dead.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="canary" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\canary.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="stark_glow" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\img\stark glow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="old_town_background" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\old-town-background.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="stark_screaming" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\img\stark screaming.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="arrow_selected" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\arrow selected.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="stark_selected" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\img\stark selected.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="platform" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\platform.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="stark_shield" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\img\stark shield.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="nightclub_background" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\nightclub-background.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="superman_glow" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\img\superman glow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="batman_glow" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\batman glow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="superman_selected" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\img\superman selected.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="soldier_screaming" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\soldier screaming.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="thor" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\img\thor.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="scarlet_screaming" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\scarlet screaming.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="thor_dead" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\img\thor dead.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="spongebob_bgmusc" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\spongebob bgmusc.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="thor_glow" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\img\thor glow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="minion" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\minion.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="thor_screaming" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\img\thor screaming.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="arrow_screaming" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\arrow screaming.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="thor_selected" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\img\thor selected.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="thor_shield" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\img\thor shield.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="waterfal_backgound" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\img\waterfal-backgound.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="yard_background" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\img\yard-background.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="life" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\life.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

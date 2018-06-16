@@ -32,7 +32,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.labelLives = new System.Windows.Forms.ToolStripStatusLabel();
-            this.progressBarLives = new System.Windows.Forms.ToolStripProgressBar();
             this.labelTime = new System.Windows.Forms.ToolStripStatusLabel();
             this.progressBarTime = new System.Windows.Forms.ToolStripProgressBar();
             this.labelPoints = new System.Windows.Forms.ToolStripStatusLabel();
@@ -52,6 +51,7 @@
             this.pauseToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.muteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.life1 = new System.Windows.Forms.PictureBox();
             this.brickWallDown = new System.Windows.Forms.PictureBox();
             this.brickWallUp = new System.Windows.Forms.PictureBox();
             this.tank = new System.Windows.Forms.PictureBox();
@@ -69,8 +69,18 @@
             this.coins = new System.Windows.Forms.PictureBox();
             this.pizza = new System.Windows.Forms.PictureBox();
             this.playGroundBox = new System.Windows.Forms.PictureBox();
+            this.life2 = new System.Windows.Forms.PictureBox();
+            this.life4 = new System.Windows.Forms.PictureBox();
+            this.life3 = new System.Windows.Forms.PictureBox();
+            this.life6 = new System.Windows.Forms.PictureBox();
+            this.life5 = new System.Windows.Forms.PictureBox();
+            this.life8 = new System.Windows.Forms.PictureBox();
+            this.life7 = new System.Windows.Forms.PictureBox();
+            this.life10 = new System.Windows.Forms.PictureBox();
+            this.life9 = new System.Windows.Forms.PictureBox();
             this.statusStrip1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.life1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.brickWallDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.brickWallUp)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tank)).BeginInit();
@@ -88,17 +98,25 @@
             ((System.ComponentModel.ISupportInitialize)(this.coins)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pizza)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.playGroundBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.life2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.life4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.life3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.life6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.life5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.life8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.life7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.life10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.life9)).BeginInit();
             this.SuspendLayout();
             // 
             // statusStrip1
             // 
             this.statusStrip1.AutoSize = false;
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.labelLives,
-            this.progressBarLives,
             this.labelTime,
             this.progressBarTime,
-            this.labelPoints});
+            this.labelPoints,
+            this.labelLives});
             this.statusStrip1.Location = new System.Drawing.Point(0, 431);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.Size = new System.Drawing.Size(819, 36);
@@ -112,12 +130,6 @@
             this.labelLives.Size = new System.Drawing.Size(65, 31);
             this.labelLives.Text = "Lives left: 5";
             // 
-            // progressBarLives
-            // 
-            this.progressBarLives.Maximum = 10;
-            this.progressBarLives.Name = "progressBarLives";
-            this.progressBarLives.Size = new System.Drawing.Size(100, 30);
-            // 
             // labelTime
             // 
             this.labelTime.Name = "labelTime";
@@ -128,7 +140,7 @@
             // 
             this.progressBarTime.Maximum = 30;
             this.progressBarTime.Name = "progressBarTime";
-            this.progressBarTime.Size = new System.Drawing.Size(300, 30);
+            this.progressBarTime.Size = new System.Drawing.Size(200, 30);
             // 
             // labelPoints
             // 
@@ -258,6 +270,15 @@
             // timer1
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // life1
+            // 
+            this.life1.Image = global::BubbleTrouble.Properties.Resources.life;
+            this.life1.Location = new System.Drawing.Point(459, 431);
+            this.life1.Name = "life1";
+            this.life1.Size = new System.Drawing.Size(32, 32);
+            this.life1.TabIndex = 26;
+            this.life1.TabStop = false;
             // 
             // brickWallDown
             // 
@@ -421,12 +442,108 @@
             this.playGroundBox.TabStop = false;
             this.playGroundBox.Paint += new System.Windows.Forms.PaintEventHandler(this.pictureBox1_Paint);
             // 
+            // life2
+            // 
+            this.life2.Image = global::BubbleTrouble.Properties.Resources.life;
+            this.life2.Location = new System.Drawing.Point(493, 431);
+            this.life2.Name = "life2";
+            this.life2.Size = new System.Drawing.Size(32, 32);
+            this.life2.TabIndex = 27;
+            this.life2.TabStop = false;
+            // 
+            // life4
+            // 
+            this.life4.Image = global::BubbleTrouble.Properties.Resources.life;
+            this.life4.Location = new System.Drawing.Point(561, 431);
+            this.life4.Name = "life4";
+            this.life4.Size = new System.Drawing.Size(32, 32);
+            this.life4.TabIndex = 29;
+            this.life4.TabStop = false;
+            // 
+            // life3
+            // 
+            this.life3.Image = global::BubbleTrouble.Properties.Resources.life;
+            this.life3.Location = new System.Drawing.Point(527, 431);
+            this.life3.Name = "life3";
+            this.life3.Size = new System.Drawing.Size(32, 32);
+            this.life3.TabIndex = 28;
+            this.life3.TabStop = false;
+            // 
+            // life6
+            // 
+            this.life6.Image = global::BubbleTrouble.Properties.Resources.life;
+            this.life6.Location = new System.Drawing.Point(629, 431);
+            this.life6.Name = "life6";
+            this.life6.Size = new System.Drawing.Size(32, 32);
+            this.life6.TabIndex = 31;
+            this.life6.TabStop = false;
+            this.life6.Visible = false;
+            // 
+            // life5
+            // 
+            this.life5.Image = global::BubbleTrouble.Properties.Resources.life;
+            this.life5.Location = new System.Drawing.Point(595, 431);
+            this.life5.Name = "life5";
+            this.life5.Size = new System.Drawing.Size(32, 32);
+            this.life5.TabIndex = 30;
+            this.life5.TabStop = false;
+            // 
+            // life8
+            // 
+            this.life8.Image = global::BubbleTrouble.Properties.Resources.life;
+            this.life8.Location = new System.Drawing.Point(696, 431);
+            this.life8.Name = "life8";
+            this.life8.Size = new System.Drawing.Size(32, 32);
+            this.life8.TabIndex = 33;
+            this.life8.TabStop = false;
+            this.life8.Visible = false;
+            // 
+            // life7
+            // 
+            this.life7.Image = global::BubbleTrouble.Properties.Resources.life;
+            this.life7.Location = new System.Drawing.Point(662, 431);
+            this.life7.Name = "life7";
+            this.life7.Size = new System.Drawing.Size(32, 32);
+            this.life7.TabIndex = 32;
+            this.life7.TabStop = false;
+            this.life7.Visible = false;
+            // 
+            // life10
+            // 
+            this.life10.Image = global::BubbleTrouble.Properties.Resources.life;
+            this.life10.Location = new System.Drawing.Point(763, 431);
+            this.life10.Name = "life10";
+            this.life10.Size = new System.Drawing.Size(32, 32);
+            this.life10.TabIndex = 35;
+            this.life10.TabStop = false;
+            this.life10.Visible = false;
+            // 
+            // life9
+            // 
+            this.life9.Image = global::BubbleTrouble.Properties.Resources.life;
+            this.life9.Location = new System.Drawing.Point(729, 431);
+            this.life9.Name = "life9";
+            this.life9.Size = new System.Drawing.Size(32, 32);
+            this.life9.TabIndex = 34;
+            this.life9.TabStop = false;
+            this.life9.Visible = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(819, 467);
+            this.Controls.Add(this.life10);
+            this.Controls.Add(this.life9);
+            this.Controls.Add(this.life8);
+            this.Controls.Add(this.life7);
+            this.Controls.Add(this.life6);
+            this.Controls.Add(this.life5);
+            this.Controls.Add(this.life4);
+            this.Controls.Add(this.life3);
+            this.Controls.Add(this.life2);
+            this.Controls.Add(this.life1);
             this.Controls.Add(this.brickWallDown);
             this.Controls.Add(this.brickWallUp);
             this.Controls.Add(this.tank);
@@ -457,6 +574,7 @@
             this.statusStrip1.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.life1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.brickWallDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.brickWallUp)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tank)).EndInit();
@@ -474,6 +592,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.coins)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pizza)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.playGroundBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.life2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.life4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.life3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.life6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.life5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.life8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.life7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.life10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.life9)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -484,7 +611,6 @@
         private System.Windows.Forms.PictureBox player;
         private System.Windows.Forms.PictureBox money1;
         private System.Windows.Forms.StatusStrip statusStrip1;
-        private System.Windows.Forms.ToolStripProgressBar progressBarLives;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripProgressBar progressBarTime;
         private System.Windows.Forms.Timer timer1;
@@ -520,5 +646,15 @@
         private System.Windows.Forms.ToolStripMenuItem level2ToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem level3ToolStripMenuItem;
         private System.Windows.Forms.PictureBox playGroundBox;
+        private System.Windows.Forms.PictureBox life1;
+        private System.Windows.Forms.PictureBox life2;
+        private System.Windows.Forms.PictureBox life4;
+        private System.Windows.Forms.PictureBox life3;
+        private System.Windows.Forms.PictureBox life6;
+        private System.Windows.Forms.PictureBox life5;
+        private System.Windows.Forms.PictureBox life8;
+        private System.Windows.Forms.PictureBox life7;
+        private System.Windows.Forms.PictureBox life10;
+        private System.Windows.Forms.PictureBox life9;
     }
 }
