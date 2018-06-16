@@ -43,8 +43,8 @@ namespace BubbleTrouble
             InitializeComponent();
             playground = new Rectangle(10, 10, Width - 40, 380);
             minions = new Dictionary<string, Minion>();
-            minions.Add("Male solider", new Minion("Male soldier", Properties.Resources.soldier, Properties.Resources.soldier_screaming, Properties.Resources.soldier_dead,Properties.Resources.soldier_with_shield, Properties.Resources.soldier_glow, Properties.Resources.soldier_selected, new List<Image>() { Properties.Resources.military_base }));
-            minions.Add("Female solider", new Minion("Female soldier", Properties.Resources.soldier_female, Properties.Resources.soldier_female_screaming, Properties.Resources.soldier_female_dead, Properties.Resources.soldier_female_shield, Properties.Resources.soldier_female_glow, Properties.Resources.soldier_female_selected, new List<Image>() { Properties.Resources.military_base }));
+            minions.Add("John", new Minion("John", Properties.Resources.soldier, Properties.Resources.soldier_screaming, Properties.Resources.soldier_dead,Properties.Resources.soldier_with_shield, Properties.Resources.soldier_glow, Properties.Resources.soldier_selected, new List<Image>() { Properties.Resources.military_base }));
+            minions.Add("Mary", new Minion("Mary", Properties.Resources.soldier_female, Properties.Resources.soldier_female_screaming, Properties.Resources.soldier_female_dead, Properties.Resources.soldier_female_shield, Properties.Resources.soldier_female_glow, Properties.Resources.soldier_female_selected, new List<Image>() { Properties.Resources.military_base }));
             minions.Add("Oliver", new Minion("Oliver", Properties.Resources.arrow, Properties.Resources.arrow_screaming, Properties.Resources.arrow_dead, Properties.Resources.arrow_shield, Properties.Resources.arrow_glow, Properties.Resources.arrow_selected, new List<Image>() { Properties.Resources.military_base }));
             minions.Add("Dinah", new Minion("Dinah", Properties.Resources.canary, Properties.Resources.canary_screaming, Properties.Resources.canary_dead, Properties.Resources.canary_shield, Properties.Resources.canary_glow, Properties.Resources.canary_selected, new List<Image>() { Properties.Resources.military_base }));
             minions.Add("Thor", new Minion("Thor", Properties.Resources.thor, Properties.Resources.thor_screaming, Properties.Resources.thor_dead, Properties.Resources.thor_shield, Properties.Resources.thor_glow, Properties.Resources.thor_selected, new List<Image>() { Properties.Resources.military_base }));
@@ -207,7 +207,7 @@ namespace BubbleTrouble
                 form.AddPlayer(game.points);
                 form.ShowDialog();
             }
-            if (level == 1) level++;
+            if (level >=2) level++;
             newGame();
         }
 
@@ -216,7 +216,7 @@ namespace BubbleTrouble
             if (musicOn) sad_violin.Play();
 
             timer1.Stop();
-            player.Image = minions[selectedPlayer].normal;
+            player.Image = minions[selectedPlayer].dead;
             livesLeft--;
             String msg = "";
 
@@ -521,6 +521,9 @@ namespace BubbleTrouble
                game.obstacles.Move(Width, Height, 0, brickWallUp.Location.Y+brickWallUp.Height);
                 game.MoveBombs(Width, brickWallUp.Location.Y + brickWallUp.Height);
 
+                if (brickWallUp.Location.Y + brickWallUp.Height >= player.Location.Y)
+                    endGame();
+
             }
             //  game.MoveBombs(platform.Width, platform.Location.Y);
             game.CheckHits();
@@ -739,7 +742,7 @@ namespace BubbleTrouble
         private void controlsToolStripMenuItem_Click(object sender, EventArgs e)
         {
             timer1.Stop();
-            Controls form = new Controls(left, right, up, down, shoot, selectedPlayer);
+            Controls form = new Controls(left, right, up, down, shoot, selectedPlayer, minions);
             if (form.ShowDialog() == DialogResult.OK)
 
             {
@@ -748,9 +751,11 @@ namespace BubbleTrouble
                 up = form.keys.ElementAt(2);
                 down = form.keys.ElementAt(3);
                 shoot = form.keys.ElementAt(4);
-
+                
+                selectedPlayer = form.selectedPlayer;
+                player.Image = minions[selectedPlayer].normal;
             }
-
+            
             timer1.Start();
 
         }

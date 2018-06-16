@@ -14,11 +14,11 @@ namespace BubbleTrouble
     {
        public List<Keys> keys;
         public List<PictureBox> pictures;
-      String selectedPlayer;
-        PictureBox playerPicture;
+   public   String selectedPlayer;
+       public PictureBox playerPicture;
 
         Dictionary<String, Minion> minions;
-        public Controls(Keys l, Keys r, Keys u, Keys d, Keys s, String player)
+        public Controls(Keys l, Keys r, Keys u, Keys d, Keys s, String player, Dictionary<String,Minion> mins)
         {
 
         
@@ -29,19 +29,7 @@ namespace BubbleTrouble
             textBoxUp.Text = u.ToString();
             textBoxDown.Text = d.ToString();
             textBoxShoot.Text = s.ToString();
-            minions = new Dictionary<string, Minion>();
-            minions.Add("John", new Minion("John", Properties.Resources.soldier, Properties.Resources.soldier_screaming, Properties.Resources.soldier_dead, Properties.Resources.soldier_with_shield, Properties.Resources.soldier_glow, Properties.Resources.soldier_selected, new List<Image>() { Properties.Resources.military_base }));
-            minions.Add("Mary", new Minion("Mary", Properties.Resources.soldier_female, Properties.Resources.soldier_female_screaming, Properties.Resources.soldier_female_dead, Properties.Resources.soldier_female_shield, Properties.Resources.soldier_female_glow, Properties.Resources.soldier_female_selected, new List<Image>() { Properties.Resources.military_base }));
-            minions.Add("Oliver", new Minion("Oliver", Properties.Resources.arrow, Properties.Resources.arrow_screaming, Properties.Resources.arrow_dead, Properties.Resources.arrow_shield, Properties.Resources.arrow_glow, Properties.Resources.arrow_selected, new List<Image>() { Properties.Resources.military_base }));
-            minions.Add("Dinah", new Minion("Dinah", Properties.Resources.canary, Properties.Resources.canary_screaming, Properties.Resources.canary_dead, Properties.Resources.canary_shield, Properties.Resources.canary_glow, Properties.Resources.canary_selected, new List<Image>() { Properties.Resources.military_base }));
-            minions.Add("Thor", new Minion("Thor", Properties.Resources.thor, Properties.Resources.thor_screaming, Properties.Resources.thor_dead, Properties.Resources.thor_shield, Properties.Resources.thor_glow, Properties.Resources.thor_selected, new List<Image>() { Properties.Resources.military_base }));
-            minions.Add("Natasha", new Minion("Natasha", Properties.Resources.blackwidow, Properties.Resources.blackwidow_screaming, Properties.Resources.blackwidow_dead, Properties.Resources.blackwidow_shield, Properties.Resources.blackwidow_glow, Properties.Resources.blackwidow_selected, new List<Image>() { Properties.Resources.military_base }));
-            minions.Add("Tony", new Minion("Tony", Properties.Resources.stark, Properties.Resources.stark_screaming, Properties.Resources.stark_dead, Properties.Resources.stark_shield, Properties.Resources.stark_glow, Properties.Resources.stark_selected, new List<Image>() { Properties.Resources.military_base }));
-            minions.Add("Wanda", new Minion("Wanda", Properties.Resources.scarlet, Properties.Resources.scarlet_screaming, Properties.Resources.scarlet_dead, Properties.Resources.scarlet_shield, Properties.Resources.scarlet_glow, Properties.Resources.scarlet_selected, new List<Image>() { Properties.Resources.military_base }));
-            minions.Add("Bruce", new Minion("Bruce", Properties.Resources.batman, Properties.Resources.batman_screaming, Properties.Resources.batman_dead, Properties.Resources.batman_shield, Properties.Resources.batman_glow, Properties.Resources.batman_selected, new List<Image>() { Properties.Resources.military_base }));
-            minions.Add("Diana", new Minion("Diana", Properties.Resources.diana, Properties.Resources.diana_screaming, Properties.Resources.diana_dead, Properties.Resources.diana_shield, Properties.Resources.diana_glow, Properties.Resources.diana_selected, new List<Image>() { Properties.Resources.military_base }));
-            minions.Add("Barry", new Minion("Barry", Properties.Resources.flash, Properties.Resources.flash_screaming, Properties.Resources.flash_dead, Properties.Resources.flash_shield, Properties.Resources.flash_glow, Properties.Resources.flash_selected, new List<Image>() { Properties.Resources.military_base }));
-            minions.Add("Harley", new Minion("Harley", Properties.Resources.harley, Properties.Resources.harley_screaming, Properties.Resources.harley_dead, Properties.Resources.harley_shield, Properties.Resources.harley_glow, Properties.Resources.harley_selected, new List<Image>() { Properties.Resources.military_base }));
+            minions = mins;
             pictures = new List<PictureBox>() { John, Mary, Oliver, Dinah, Thor, Natasha, Tony, Wanda, Bruce, Diana, Barry, Harley };
             selectedPlayer = player;
             playerPicture = new PictureBox();
@@ -49,8 +37,10 @@ namespace BubbleTrouble
             {
                 p.BackColor = Color.Transparent;
                 if (p.Name.Equals(selectedPlayer))
-                    playerPicture.Image = minions[selectedPlayer].selected;
-              //  p.MouseHover += new EventHandler(hover(p));
+                { playerPicture.Image = minions[selectedPlayer].selected;
+                    p.Image = minions[selectedPlayer].selected;
+                }
+          
 
             }
             

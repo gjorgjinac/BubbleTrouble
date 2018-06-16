@@ -399,7 +399,7 @@
             // brickWallDown
             // 
             this.brickWallDown.Image = global::BubbleTrouble.Properties.Resources.brick_wall;
-            this.brickWallDown.Location = new System.Drawing.Point(0, 399);
+            this.brickWallDown.Location = new System.Drawing.Point(0, 415);
             this.brickWallDown.Name = "brickWallDown";
             this.brickWallDown.Size = new System.Drawing.Size(819, 37);
             this.brickWallDown.TabIndex = 24;
