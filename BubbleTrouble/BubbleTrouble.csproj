@@ -239,6 +239,9 @@
     <None Include="img\bat1 background.jpg" />
     <None Include="img\darkyard-background.gif" />
     <None Include="img\life.png" />
+    <None Include="img\dragon.gif" />
+    <None Include="img\dragon1.gif" />
+    <None Include="img\fire spit.gif" />
     <Content Include="img\money.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

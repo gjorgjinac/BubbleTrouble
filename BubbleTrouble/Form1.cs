@@ -64,10 +64,11 @@ namespace BubbleTrouble
             level = 1;
             DoubleBuffered = true;
             goodies = new List<PictureBox>() { money1, pizza, coins, time, shield };
-          
+            dragon.BackColor = Color.Transparent;
             player.BackColor = Color.Transparent;
             ladder.BackColor = Color.Transparent;
             tank.BackColor = Color.Transparent;
+            fireSpit.BackColor = Color.Transparent;
             FormBorderStyle = FormBorderStyle.FixedSingle;
             StartPosition = FormStartPosition.CenterScreen;
             totalPoints = 0;
@@ -124,6 +125,8 @@ namespace BubbleTrouble
                 tankStand.Visible = true;
                 brickWallDown.Visible = false;
                 brickWallUp.Visible = false;
+                dragon.Visible = false;
+                fireSpit.Visible = false;
             }
             if (level == 2)
             {
@@ -137,6 +140,9 @@ namespace BubbleTrouble
                 tankStand.Visible = false;
                 brickWallDown.Visible = false;
                 brickWallUp.Visible = false;
+                dragon.Visible = false;
+
+                fireSpit.Visible = false;
             }
             if (level == 3)
             {
@@ -151,6 +157,8 @@ namespace BubbleTrouble
                 brickWallDown.Visible = true;
                 brickWallUp.Visible = true;
                 brickWallUp.Height = 50;
+                dragon.Visible = true;
+                fireSpit.Visible = true;
             }
 
 
@@ -187,6 +195,7 @@ namespace BubbleTrouble
                 if (MessageBox.Show("You have no more lives left. GAME OVER \n START NEW GAME?", "Game over", MessageBoxButtons.YesNo) == DialogResult.Yes)
                 {
                     newGame();
+                    totalPoints = 0;
                 }
                 else
                 {
@@ -217,7 +226,7 @@ namespace BubbleTrouble
             {
                 HighScores form = new HighScores();
 
-                form.AddPlayer(game.points);
+                form.AddPlayer(totalPoints);
                 form.ShowDialog();
             }
             if (level < 3) level++;
@@ -241,7 +250,7 @@ namespace BubbleTrouble
             {
                 HighScores form = new HighScores();
 
-                form.AddPlayer(game.points);
+                form.AddPlayer(totalPoints + game.points);
                 form.ShowDialog();
 
             }
