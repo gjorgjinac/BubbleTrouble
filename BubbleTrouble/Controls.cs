@@ -13,7 +13,7 @@ namespace BubbleTrouble
     public partial class Controls : Form
     {
        public List<Keys> keys;
-
+        public List<PictureBox> minions;
         
 
         public Controls(Keys l, Keys r, Keys u, Keys d, Keys s)
@@ -27,8 +27,13 @@ namespace BubbleTrouble
             textBoxUp.Text = u.ToString();
             textBoxDown.Text = d.ToString();
             textBoxShoot.Text = s.ToString();
+            minions = new List<PictureBox>() { soldierMale, soldierFemale, arrow,canary,thor,blackwidow,loki,stark,batman,diana,harley,flash };
 
-
+            foreach (PictureBox p in minions)
+            {
+                p.BackColor = Color.Transparent;
+              
+            }
 
         }
 

@@ -114,6 +114,14 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="img\stark.png" />
+    <None Include="img\stark shield.png" />
+    <None Include="img\stark screaming.png" />
+    <None Include="img\stark dead.png" />
+    <None Include="img\thor.png" />
+    <None Include="img\thor shield.png" />
+    <None Include="img\thor screaming.png" />
+    <None Include="img\thor dead.png" />
     <None Include="img\soldier female.png" />
     <None Include="img\soldier female shield.png" />
     <None Include="img\soldier female screaming.png" />
@@ -152,6 +160,38 @@
     <None Include="img\ambulance with shield.png" />
     <None Include="img\hospital scene.jpg" />
     <None Include="img\brick wall.jpg" />
+    <None Include="img\blackwidow dead.png" />
+    <None Include="img\blackwidow screaming.png" />
+    <None Include="img\blackwidow shield.png" />
+    <None Include="img\blackwidow.png" />
+    <None Include="img\loki dead.png" />
+    <None Include="img\loki screaming.png" />
+    <None Include="img\loki shield.png" />
+    <None Include="img\loki.png" />
+    <None Include="img\diana dead.png" />
+    <None Include="img\diana screaming.png" />
+    <None Include="img\diana shield.png" />
+    <None Include="img\diana.png" />
+    <None Include="img\batman dead.png" />
+    <None Include="img\batman screaming.png" />
+    <None Include="img\batman shield.png" />
+    <None Include="img\batman.png" />
+    <None Include="img\harley dead.png" />
+    <None Include="img\harley screaming.png" />
+    <None Include="img\harley shield.png" />
+    <None Include="img\harley.png" />
+    <None Include="img\arrow dead.png" />
+    <None Include="img\arrow screaming.png" />
+    <None Include="img\arrow shield.png" />
+    <None Include="img\arrow.png" />
+    <None Include="img\canary dead.png" />
+    <None Include="img\canary screaming.png" />
+    <None Include="img\canary shield.png" />
+    <None Include="img\canary.png" />
+    <None Include="img\flash dead.png" />
+    <None Include="img\flash screaming.png" />
+    <None Include="img\flash shield.png" />
+    <None Include="img\flash.png" />
     <Content Include="img\money.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
