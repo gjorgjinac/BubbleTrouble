@@ -234,7 +234,7 @@
             // Natasha
             // 
             this.Natasha.Image = global::BubbleTrouble.Properties.Resources.blackwidow;
-            this.Natasha.Location = new System.Drawing.Point(369, 163);
+            this.Natasha.Location = new System.Drawing.Point(541, 163);
             this.Natasha.Name = "Natasha";
             this.Natasha.Size = new System.Drawing.Size(80, 80);
             this.Natasha.TabIndex = 19;
@@ -258,7 +258,7 @@
             // Wanda
             // 
             this.Wanda.Image = global::BubbleTrouble.Properties.Resources.scarlet;
-            this.Wanda.Location = new System.Drawing.Point(541, 163);
+            this.Wanda.Location = new System.Drawing.Point(369, 163);
             this.Wanda.Name = "Wanda";
             this.Wanda.Size = new System.Drawing.Size(80, 80);
             this.Wanda.TabIndex = 20;

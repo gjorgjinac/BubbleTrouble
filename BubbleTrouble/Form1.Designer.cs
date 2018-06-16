@@ -298,7 +298,7 @@
             // barrier2_1
             // 
             this.barrier2_1.Image = global::BubbleTrouble.Properties.Resources.barrier2;
-            this.barrier2_1.Location = new System.Drawing.Point(565, 290);
+            this.barrier2_1.Location = new System.Drawing.Point(565, 308);
             this.barrier2_1.Name = "barrier2_1";
             this.barrier2_1.Size = new System.Drawing.Size(38, 103);
             this.barrier2_1.TabIndex = 15;
@@ -307,7 +307,7 @@
             // barrier1_1
             // 
             this.barrier1_1.Image = global::BubbleTrouble.Properties.Resources.barrier2;
-            this.barrier1_1.Location = new System.Drawing.Point(269, 290);
+            this.barrier1_1.Location = new System.Drawing.Point(269, 308);
             this.barrier1_1.Name = "barrier1_1";
             this.barrier1_1.Size = new System.Drawing.Size(38, 103);
             this.barrier1_1.TabIndex = 14;
@@ -318,7 +318,7 @@
             this.barrier2.Image = global::BubbleTrouble.Properties.Resources.barrier1;
             this.barrier2.Location = new System.Drawing.Point(565, 24);
             this.barrier2.Name = "barrier2";
-            this.barrier2.Size = new System.Drawing.Size(38, 270);
+            this.barrier2.Size = new System.Drawing.Size(38, 288);
             this.barrier2.TabIndex = 13;
             this.barrier2.TabStop = false;
             // 
@@ -327,14 +327,14 @@
             this.barrier1.Image = global::BubbleTrouble.Properties.Resources.barrier1;
             this.barrier1.Location = new System.Drawing.Point(269, 24);
             this.barrier1.Name = "barrier1";
-            this.barrier1.Size = new System.Drawing.Size(38, 270);
+            this.barrier1.Size = new System.Drawing.Size(38, 288);
             this.barrier1.TabIndex = 11;
             this.barrier1.TabStop = false;
             // 
             // platform
             // 
             this.platform.Image = global::BubbleTrouble.Properties.Resources.platform;
-            this.platform.Location = new System.Drawing.Point(0, 161);
+            this.platform.Location = new System.Drawing.Point(-2, 161);
             this.platform.Name = "platform";
             this.platform.Size = new System.Drawing.Size(263, 36);
             this.platform.TabIndex = 10;

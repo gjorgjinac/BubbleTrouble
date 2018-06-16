@@ -30,7 +30,7 @@ namespace BubbleTrouble
             textBoxDown.Text = d.ToString();
             textBoxShoot.Text = s.ToString();
             minions = mins;
-            pictures = new List<PictureBox>() { John, Mary, Oliver, Dinah, Thor, Natasha, Tony, Wanda, Bruce, Diana, Barry, Harley };
+            pictures = new List<PictureBox>() { John, Mary, Oliver, Dinah, Thor,Wanda , Tony, Natasha, Bruce, Diana, Barry, Harley };
             selectedPlayer = player;
             playerPicture = new PictureBox();
             foreach (PictureBox p in pictures)
