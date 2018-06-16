@@ -43,32 +43,32 @@
             this.Cancel = new System.Windows.Forms.Button();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.buttonReset = new System.Windows.Forms.Button();
-            this.soldierMale = new System.Windows.Forms.PictureBox();
-            this.soldierFemale = new System.Windows.Forms.PictureBox();
-            this.thor = new System.Windows.Forms.PictureBox();
-            this.blackwidow = new System.Windows.Forms.PictureBox();
-            this.stark = new System.Windows.Forms.PictureBox();
-            this.loki = new System.Windows.Forms.PictureBox();
-            this.batman = new System.Windows.Forms.PictureBox();
-            this.diana = new System.Windows.Forms.PictureBox();
-            this.harley = new System.Windows.Forms.PictureBox();
-            this.flash = new System.Windows.Forms.PictureBox();
-            this.arrow = new System.Windows.Forms.PictureBox();
-            this.canary = new System.Windows.Forms.PictureBox();
+            this.John = new System.Windows.Forms.PictureBox();
+            this.Mary = new System.Windows.Forms.PictureBox();
+            this.Thor = new System.Windows.Forms.PictureBox();
+            this.Natasha = new System.Windows.Forms.PictureBox();
+            this.Tony = new System.Windows.Forms.PictureBox();
+            this.Wanda = new System.Windows.Forms.PictureBox();
+            this.Bruce = new System.Windows.Forms.PictureBox();
+            this.Diana = new System.Windows.Forms.PictureBox();
+            this.Harley = new System.Windows.Forms.PictureBox();
+            this.Barry = new System.Windows.Forms.PictureBox();
+            this.Oliver = new System.Windows.Forms.PictureBox();
+            this.Dinah = new System.Windows.Forms.PictureBox();
             this.label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.soldierMale)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.soldierFemale)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.thor)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.blackwidow)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.stark)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.loki)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.batman)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.diana)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.harley)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.flash)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.arrow)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.canary)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.John)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Mary)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Thor)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Natasha)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Tony)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Wanda)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Bruce)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Diana)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Harley)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Barry)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Oliver)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Dinah)).BeginInit();
             this.SuspendLayout();
             // 
             // textBoxLeft
@@ -195,113 +195,149 @@
             this.buttonReset.UseVisualStyleBackColor = true;
             this.buttonReset.Click += new System.EventHandler(this.buttonReset_Click);
             // 
-            // soldierMale
+            // John
             // 
-            this.soldierMale.Image = global::BubbleTrouble.Properties.Resources.soldier;
-            this.soldierMale.Location = new System.Drawing.Point(283, 77);
-            this.soldierMale.Name = "soldierMale";
-            this.soldierMale.Size = new System.Drawing.Size(80, 80);
-            this.soldierMale.TabIndex = 16;
-            this.soldierMale.TabStop = false;
+            this.John.Image = global::BubbleTrouble.Properties.Resources.soldier;
+            this.John.Location = new System.Drawing.Point(283, 77);
+            this.John.Name = "John";
+            this.John.Size = new System.Drawing.Size(80, 80);
+            this.John.TabIndex = 16;
+            this.John.TabStop = false;
+            this.John.MouseClick += new System.Windows.Forms.MouseEventHandler(this.John_MouseClick);
+            this.John.MouseEnter += new System.EventHandler(this.John_MouseEnter);
+            this.John.MouseLeave += new System.EventHandler(this.John_MouseLeave);
             // 
-            // soldierFemale
+            // Mary
             // 
-            this.soldierFemale.Image = global::BubbleTrouble.Properties.Resources.soldier_female;
-            this.soldierFemale.Location = new System.Drawing.Point(369, 77);
-            this.soldierFemale.Name = "soldierFemale";
-            this.soldierFemale.Size = new System.Drawing.Size(80, 80);
-            this.soldierFemale.TabIndex = 17;
-            this.soldierFemale.TabStop = false;
+            this.Mary.Image = global::BubbleTrouble.Properties.Resources.soldier_female;
+            this.Mary.Location = new System.Drawing.Point(369, 77);
+            this.Mary.Name = "Mary";
+            this.Mary.Size = new System.Drawing.Size(80, 80);
+            this.Mary.TabIndex = 17;
+            this.Mary.TabStop = false;
+            this.Mary.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Mary_MouseClick);
+            this.Mary.MouseEnter += new System.EventHandler(this.Mary_MouseEnter);
+            this.Mary.MouseLeave += new System.EventHandler(this.Mary_MouseLeave);
             // 
-            // thor
+            // Thor
             // 
-            this.thor.Image = global::BubbleTrouble.Properties.Resources.thor;
-            this.thor.Location = new System.Drawing.Point(283, 163);
-            this.thor.Name = "thor";
-            this.thor.Size = new System.Drawing.Size(80, 80);
-            this.thor.TabIndex = 18;
-            this.thor.TabStop = false;
+            this.Thor.Image = global::BubbleTrouble.Properties.Resources.thor;
+            this.Thor.Location = new System.Drawing.Point(283, 163);
+            this.Thor.Name = "Thor";
+            this.Thor.Size = new System.Drawing.Size(80, 80);
+            this.Thor.TabIndex = 18;
+            this.Thor.TabStop = false;
+            this.Thor.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Thor_MouseClick);
+            this.Thor.MouseEnter += new System.EventHandler(this.Thor_MouseEnter);
+            this.Thor.MouseLeave += new System.EventHandler(this.Thor_MouseLeave);
             // 
-            // blackwidow
+            // Natasha
             // 
-            this.blackwidow.Image = global::BubbleTrouble.Properties.Resources.blackwidow;
-            this.blackwidow.Location = new System.Drawing.Point(369, 163);
-            this.blackwidow.Name = "blackwidow";
-            this.blackwidow.Size = new System.Drawing.Size(80, 80);
-            this.blackwidow.TabIndex = 19;
-            this.blackwidow.TabStop = false;
+            this.Natasha.Image = global::BubbleTrouble.Properties.Resources.blackwidow;
+            this.Natasha.Location = new System.Drawing.Point(369, 163);
+            this.Natasha.Name = "Natasha";
+            this.Natasha.Size = new System.Drawing.Size(80, 80);
+            this.Natasha.TabIndex = 19;
+            this.Natasha.TabStop = false;
+            this.Natasha.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Natasha_MouseClick);
+            this.Natasha.MouseEnter += new System.EventHandler(this.Natasha_MouseEnter);
+            this.Natasha.MouseLeave += new System.EventHandler(this.Natasha_MouseLeave);
             // 
-            // stark
+            // Tony
             // 
-            this.stark.Image = global::BubbleTrouble.Properties.Resources.stark;
-            this.stark.Location = new System.Drawing.Point(541, 163);
-            this.stark.Name = "stark";
-            this.stark.Size = new System.Drawing.Size(80, 80);
-            this.stark.TabIndex = 21;
-            this.stark.TabStop = false;
+            this.Tony.Image = global::BubbleTrouble.Properties.Resources.stark;
+            this.Tony.Location = new System.Drawing.Point(455, 163);
+            this.Tony.Name = "Tony";
+            this.Tony.Size = new System.Drawing.Size(80, 80);
+            this.Tony.TabIndex = 21;
+            this.Tony.TabStop = false;
+            this.Tony.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Tony_MouseClick);
+            this.Tony.MouseEnter += new System.EventHandler(this.Tony_MouseEnter);
+            this.Tony.MouseLeave += new System.EventHandler(this.Tony_MouseLeave);
             // 
-            // loki
+            // Wanda
             // 
-            this.loki.Image = global::BubbleTrouble.Properties.Resources.loki;
-            this.loki.Location = new System.Drawing.Point(455, 163);
-            this.loki.Name = "loki";
-            this.loki.Size = new System.Drawing.Size(80, 80);
-            this.loki.TabIndex = 20;
-            this.loki.TabStop = false;
+            this.Wanda.Image = global::BubbleTrouble.Properties.Resources.scarlet;
+            this.Wanda.Location = new System.Drawing.Point(541, 163);
+            this.Wanda.Name = "Wanda";
+            this.Wanda.Size = new System.Drawing.Size(80, 80);
+            this.Wanda.TabIndex = 20;
+            this.Wanda.TabStop = false;
+            this.Wanda.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Wanda_MouseClick);
+            this.Wanda.MouseEnter += new System.EventHandler(this.Wanda_MouseEnter);
+            this.Wanda.MouseLeave += new System.EventHandler(this.Wanda_MouseLeave);
             // 
-            // batman
+            // Bruce
             // 
-            this.batman.Image = global::BubbleTrouble.Properties.Resources.batman;
-            this.batman.Location = new System.Drawing.Point(283, 249);
-            this.batman.Name = "batman";
-            this.batman.Size = new System.Drawing.Size(80, 80);
-            this.batman.TabIndex = 22;
-            this.batman.TabStop = false;
+            this.Bruce.Image = global::BubbleTrouble.Properties.Resources.batman;
+            this.Bruce.Location = new System.Drawing.Point(283, 249);
+            this.Bruce.Name = "Bruce";
+            this.Bruce.Size = new System.Drawing.Size(80, 80);
+            this.Bruce.TabIndex = 22;
+            this.Bruce.TabStop = false;
+            this.Bruce.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Bruce_MouseClick);
+            this.Bruce.MouseEnter += new System.EventHandler(this.Bruce_MouseEnter);
+            this.Bruce.MouseLeave += new System.EventHandler(this.Bruce_MouseLeave);
             // 
-            // diana
+            // Diana
             // 
-            this.diana.Image = global::BubbleTrouble.Properties.Resources.diana;
-            this.diana.Location = new System.Drawing.Point(369, 249);
-            this.diana.Name = "diana";
-            this.diana.Size = new System.Drawing.Size(80, 80);
-            this.diana.TabIndex = 23;
-            this.diana.TabStop = false;
+            this.Diana.Image = global::BubbleTrouble.Properties.Resources.diana;
+            this.Diana.Location = new System.Drawing.Point(369, 249);
+            this.Diana.Name = "Diana";
+            this.Diana.Size = new System.Drawing.Size(80, 80);
+            this.Diana.TabIndex = 23;
+            this.Diana.TabStop = false;
+            this.Diana.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Diana_MouseClick);
+            this.Diana.MouseEnter += new System.EventHandler(this.Diana_MouseEnter);
+            this.Diana.MouseLeave += new System.EventHandler(this.Diana_MouseLeave);
             // 
-            // harley
+            // Harley
             // 
-            this.harley.Image = global::BubbleTrouble.Properties.Resources.harley;
-            this.harley.Location = new System.Drawing.Point(455, 249);
-            this.harley.Name = "harley";
-            this.harley.Size = new System.Drawing.Size(80, 80);
-            this.harley.TabIndex = 24;
-            this.harley.TabStop = false;
+            this.Harley.Image = global::BubbleTrouble.Properties.Resources.harley;
+            this.Harley.Location = new System.Drawing.Point(541, 249);
+            this.Harley.Name = "Harley";
+            this.Harley.Size = new System.Drawing.Size(80, 80);
+            this.Harley.TabIndex = 24;
+            this.Harley.TabStop = false;
+            this.Harley.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Harley_MouseClick);
+            this.Harley.MouseEnter += new System.EventHandler(this.Harley_MouseEnter);
+            this.Harley.MouseLeave += new System.EventHandler(this.Harley_MouseLeave);
             // 
-            // flash
+            // Barry
             // 
-            this.flash.Image = global::BubbleTrouble.Properties.Resources.flash;
-            this.flash.Location = new System.Drawing.Point(541, 249);
-            this.flash.Name = "flash";
-            this.flash.Size = new System.Drawing.Size(80, 80);
-            this.flash.TabIndex = 25;
-            this.flash.TabStop = false;
+            this.Barry.Image = global::BubbleTrouble.Properties.Resources.flash;
+            this.Barry.Location = new System.Drawing.Point(455, 249);
+            this.Barry.Name = "Barry";
+            this.Barry.Size = new System.Drawing.Size(80, 80);
+            this.Barry.TabIndex = 25;
+            this.Barry.TabStop = false;
+            this.Barry.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Barry_MouseClick);
+            this.Barry.MouseEnter += new System.EventHandler(this.Barry_MouseEnter);
+            this.Barry.MouseLeave += new System.EventHandler(this.Barry_MouseLeave);
             // 
-            // arrow
+            // Oliver
             // 
-            this.arrow.Image = global::BubbleTrouble.Properties.Resources.arrow;
-            this.arrow.Location = new System.Drawing.Point(455, 77);
-            this.arrow.Name = "arrow";
-            this.arrow.Size = new System.Drawing.Size(80, 80);
-            this.arrow.TabIndex = 26;
-            this.arrow.TabStop = false;
+            this.Oliver.Image = global::BubbleTrouble.Properties.Resources.arrow;
+            this.Oliver.Location = new System.Drawing.Point(455, 77);
+            this.Oliver.Name = "Oliver";
+            this.Oliver.Size = new System.Drawing.Size(80, 80);
+            this.Oliver.TabIndex = 26;
+            this.Oliver.TabStop = false;
+            this.Oliver.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Oliver_MouseClick);
+            this.Oliver.MouseEnter += new System.EventHandler(this.Oliver_MouseEnter);
+            this.Oliver.MouseLeave += new System.EventHandler(this.Oliver_MouseLeave);
             // 
-            // canary
+            // Dinah
             // 
-            this.canary.Image = global::BubbleTrouble.Properties.Resources.canary;
-            this.canary.Location = new System.Drawing.Point(541, 77);
-            this.canary.Name = "canary";
-            this.canary.Size = new System.Drawing.Size(80, 80);
-            this.canary.TabIndex = 27;
-            this.canary.TabStop = false;
+            this.Dinah.Image = global::BubbleTrouble.Properties.Resources.canary;
+            this.Dinah.Location = new System.Drawing.Point(541, 77);
+            this.Dinah.Name = "Dinah";
+            this.Dinah.Size = new System.Drawing.Size(80, 80);
+            this.Dinah.TabIndex = 27;
+            this.Dinah.TabStop = false;
+            this.Dinah.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Dinah_MouseClick);
+            this.Dinah.MouseEnter += new System.EventHandler(this.Dinah_MouseEnter);
+            this.Dinah.MouseLeave += new System.EventHandler(this.Dinah_MouseLeave);
             // 
             // label6
             // 
@@ -317,20 +353,20 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::BubbleTrouble.Properties.Resources.gradient1;
-            this.ClientSize = new System.Drawing.Size(691, 408);
+            this.ClientSize = new System.Drawing.Size(800, 408);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.canary);
-            this.Controls.Add(this.arrow);
-            this.Controls.Add(this.flash);
-            this.Controls.Add(this.harley);
-            this.Controls.Add(this.diana);
-            this.Controls.Add(this.batman);
-            this.Controls.Add(this.stark);
-            this.Controls.Add(this.loki);
-            this.Controls.Add(this.blackwidow);
-            this.Controls.Add(this.thor);
-            this.Controls.Add(this.soldierFemale);
-            this.Controls.Add(this.soldierMale);
+            this.Controls.Add(this.Dinah);
+            this.Controls.Add(this.Oliver);
+            this.Controls.Add(this.Barry);
+            this.Controls.Add(this.Harley);
+            this.Controls.Add(this.Diana);
+            this.Controls.Add(this.Bruce);
+            this.Controls.Add(this.Tony);
+            this.Controls.Add(this.Wanda);
+            this.Controls.Add(this.Natasha);
+            this.Controls.Add(this.Thor);
+            this.Controls.Add(this.Mary);
+            this.Controls.Add(this.John);
             this.Controls.Add(this.buttonReset);
             this.Controls.Add(this.Cancel);
             this.Controls.Add(this.Save);
@@ -347,18 +383,18 @@
             this.Name = "Controls";
             this.Text = "Controls";
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.soldierMale)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.soldierFemale)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.thor)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.blackwidow)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.stark)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.loki)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.batman)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.diana)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.harley)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.flash)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.arrow)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.canary)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.John)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Mary)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Thor)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Natasha)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Tony)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Wanda)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Bruce)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Diana)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Harley)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Barry)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Oliver)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Dinah)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -380,18 +416,18 @@
         private System.Windows.Forms.Button Cancel;
         private System.Windows.Forms.ErrorProvider errorProvider1;
         private System.Windows.Forms.Button buttonReset;
-        private System.Windows.Forms.PictureBox soldierFemale;
-        private System.Windows.Forms.PictureBox soldierMale;
-        private System.Windows.Forms.PictureBox blackwidow;
-        private System.Windows.Forms.PictureBox thor;
-        private System.Windows.Forms.PictureBox stark;
-        private System.Windows.Forms.PictureBox loki;
-        private System.Windows.Forms.PictureBox diana;
-        private System.Windows.Forms.PictureBox batman;
-        private System.Windows.Forms.PictureBox harley;
-        private System.Windows.Forms.PictureBox flash;
-        private System.Windows.Forms.PictureBox canary;
-        private System.Windows.Forms.PictureBox arrow;
+        private System.Windows.Forms.PictureBox Mary;
+        private System.Windows.Forms.PictureBox John;
+        private System.Windows.Forms.PictureBox Natasha;
+        private System.Windows.Forms.PictureBox Thor;
+        private System.Windows.Forms.PictureBox Tony;
+        private System.Windows.Forms.PictureBox Wanda;
+        private System.Windows.Forms.PictureBox Diana;
+        private System.Windows.Forms.PictureBox Bruce;
+        private System.Windows.Forms.PictureBox Harley;
+        private System.Windows.Forms.PictureBox Barry;
+        private System.Windows.Forms.PictureBox Dinah;
+        private System.Windows.Forms.PictureBox Oliver;
         private System.Windows.Forms.Label label6;
     }
 }

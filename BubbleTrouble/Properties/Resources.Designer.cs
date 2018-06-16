@@ -123,9 +123,29 @@ namespace BubbleTrouble.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap arrow_glow {
+            get {
+                object obj = ResourceManager.GetObject("arrow_glow", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap arrow_screaming {
             get {
                 object obj = ResourceManager.GetObject("arrow_screaming", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap arrow_selected {
+            get {
+                object obj = ResourceManager.GetObject("arrow_selected", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -183,9 +203,29 @@ namespace BubbleTrouble.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap batman_glow {
+            get {
+                object obj = ResourceManager.GetObject("batman_glow", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap batman_screaming {
             get {
                 object obj = ResourceManager.GetObject("batman_screaming", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap batman_selected {
+            get {
+                object obj = ResourceManager.GetObject("batman_selected", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -233,9 +273,29 @@ namespace BubbleTrouble.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap blackwidow_glow {
+            get {
+                object obj = ResourceManager.GetObject("blackwidow_glow", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap blackwidow_screaming {
             get {
                 object obj = ResourceManager.GetObject("blackwidow_screaming", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap blackwidow_selected {
+            get {
+                object obj = ResourceManager.GetObject("blackwidow_selected", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -302,9 +362,29 @@ namespace BubbleTrouble.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap canary_glow {
+            get {
+                object obj = ResourceManager.GetObject("canary_glow", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap canary_screaming {
             get {
                 object obj = ResourceManager.GetObject("canary_screaming", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap canary_selected {
+            get {
+                object obj = ResourceManager.GetObject("canary_selected", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -352,9 +432,29 @@ namespace BubbleTrouble.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap diana_glow {
+            get {
+                object obj = ResourceManager.GetObject("diana_glow", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap diana_screaming {
             get {
                 object obj = ResourceManager.GetObject("diana_screaming", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap diana_selected {
+            get {
+                object obj = ResourceManager.GetObject("diana_selected", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -392,9 +492,29 @@ namespace BubbleTrouble.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap flash_glow {
+            get {
+                object obj = ResourceManager.GetObject("flash_glow", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap flash_screaming {
             get {
                 object obj = ResourceManager.GetObject("flash_screaming", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap flash_selected {
+            get {
+                object obj = ResourceManager.GetObject("flash_selected", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -472,9 +592,29 @@ namespace BubbleTrouble.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap harley_glow {
+            get {
+                object obj = ResourceManager.GetObject("harley_glow", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap harley_screaming {
             get {
                 object obj = ResourceManager.GetObject("harley_screaming", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap harley_selected {
+            get {
+                object obj = ResourceManager.GetObject("harley_selected", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -532,9 +672,29 @@ namespace BubbleTrouble.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap loki_glow {
+            get {
+                object obj = ResourceManager.GetObject("loki_glow", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap loki_screaming {
             get {
                 object obj = ResourceManager.GetObject("loki_screaming", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap loki_selected {
+            get {
+                object obj = ResourceManager.GetObject("loki_selected", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -661,9 +821,29 @@ namespace BubbleTrouble.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap scarlet_glow {
+            get {
+                object obj = ResourceManager.GetObject("scarlet_glow", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap scarlet_screaming {
             get {
                 object obj = ResourceManager.GetObject("scarlet_screaming", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap scarlet_selected {
+            get {
+                object obj = ResourceManager.GetObject("scarlet_selected", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -731,9 +911,29 @@ namespace BubbleTrouble.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap soldier_female_glow {
+            get {
+                object obj = ResourceManager.GetObject("soldier_female_glow", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap soldier_female_screaming {
             get {
                 object obj = ResourceManager.GetObject("soldier_female_screaming", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap soldier_female_selected {
+            get {
+                object obj = ResourceManager.GetObject("soldier_female_selected", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -751,9 +951,39 @@ namespace BubbleTrouble.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap soldier_female1 {
+            get {
+                object obj = ResourceManager.GetObject("soldier_female1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap soldier_glow {
+            get {
+                object obj = ResourceManager.GetObject("soldier_glow", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap soldier_screaming {
             get {
                 object obj = ResourceManager.GetObject("soldier_screaming", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap soldier_selected {
+            get {
+                object obj = ResourceManager.GetObject("soldier_selected", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -800,6 +1030,16 @@ namespace BubbleTrouble.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap stark_glow {
+            get {
+                object obj = ResourceManager.GetObject("stark_glow", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap stark_screaming {
             get {
                 object obj = ResourceManager.GetObject("stark_screaming", resourceCulture);
@@ -810,9 +1050,39 @@ namespace BubbleTrouble.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap stark_selected {
+            get {
+                object obj = ResourceManager.GetObject("stark_selected", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap stark_shield {
             get {
                 object obj = ResourceManager.GetObject("stark_shield", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap superman_glow {
+            get {
+                object obj = ResourceManager.GetObject("superman_glow", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap superman_selected {
+            get {
+                object obj = ResourceManager.GetObject("superman_selected", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -860,9 +1130,29 @@ namespace BubbleTrouble.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap thor_glow {
+            get {
+                object obj = ResourceManager.GetObject("thor_glow", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap thor_screaming {
             get {
                 object obj = ResourceManager.GetObject("thor_screaming", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap thor_selected {
+            get {
+                object obj = ResourceManager.GetObject("thor_selected", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -73,6 +73,7 @@
     <Compile Include="HighScores.Designer.cs">
       <DependentUpon>HighScores.cs</DependentUpon>
     </Compile>
+    <Compile Include="Minion.cs" />
     <Compile Include="Obstacle.cs" />
     <Compile Include="Obstacles.cs" />
     <Compile Include="Player.cs" />
@@ -114,6 +115,22 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="img\soldier female glow.png" />
+    <None Include="img\soldier selected.png" />
+    <None Include="img\thor selected.png" />
+    <None Include="img\superman selected.png" />
+    <None Include="img\stark selected.png" />
+    <None Include="img\soldier female selected.png" />
+    <None Include="img\scarlet selected.png" />
+    <None Include="img\thor glow.png" />
+    <None Include="img\superman glow.png" />
+    <None Include="img\stark glow.png" />
+    <None Include="img\soldier glow.png" />
+    <None Include="img\scarlet glow.png" />
+    <None Include="img\scarlet.png" />
+    <None Include="img\scarlet shield.png" />
+    <None Include="img\scarlet screaming.png" />
+    <None Include="img\scarlet dead.png" />
     <None Include="img\stark.png" />
     <None Include="img\stark shield.png" />
     <None Include="img\stark screaming.png" />
@@ -192,6 +209,22 @@
     <None Include="img\flash screaming.png" />
     <None Include="img\flash shield.png" />
     <None Include="img\flash.png" />
+    <None Include="img\blackwidow glow.png" />
+    <None Include="img\canary glow.png" />
+    <None Include="img\diana glow.png" />
+    <None Include="img\flash glow.png" />
+    <None Include="img\harley glow.png" />
+    <None Include="img\loki glow.png" />
+    <None Include="img\batman glow.png" />
+    <None Include="img\arrow glow.png" />
+    <None Include="img\batman selected.png" />
+    <None Include="img\blackwidow selected.png" />
+    <None Include="img\canary selected.png" />
+    <None Include="img\diana selected.png" />
+    <None Include="img\flash selected.png" />
+    <None Include="img\harley selected.png" />
+    <None Include="img\loki selected.png" />
+    <None Include="img\arrow selected.png" />
     <Content Include="img\money.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

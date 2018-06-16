@@ -15,7 +15,7 @@ namespace BubbleTrouble
 {
     public partial class Form1 : Form
     {
-        Dictionary<String, List<Bitmap>> minions;
+        Dictionary<String, Minion> minions;
 
         Keys left = Keys.Left, right = Keys.Right, up = Keys.Up, down = Keys.Down, shoot = Keys.Space;
         String FileName;
@@ -42,9 +42,19 @@ namespace BubbleTrouble
 
             InitializeComponent();
             playground = new Rectangle(10, 10, Width - 40, 380);
-            minions = new Dictionary<string, List<Bitmap>>();
-            minions.Add("soldierMale", new List<Bitmap> () { Properties.Resources.soldier, Properties.Resources.soldier_dead, Properties.Resources.soldier_with_shield, Properties.Resources.soldier_screaming , Properties.Resources.military_base});
-            minions.Add("soldierFemale", new List<Bitmap>() { Properties.Resources.soldier_female, Properties.Resources.soldier_female_dead, Properties.Resources.soldier_female_shield, Properties.Resources.soldier_female_screaming, Properties.Resources.military_base });
+            minions = new Dictionary<string, Minion>();
+            minions.Add("Male solider", new Minion("Male soldier", Properties.Resources.soldier, Properties.Resources.soldier_screaming, Properties.Resources.soldier_dead,Properties.Resources.soldier_with_shield, Properties.Resources.soldier_glow, Properties.Resources.soldier_selected, new List<Image>() { Properties.Resources.military_base }));
+            minions.Add("Female solider", new Minion("Female soldier", Properties.Resources.soldier_female, Properties.Resources.soldier_female_screaming, Properties.Resources.soldier_female_dead, Properties.Resources.soldier_female_shield, Properties.Resources.soldier_female_glow, Properties.Resources.soldier_female_selected, new List<Image>() { Properties.Resources.military_base }));
+            minions.Add("Oliver", new Minion("Oliver", Properties.Resources.arrow, Properties.Resources.arrow_screaming, Properties.Resources.arrow_dead, Properties.Resources.arrow_shield, Properties.Resources.arrow_glow, Properties.Resources.arrow_selected, new List<Image>() { Properties.Resources.military_base }));
+            minions.Add("Dinah", new Minion("Dinah", Properties.Resources.canary, Properties.Resources.canary_screaming, Properties.Resources.canary_dead, Properties.Resources.canary_shield, Properties.Resources.canary_glow, Properties.Resources.canary_selected, new List<Image>() { Properties.Resources.military_base }));
+            minions.Add("Thor", new Minion("Thor", Properties.Resources.thor, Properties.Resources.thor_screaming, Properties.Resources.thor_dead, Properties.Resources.thor_shield, Properties.Resources.thor_glow, Properties.Resources.thor_selected, new List<Image>() { Properties.Resources.military_base }));
+            minions.Add("Natasha", new Minion("Natasha", Properties.Resources.blackwidow, Properties.Resources.blackwidow_screaming, Properties.Resources.blackwidow_dead, Properties.Resources.blackwidow_shield, Properties.Resources.blackwidow_glow, Properties.Resources.blackwidow_selected, new List<Image>() { Properties.Resources.military_base }));
+            minions.Add("Tony", new Minion("Tony", Properties.Resources.stark, Properties.Resources.stark_screaming, Properties.Resources.stark_dead, Properties.Resources.stark_shield, Properties.Resources.stark_glow, Properties.Resources.stark_selected, new List<Image>() { Properties.Resources.military_base }));
+            minions.Add("Wanda", new Minion("Wanda", Properties.Resources.scarlet, Properties.Resources.scarlet_screaming, Properties.Resources.scarlet_dead, Properties.Resources.scarlet_shield, Properties.Resources.scarlet_glow, Properties.Resources.scarlet_selected, new List<Image>() { Properties.Resources.military_base }));
+            minions.Add("Bruce", new Minion("Bruce", Properties.Resources.batman, Properties.Resources.batman_screaming, Properties.Resources.batman_dead, Properties.Resources.batman_shield, Properties.Resources.batman_glow, Properties.Resources.batman_selected, new List<Image>() { Properties.Resources.military_base }));
+            minions.Add("Diana", new Minion("Diana", Properties.Resources.diana, Properties.Resources.diana_screaming, Properties.Resources.diana_dead, Properties.Resources.diana_shield, Properties.Resources.diana_glow, Properties.Resources.diana_selected, new List<Image>() { Properties.Resources.military_base }));
+            minions.Add("Barry", new Minion("Barry", Properties.Resources.flash, Properties.Resources.flash_screaming, Properties.Resources.flash_dead, Properties.Resources.flash_shield, Properties.Resources.flash_glow, Properties.Resources.flash_selected, new List<Image>() { Properties.Resources.military_base }));
+            minions.Add("Harley", new Minion("Harley", Properties.Resources.harley, Properties.Resources.harley_screaming, Properties.Resources.harley_dead, Properties.Resources.harley_shield, Properties.Resources.harley_glow, Properties.Resources.harley_selected, new List<Image>() { Properties.Resources.military_base }));
 
             musicOn = true;
             this.Text = "Bubble Trouble";
@@ -61,9 +71,9 @@ namespace BubbleTrouble
             StartPosition = FormStartPosition.CenterScreen;
             totalPoints = 0;
             FileName = null;
-            selectedPlayer = "soldierFemale";
-            this.BackgroundImage = minions[selectedPlayer].ElementAt(4);
-            player.Image = minions[selectedPlayer].ElementAt(0);
+            selectedPlayer = "Diana";
+            BackgroundImage = minions[selectedPlayer].backgrounds.ElementAt(level-1);
+            player.Image = minions[selectedPlayer].normal;
             player.BackColor = Color.Transparent;
               newGame();
         }
@@ -146,7 +156,7 @@ namespace BubbleTrouble
             resetGoodies();
             shieldTime = 0;
             controlLock = false;
-            player.Image = minions[selectedPlayer].ElementAt(0);
+            player.Image = minions[selectedPlayer].now;
             activeGoodie = null;
             timer1.Start();
 
@@ -206,7 +216,7 @@ namespace BubbleTrouble
             if (musicOn) sad_violin.Play();
 
             timer1.Stop();
-            player.Image = minions[selectedPlayer].ElementAt(1);
+            player.Image = minions[selectedPlayer].normal;
             livesLeft--;
             String msg = "";
 
@@ -299,7 +309,7 @@ namespace BubbleTrouble
                             //Se zaklucuvaat kontrolite se dodeka coveceto ne padne na zemjata
                             controlLock = true;
                             //Se menuva izgledot na coveceto so otvorena usta kako da vreska
-                            player.Image = minions[selectedPlayer].ElementAt(3);
+                            player.Image = minions[selectedPlayer].screaming;
 
                         }
 
@@ -451,7 +461,7 @@ namespace BubbleTrouble
                 if (activeGoodie == shield)
                 {
                     shieldTime = 10;
-                    player.Image = minions[selectedPlayer].ElementAt(2);
+                    player.Image = minions[selectedPlayer].shield;
                 }
                 else if (activeGoodie == pizza)
                 {
@@ -729,7 +739,7 @@ namespace BubbleTrouble
         private void controlsToolStripMenuItem_Click(object sender, EventArgs e)
         {
             timer1.Stop();
-            Controls form = new Controls(left, right, up, down, shoot);
+            Controls form = new Controls(left, right, up, down, shoot, selectedPlayer);
             if (form.ShowDialog() == DialogResult.OK)
 
             {
