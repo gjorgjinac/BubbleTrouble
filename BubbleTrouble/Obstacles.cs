@@ -61,6 +61,7 @@ namespace BubbleTrouble
 
         public void Move(int width, int height, List<int> barriers)
         {
+            //ONLY USED FOR LEVEL 2
 
             for (int i = 0; i < ObstacleList.Count; i++)
             {
@@ -128,14 +129,28 @@ namespace BubbleTrouble
         }
 
             public void Move (int width, int height, int specialWidth, int specialHeight)
-        {foreach (Obstacle c in ObstacleList)
+        {
+
+            if (level == 1)
+
             {
-                c.Move(width-70, height-70-70,0,0,10);
+                foreach (Obstacle c in ObstacleList)
+                {
+                    c.Move(width - 70, height - 70 - 70, 0, 0, 10);
 
-
-
+                }
+                specialObstacle.Move(specialWidth - 70, specialHeight + 50 - 70, 0, 0, 10);
             }
-            if (level==1) specialObstacle.Move(specialWidth-70, specialHeight + 50 -70,0,0, 10);
+
+            if (level == 3)
+            {
+                foreach (Obstacle c in ObstacleList)
+                {
+                    c.Move(width - 70, height - 70 - 70, specialWidth, specialHeight, 10);
+
+                }
+            }
+
         }
     }
 }

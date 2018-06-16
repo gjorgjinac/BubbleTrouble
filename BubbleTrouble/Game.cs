@@ -49,8 +49,8 @@ namespace BubbleTrouble
         {
             foreach (Bomb b in bombs)
             {
-                if (level == 1) b.Move(width, height);
-                if (level == 2) b.Move();
+                if (level == 1 || level ==3) b.Move(width, height);
+                if (level == 2 ) b.Move();
 
             }
 

@@ -135,6 +135,7 @@ namespace BubbleTrouble
                 tankStand.Visible = false;
                 brickWallDown.Visible = true;
                 brickWallUp.Visible = true;
+                brickWallUp.Height = 50;
             }
 
 
@@ -379,8 +380,7 @@ namespace BubbleTrouble
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            game.MoveBombs(platform.Width, platform.Location.Y);
-            game.CheckHits();
+          
 
             Random random = new Random();
             if (shieldTime <= 0 && game.PlayerHit(player.Location, Width, this.Height))
@@ -483,7 +483,11 @@ namespace BubbleTrouble
 
 
             if (level == 1)
-            { game.obstacles.Move(Width, Height, platform.Width, platform.Location.Y); }
+            {
+                game.obstacles.Move(Width, Height, platform.Width, platform.Location.Y);
+                game.MoveBombs(platform.Width, platform.Location.Y);
+
+            }
             if (level==2)
             {
                 game.obstacles.Move(
@@ -498,15 +502,20 @@ namespace BubbleTrouble
                 {
                     barrier2_1.Visible = false;
                 }
-
+                game.MoveBombs(Width,Height);
             }
             if (level == 3)
             {
-                brickWallUp.Location = new Point(brickWallUp.Location.X, brickWallUp.Location.Y + 5);
-              //  game.obstacles.Move(Width, Height, brickWallUp.Location.X+brickWallUp.Width, brickWallUp.Location.Y+brickWallUp.Height);
-
+                //   brickWallUp.Location = new Point(brickWallUp.Location.X, brickWallUp.Location.Y + 1);
+                brickWallUp.Height++;
+               game.obstacles.Move(Width, Height, 0, brickWallUp.Location.Y+brickWallUp.Height);
+                game.MoveBombs(Width, brickWallUp.Location.Y + brickWallUp.Height);
 
             }
+            //  game.MoveBombs(platform.Width, platform.Location.Y);
+            game.CheckHits();
+
+
 
             Invalidate(true);
         }

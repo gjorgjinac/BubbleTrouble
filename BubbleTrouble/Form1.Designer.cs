@@ -390,9 +390,9 @@
             // brickWallUp
             // 
             this.brickWallUp.Image = global::BubbleTrouble.Properties.Resources.brick_wall;
-            this.brickWallUp.Location = new System.Drawing.Point(0, -558);
+            this.brickWallUp.Location = new System.Drawing.Point(-1, 24);
             this.brickWallUp.Name = "brickWallUp";
-            this.brickWallUp.Size = new System.Drawing.Size(820, 610);
+            this.brickWallUp.Size = new System.Drawing.Size(820, 41);
             this.brickWallUp.TabIndex = 23;
             this.brickWallUp.TabStop = false;
             // 
