@@ -115,6 +115,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="img\stark background.png" />
     <None Include="img\soldier female glow.png" />
     <None Include="img\soldier selected.png" />
     <None Include="img\thor selected.png" />
@@ -225,6 +226,9 @@
     <None Include="img\harley selected.png" />
     <None Include="img\loki selected.png" />
     <None Include="img\arrow selected.png" />
+    <None Include="img\arrow background.png" />
+    <None Include="img\cave background.gif" />
+    <None Include="img\cave-background.gif" />
     <Content Include="img\money.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

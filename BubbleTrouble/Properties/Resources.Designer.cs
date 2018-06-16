@@ -113,6 +113,16 @@ namespace BubbleTrouble.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap arrow_background {
+            get {
+                object obj = ResourceManager.GetObject("arrow_background", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap arrow_dead {
             get {
                 object obj = ResourceManager.GetObject("arrow_dead", resourceCulture);
@@ -395,6 +405,26 @@ namespace BubbleTrouble.Properties {
         public static System.Drawing.Bitmap canary_shield {
             get {
                 object obj = ResourceManager.GetObject("canary_shield", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap cave_background {
+            get {
+                object obj = ResourceManager.GetObject("cave_background", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap cave_background1 {
+            get {
+                object obj = ResourceManager.GetObject("cave_background1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -1013,6 +1043,16 @@ namespace BubbleTrouble.Properties {
         public static System.Drawing.Bitmap stark {
             get {
                 object obj = ResourceManager.GetObject("stark", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap stark_background {
+            get {
+                object obj = ResourceManager.GetObject("stark_background", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

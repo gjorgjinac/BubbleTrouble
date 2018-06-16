@@ -65,7 +65,7 @@ namespace BubbleTrouble
 
         public Boolean checkEnd()
         {
-            return (obstacles.ObstacleList.Count == 0 && level == 2)||(obstacles.ObstacleList.Count == 0 && specialObstaclePassed && level==1) || livesLeft == 0 || timeMili < 10;
+            return (obstacles.ObstacleList.Count == 0 && level != 1)||(obstacles.ObstacleList.Count == 0 && specialObstaclePassed && level==1) || livesLeft == 0 || timeMili < 10;
         }
 
         public Boolean AddBomb(Point p)
