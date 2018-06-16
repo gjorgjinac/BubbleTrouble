@@ -235,6 +235,9 @@
   <data name="soldier_female_shield" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\img\soldier female shield.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="ancient_background" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\ancient-background.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="arrow" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\img\arrow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -256,6 +259,9 @@
   <data name="arrow_shield" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\img\arrow shield.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="bat1_background" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\bat1 background.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="batman" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\img\batman.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -273,6 +279,9 @@
   </data>
   <data name="batman_shield" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\img\batman shield.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="bat_background" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\bat background.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="blackwidow" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\img\blackwidow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -316,6 +325,9 @@
   <data name="cave_background1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\img\cave-background.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="darkyard_background" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\darkyard-background.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="diana" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\img\diana.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -333,6 +345,9 @@
   </data>
   <data name="diana_shield" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\img\diana shield.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="dungeon_background" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\dungeon-background.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="flash" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\img\flash.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -387,6 +402,12 @@
   </data>
   <data name="loki_shield" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\img\loki shield.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="nightclub_background" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\nightclub-background.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="old_town_background" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\old-town-background.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="scarlet" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\img\scarlet.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -465,5 +486,11 @@
   </data>
   <data name="thor_shield" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\img\thor shield.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="waterfal_backgound" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\waterfal-backgound.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="yard_background" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\yard-background.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

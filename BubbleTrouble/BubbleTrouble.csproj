@@ -115,6 +115,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="img\yard-background.gif" />
+    <None Include="img\old-town-background.gif" />
+    <None Include="img\nightclub-background.gif" />
+    <None Include="img\waterfal-backgound.gif" />
     <None Include="img\stark background.png" />
     <None Include="img\soldier female glow.png" />
     <None Include="img\soldier selected.png" />
@@ -229,6 +233,11 @@
     <None Include="img\arrow background.png" />
     <None Include="img\cave background.gif" />
     <None Include="img\cave-background.gif" />
+    <None Include="img\dungeon-background.gif" />
+    <None Include="img\ancient-background.gif" />
+    <None Include="img\bat background.jpg" />
+    <None Include="img\bat1 background.jpg" />
+    <None Include="img\darkyard-background.gif" />
     <Content Include="img\money.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -103,6 +103,16 @@ namespace BubbleTrouble.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap ancient_background {
+            get {
+                object obj = ResourceManager.GetObject("ancient_background", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap arrow {
             get {
                 object obj = ResourceManager.GetObject("arrow", resourceCulture);
@@ -186,6 +196,26 @@ namespace BubbleTrouble.Properties {
         public static System.Drawing.Bitmap barrier2 {
             get {
                 object obj = ResourceManager.GetObject("barrier2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap bat_background {
+            get {
+                object obj = ResourceManager.GetObject("bat_background", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap bat1_background {
+            get {
+                object obj = ResourceManager.GetObject("bat1_background", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -442,6 +472,16 @@ namespace BubbleTrouble.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap darkyard_background {
+            get {
+                object obj = ResourceManager.GetObject("darkyard_background", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap diana {
             get {
                 object obj = ResourceManager.GetObject("diana", resourceCulture);
@@ -495,6 +535,16 @@ namespace BubbleTrouble.Properties {
         public static System.Drawing.Bitmap diana_shield {
             get {
                 object obj = ResourceManager.GetObject("diana_shield", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap dungeon_background {
+            get {
+                object obj = ResourceManager.GetObject("dungeon_background", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -795,6 +845,26 @@ namespace BubbleTrouble.Properties {
         public static System.Drawing.Bitmap money {
             get {
                 object obj = ResourceManager.GetObject("money", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap nightclub_background {
+            get {
+                object obj = ResourceManager.GetObject("nightclub_background", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap old_town_background {
+            get {
+                object obj = ResourceManager.GetObject("old_town_background", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -1213,6 +1283,26 @@ namespace BubbleTrouble.Properties {
         public static System.Drawing.Bitmap time {
             get {
                 object obj = ResourceManager.GetObject("time", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap waterfal_backgound {
+            get {
+                object obj = ResourceManager.GetObject("waterfal_backgound", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap yard_background {
+            get {
+                object obj = ResourceManager.GetObject("yard_background", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
