@@ -62,7 +62,7 @@ namespace BubbleTrouble
 
 
             }
-            else if (DirectionHorizontal == -1)
+            else 
             {
                 if (X < right && X > left) X -= speed;
                 else if (X <= left) { X += speed; DirectionHorizontal *= -1; }
@@ -77,7 +77,7 @@ namespace BubbleTrouble
 
 
             }
-            else if (DirectionVertical == -1)
+            else 
             {
                 if (Y < bottom && Y > top+speed) Y -= speed;
                 else if (Y <= top + Radius) { Y += speed; DirectionVertical *= -1; }

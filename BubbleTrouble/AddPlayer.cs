@@ -26,7 +26,7 @@ namespace BubbleTrouble
 
         private void textBox1_Validating(object sender, CancelEventArgs e)
         {
-            if (textBox1.Text == "") { errorProvider1.SetError(textBox1, "Name can't be empty"); e.Cancel = true; }
+            if (textBox1.Text == "") { errorProvider1.SetError(textBox1, "Name can't be empty");  }
             else errorProvider1.SetError(textBox1, null);
         }
 
@@ -38,6 +38,7 @@ namespace BubbleTrouble
 
         private void buttonCancel_Click(object sender, EventArgs e)
         {
+            errorProvider1.SetError(textBox1, null);
             DialogResult = DialogResult.Cancel;
         }
     }
