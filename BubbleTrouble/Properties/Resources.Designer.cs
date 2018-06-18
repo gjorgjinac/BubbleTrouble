@@ -482,6 +482,16 @@ namespace BubbleTrouble.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap darkyard_background_with_dragon {
+            get {
+                object obj = ResourceManager.GetObject("darkyard-background-with-dragon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap diana {
             get {
                 object obj = ResourceManager.GetObject("diana", resourceCulture);
@@ -555,6 +565,16 @@ namespace BubbleTrouble.Properties {
         public static System.Drawing.Bitmap dragon1 {
             get {
                 object obj = ResourceManager.GetObject("dragon1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap dragon2 {
+            get {
+                object obj = ResourceManager.GetObject("dragon2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -11,17 +11,17 @@ namespace BubbleTrouble
     class Obstacles
     {
 
-      public  List<Obstacle> ObstacleList { get; set; }
+        public List<Obstacle> ObstacleList { get; set; }
         public Obstacle specialObstacle { get; set; }
         public int level;
 
-        public void AddObstacle (Obstacle c)
+        public void AddObstacle(Obstacle c)
         {
             ObstacleList.Add(c);
         }
-        public Boolean eliminated (int parent)
+        public Boolean eliminated(int parent)
         {
-            foreach(Obstacle o in ObstacleList)
+            foreach (Obstacle o in ObstacleList)
             {
                 if (o.Parent == parent) return false;
             }
@@ -38,13 +38,13 @@ namespace BubbleTrouble
             {
                 ObstacleList.Add(new Obstacle(60, Color.Black, new Point(600, 300), -1, 1));
                 ObstacleList.Add(new Obstacle(40, Color.Black, new Point(100, 100), 1, 1));
-            specialObstacle = new Obstacle(20, Color.Black, new Point(40,40), 1, -1);
+                specialObstacle = new Obstacle(20, Color.Black, new Point(40, 40), 1, -1);
             }
             if (level == 2)
             {
-                ObstacleList.Add(new Obstacle(40, Color.DarkCyan, new Point(100, 100), 1, 1,0));
-                ObstacleList.Add(new Obstacle(40, Color.DarkOrange, new Point(400,200), 1, 1,1));
-                ObstacleList.Add(new Obstacle(40, Color.Turquoise, new Point(700, 300), 1, 1,2));
+                ObstacleList.Add(new Obstacle(40, Color.DarkCyan, new Point(100, 100), 1, 1, 0));
+                ObstacleList.Add(new Obstacle(40, Color.DarkOrange, new Point(400, 200), 1, 1, 1));
+                ObstacleList.Add(new Obstacle(40, Color.Turquoise, new Point(700, 300), 1, 1, 2));
 
 
             }
@@ -56,6 +56,9 @@ namespace BubbleTrouble
 
 
             }
+
+
+
 
         }
 
@@ -75,32 +78,27 @@ namespace BubbleTrouble
         }
 
 
-
-
-
-
-
-
-
-        public void Draw (Graphics g, Boolean drawSpecial)
+        public void Draw(Graphics g, Boolean drawSpecial)
         {
             foreach (Obstacle c in ObstacleList)
             {
                 c.Draw(g);
             }
-           if (drawSpecial) specialObstacle.Draw(g);
+            if (drawSpecial) specialObstacle.Draw(g);
         }
-     
 
-        public Boolean isPlayerHit (Point x, int width, int height)
+
+        public Boolean isPlayerHit(Point x, int width, int height)
         {
             foreach (Obstacle c in ObstacleList)
             {
-                if (c.HitsPlayer(x)) {
+                if (c.HitsPlayer(x))
+                {
                     c.DirectionHorizontal *= -1;
                     c.DirectionVertical *= -1;
-                    c.Move(width, height - 50, 0,0,10);
-                    return true; }
+                    c.Move(width, height - 50, 0, 0, 10);
+                    return true;
+                }
             }
             if (level == 1)
             {
@@ -108,7 +106,7 @@ namespace BubbleTrouble
                 {
                     specialObstacle.DirectionHorizontal *= -1;
                     specialObstacle.DirectionVertical *= -1;
-                    specialObstacle.Move(width, height - 50,0,0, 10);
+                    specialObstacle.Move(width, height - 50, 0, 0, 10);
                     return true;
                 }
             }
@@ -120,7 +118,7 @@ namespace BubbleTrouble
         {
             foreach (Obstacle c in ObstacleList)
             {
-                c.Move(width, height - 70,0,0, 10);
+                c.Move(width, height - 70, 0, 0, 10);
 
 
 
@@ -128,7 +126,7 @@ namespace BubbleTrouble
             }
         }
 
-            public void Move (int width, int height, int specialWidth, int specialHeight)
+        public void Move(int width, int height, int specialWidth, int specialHeight)
         {
 
             if (level == 1)

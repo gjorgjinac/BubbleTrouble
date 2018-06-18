@@ -6,8 +6,9 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace BubbleTrouble
-{[Serializable]
-   public class Circle
+{
+    [Serializable]
+    public class Circle
     {
         public float Radius { get; set; }
         public Color Color { get; set; }
@@ -22,11 +23,11 @@ namespace BubbleTrouble
             Direction = direction;
         }
 
-        public Circle (Point p)
+        public Circle(Point p)
         {
             Position = p;
         }
-        public Circle ()
+        public Circle()
         {
 
         }
@@ -37,10 +38,10 @@ namespace BubbleTrouble
 
 
         public double distance(Point A, Point B)
-            {
-                return Math.Sqrt(Math.Pow(A.X - B.X, 2) + Math.Pow(A.Y - B.Y, 2));
-            }
-       
+        {
+            return Math.Sqrt(Math.Pow(A.X - B.X, 2) + Math.Pow(A.Y - B.Y, 2));
+        }
+
 
 
         public void Draw(Graphics g)

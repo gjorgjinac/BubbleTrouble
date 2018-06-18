@@ -31,10 +31,10 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
-            this.labelLives = new System.Windows.Forms.ToolStripStatusLabel();
             this.labelTime = new System.Windows.Forms.ToolStripStatusLabel();
             this.progressBarTime = new System.Windows.Forms.ToolStripProgressBar();
             this.labelPoints = new System.Windows.Forms.ToolStripStatusLabel();
+            this.labelLives = new System.Windows.Forms.ToolStripStatusLabel();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.gameToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.openGameToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
@@ -51,8 +51,6 @@
             this.pauseToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.muteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.fireSpit = new System.Windows.Forms.PictureBox();
-            this.dragon = new System.Windows.Forms.PictureBox();
             this.life10 = new System.Windows.Forms.PictureBox();
             this.life9 = new System.Windows.Forms.PictureBox();
             this.life8 = new System.Windows.Forms.PictureBox();
@@ -82,8 +80,6 @@
             this.playGroundBox = new System.Windows.Forms.PictureBox();
             this.statusStrip1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.fireSpit)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dragon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.life10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.life9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.life8)).BeginInit();
@@ -128,12 +124,6 @@
             this.statusStrip1.Text = "statusStrip1";
             this.statusStrip1.Paint += new System.Windows.Forms.PaintEventHandler(this.statusStrip1_Paint);
             // 
-            // labelLives
-            // 
-            this.labelLives.Name = "labelLives";
-            this.labelLives.Size = new System.Drawing.Size(65, 31);
-            this.labelLives.Text = "Lives left: 5";
-            // 
             // labelTime
             // 
             this.labelTime.Name = "labelTime";
@@ -151,6 +141,12 @@
             this.labelPoints.Name = "labelPoints";
             this.labelPoints.Size = new System.Drawing.Size(118, 31);
             this.labelPoints.Text = "toolStripStatusLabel1";
+            // 
+            // labelLives
+            // 
+            this.labelLives.Name = "labelLives";
+            this.labelLives.Size = new System.Drawing.Size(65, 31);
+            this.labelLives.Text = "Lives left: 5";
             // 
             // menuStrip1
             // 
@@ -179,21 +175,21 @@
             // openGameToolStripMenuItem1
             // 
             this.openGameToolStripMenuItem1.Name = "openGameToolStripMenuItem1";
-            this.openGameToolStripMenuItem1.Size = new System.Drawing.Size(137, 22);
+            this.openGameToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
             this.openGameToolStripMenuItem1.Text = "Open Game";
             this.openGameToolStripMenuItem1.Click += new System.EventHandler(this.openGameToolStripMenuItem1_Click);
             // 
             // saveGameToolStripMenuItem
             // 
             this.saveGameToolStripMenuItem.Name = "saveGameToolStripMenuItem";
-            this.saveGameToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
+            this.saveGameToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.saveGameToolStripMenuItem.Text = "Save Game";
             this.saveGameToolStripMenuItem.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
             // 
             // newGameToolStripMenuItem1
             // 
             this.newGameToolStripMenuItem1.Name = "newGameToolStripMenuItem1";
-            this.newGameToolStripMenuItem1.Size = new System.Drawing.Size(137, 22);
+            this.newGameToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
             this.newGameToolStripMenuItem1.Text = "New Game";
             this.newGameToolStripMenuItem1.Click += new System.EventHandler(this.newGameToolStripMenuItem_Click);
             // 
@@ -210,21 +206,21 @@
             // level1ToolStripMenuItem
             // 
             this.level1ToolStripMenuItem.Name = "level1ToolStripMenuItem";
-            this.level1ToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
+            this.level1ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.level1ToolStripMenuItem.Text = "level 1";
             this.level1ToolStripMenuItem.Click += new System.EventHandler(this.level1ToolStripMenuItem_Click);
             // 
             // level2ToolStripMenuItem1
             // 
             this.level2ToolStripMenuItem1.Name = "level2ToolStripMenuItem1";
-            this.level2ToolStripMenuItem1.Size = new System.Drawing.Size(107, 22);
+            this.level2ToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
             this.level2ToolStripMenuItem1.Text = "level 2";
             this.level2ToolStripMenuItem1.Click += new System.EventHandler(this.level2ToolStripMenuItem1_Click);
             // 
             // level3ToolStripMenuItem
             // 
             this.level3ToolStripMenuItem.Name = "level3ToolStripMenuItem";
-            this.level3ToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
+            this.level3ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.level3ToolStripMenuItem.Text = "level 3";
             this.level3ToolStripMenuItem.Click += new System.EventHandler(this.level3ToolStripMenuItem_Click);
             // 
@@ -274,26 +270,6 @@
             // timer1
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // fireSpit
-            // 
-            this.fireSpit.Image = global::BubbleTrouble.Properties.Resources.fire_spit;
-            this.fireSpit.Location = new System.Drawing.Point(500, 261);
-            this.fireSpit.Name = "fireSpit";
-            this.fireSpit.Size = new System.Drawing.Size(246, 132);
-            this.fireSpit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.fireSpit.TabIndex = 37;
-            this.fireSpit.TabStop = false;
-            // 
-            // dragon
-            // 
-            this.dragon.Image = global::BubbleTrouble.Properties.Resources.dragon1;
-            this.dragon.Location = new System.Drawing.Point(136, 71);
-            this.dragon.Name = "dragon";
-            this.dragon.Size = new System.Drawing.Size(370, 283);
-            this.dragon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.dragon.TabIndex = 36;
-            this.dragon.TabStop = false;
             // 
             // life10
             // 
@@ -491,7 +467,6 @@
             this.money1.Size = new System.Drawing.Size(79, 54);
             this.money1.TabIndex = 6;
             this.money1.TabStop = false;
-            this.money1.Click += new System.EventHandler(this.money1_Click);
             // 
             // ladder
             // 
@@ -543,7 +518,7 @@
             // playGroundBox
             // 
             this.playGroundBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.playGroundBox.Image = global::BubbleTrouble.Properties.Resources.cave_background1;
+            this.playGroundBox.Image = global::BubbleTrouble.Properties.Resources.waterfal_backgound;
             this.playGroundBox.Location = new System.Drawing.Point(0, 0);
             this.playGroundBox.Margin = new System.Windows.Forms.Padding(0);
             this.playGroundBox.Name = "playGroundBox";
@@ -558,8 +533,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(819, 467);
-            this.Controls.Add(this.fireSpit);
-            this.Controls.Add(this.dragon);
             this.Controls.Add(this.life10);
             this.Controls.Add(this.life9);
             this.Controls.Add(this.life8);
@@ -600,8 +573,6 @@
             this.statusStrip1.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.fireSpit)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dragon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.life10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.life9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.life8)).EndInit();
@@ -684,7 +655,5 @@
         private System.Windows.Forms.PictureBox life7;
         private System.Windows.Forms.PictureBox life10;
         private System.Windows.Forms.PictureBox life9;
-        private System.Windows.Forms.PictureBox dragon;
-        private System.Windows.Forms.PictureBox fireSpit;
     }
 }

@@ -44,7 +44,7 @@ namespace BubbleTrouble
             playground = new Rectangle(10, 10, Width - 40, 380);
             lives = new List<PictureBox>() { life1, life2, life3, life4, life5, life6, life7, life8, life9, life10 };
             minions = new Dictionary<string, Minion>();
-            minions.Add("John", new Minion("John", Properties.Resources.soldier, Properties.Resources.soldier_screaming, Properties.Resources.soldier_dead,Properties.Resources.soldier_with_shield, Properties.Resources.soldier_glow, Properties.Resources.soldier_selected, new List<Image>() { Properties.Resources.military_base }));
+            minions.Add("John", new Minion("John", Properties.Resources.soldier, Properties.Resources.soldier_screaming, Properties.Resources.soldier_dead, Properties.Resources.soldier_with_shield, Properties.Resources.soldier_glow, Properties.Resources.soldier_selected, new List<Image>() { Properties.Resources.military_base }));
             minions.Add("Mary", new Minion("Mary", Properties.Resources.soldier_female, Properties.Resources.soldier_female_screaming, Properties.Resources.soldier_female_dead, Properties.Resources.soldier_female_shield, Properties.Resources.soldier_female_glow, Properties.Resources.soldier_female_selected, new List<Image>() { Properties.Resources.military_base }));
             minions.Add("Oliver", new Minion("Oliver", Properties.Resources.arrow, Properties.Resources.arrow_screaming, Properties.Resources.arrow_dead, Properties.Resources.arrow_shield, Properties.Resources.arrow_glow, Properties.Resources.arrow_selected, new List<Image>() { Properties.Resources.arrow_background }));
             minions.Add("Dinah", new Minion("Dinah", Properties.Resources.canary, Properties.Resources.canary_screaming, Properties.Resources.canary_dead, Properties.Resources.canary_shield, Properties.Resources.canary_glow, Properties.Resources.canary_selected, new List<Image>() { Properties.Resources.arrow_background }));
@@ -52,7 +52,7 @@ namespace BubbleTrouble
             minions.Add("Natasha", new Minion("Natasha", Properties.Resources.blackwidow, Properties.Resources.blackwidow_screaming, Properties.Resources.blackwidow_dead, Properties.Resources.blackwidow_shield, Properties.Resources.blackwidow_glow, Properties.Resources.blackwidow_selected, new List<Image>() { Properties.Resources.old_town_background }));
             minions.Add("Tony", new Minion("Tony", Properties.Resources.stark, Properties.Resources.stark_screaming, Properties.Resources.stark_dead, Properties.Resources.stark_shield, Properties.Resources.stark_glow, Properties.Resources.stark_selected, new List<Image>() { Properties.Resources.stark_background }));
             minions.Add("Wanda", new Minion("Wanda", Properties.Resources.scarlet, Properties.Resources.scarlet_screaming, Properties.Resources.scarlet_dead, Properties.Resources.scarlet_shield, Properties.Resources.scarlet_glow, Properties.Resources.scarlet_selected, new List<Image>() { Properties.Resources.darkyard_background }));
-            minions.Add("Bruce", new Minion("Bruce", Properties.Resources.batman, Properties.Resources.batman_screaming, Properties.Resources.batman_dead, Properties.Resources.batman_shield, Properties.Resources.batman_glow, Properties.Resources.batman_selected, new List<Image>() { Properties.Resources.bat1_background}));
+            minions.Add("Bruce", new Minion("Bruce", Properties.Resources.batman, Properties.Resources.batman_screaming, Properties.Resources.batman_dead, Properties.Resources.batman_shield, Properties.Resources.batman_glow, Properties.Resources.batman_selected, new List<Image>() { Properties.Resources.bat1_background }));
             minions.Add("Diana", new Minion("Diana", Properties.Resources.diana, Properties.Resources.diana_screaming, Properties.Resources.diana_dead, Properties.Resources.diana_shield, Properties.Resources.diana_glow, Properties.Resources.diana_selected, new List<Image>() { Properties.Resources.waterfal_backgound }));
             minions.Add("Barry", new Minion("Barry", Properties.Resources.flash, Properties.Resources.flash_screaming, Properties.Resources.flash_dead, Properties.Resources.flash_shield, Properties.Resources.flash_glow, Properties.Resources.flash_selected, new List<Image>() { Properties.Resources.military_base }));
             minions.Add("Harley", new Minion("Harley", Properties.Resources.harley, Properties.Resources.harley_screaming, Properties.Resources.harley_dead, Properties.Resources.harley_shield, Properties.Resources.harley_glow, Properties.Resources.harley_selected, new List<Image>() { Properties.Resources.nightclub_background, Properties.Resources.old_town_background }));
@@ -64,22 +64,23 @@ namespace BubbleTrouble
             level = 1;
             DoubleBuffered = true;
             goodies = new List<PictureBox>() { money1, pizza, coins, time, shield };
-            dragon.BackColor = Color.Transparent;
+           
             player.BackColor = Color.Transparent;
             ladder.BackColor = Color.Transparent;
+          
             tank.BackColor = Color.Transparent;
-            fireSpit.BackColor = Color.Transparent;
+      
             FormBorderStyle = FormBorderStyle.FixedSingle;
             StartPosition = FormStartPosition.CenterScreen;
             totalPoints = 0;
             FileName = null;
             selectedPlayer = "Harley";
-            
-       BackgroundImage=     playGroundBox.Image  = minions[selectedPlayer].backgrounds.ElementAt((level-1) % (minions[selectedPlayer].backgrounds.Count));
-          
+
+            BackgroundImage = playGroundBox.Image = minions[selectedPlayer].backgrounds.ElementAt((level - 1) % (minions[selectedPlayer].backgrounds.Count));
+
             player.Image = minions[selectedPlayer].normal;
             player.BackColor = Color.Transparent;
-              newGame();
+            newGame();
         }
         public void resetGoodies()
         {
@@ -87,7 +88,7 @@ namespace BubbleTrouble
             {
 
                 goodie.BackColor = Color.Transparent;
-             
+
                 goodie.Location = new Point(0, 0);
                 goodie.Visible = false;
             }
@@ -125,8 +126,7 @@ namespace BubbleTrouble
                 tankStand.Visible = true;
                 brickWallDown.Visible = false;
                 brickWallUp.Visible = false;
-                dragon.Visible = false;
-                fireSpit.Visible = false;
+               
             }
             if (level == 2)
             {
@@ -140,9 +140,7 @@ namespace BubbleTrouble
                 tankStand.Visible = false;
                 brickWallDown.Visible = false;
                 brickWallUp.Visible = false;
-                dragon.Visible = false;
-
-                fireSpit.Visible = false;
+               
             }
             if (level == 3)
             {
@@ -157,14 +155,15 @@ namespace BubbleTrouble
                 brickWallDown.Visible = true;
                 brickWallUp.Visible = true;
                 brickWallUp.Height = 50;
-                dragon.Visible = true;
-                fireSpit.Visible = true;
+               
             }
-
-
-
+          
 
             BackgroundImage = playGroundBox.Image = minions[selectedPlayer].backgrounds.ElementAt((level - 1) % (minions[selectedPlayer].backgrounds.Count));
+
+           
+            
+
 
             resetGoodies();
             shieldTime = 0;
@@ -174,7 +173,7 @@ namespace BubbleTrouble
             timer1.Start();
             pauseToolStripMenuItem1.Text = "Pause";
             progressBarTime.Value = progressBarTime.Maximum;
-           // progressBarLives.Value = livesLeft;
+    
 
 
             goodieUnique = true;
@@ -257,8 +256,8 @@ namespace BubbleTrouble
             sad_violin.Stop();
 
 
-         //   progressBarLives.Value = game.livesLeft;
-       
+            //   progressBarLives.Value = game.livesLeft;
+
 
 
             lifeLost();
@@ -275,11 +274,11 @@ namespace BubbleTrouble
                 {
                     if (game.AddBomb(player.Location))
                         bulletSound.Play();
-                
-               
+
+
                 }
                 //Postojat razlicini implementacii za prvo i vtoro nivo bidejki ima razlicni barieri
-                if (level == 1)
+                if (level == 1 )
                 {
                     //Pri dvizenje levo ili desno na prvo nivo, samo treba da se onevozmozi izleguvanjeto na igracot od prozorecot
                     if (e.KeyCode == left && player.Location.X > 0)
@@ -380,7 +379,7 @@ namespace BubbleTrouble
                 }
 
 
-                if (level == 3)
+                if (level == 3 )
                 {
                     //Pri dvizenje levo ili desno na prvo nivo, samo treba da se onevozmozi izleguvanjeto na igracot od prozorecot
                     if (e.KeyCode == left && player.Location.X > 0)
@@ -396,7 +395,7 @@ namespace BubbleTrouble
                 }
 
 
-     }
+            }
 
 
             Invalidate(true);
@@ -415,7 +414,7 @@ namespace BubbleTrouble
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-          
+
 
             Random random = new Random();
             if (shieldTime <= 0 && game.PlayerHit(player.Location, Width, this.Height))
@@ -460,7 +459,7 @@ namespace BubbleTrouble
             {
                 progressBarTime.Value--;
                 shieldTime--;
-              
+
             }
             if (game.timeMili % 20 == 0 && tank.Visible)
             {
@@ -528,13 +527,13 @@ namespace BubbleTrouble
             labelPoints.Text = String.Format("Points: {0} ", game.points);
 
 
-            if (level == 1)
+            if (level == 1 || level == 4)
             {
                 game.obstacles.Move(Width, Height, platform.Width, platform.Location.Y);
                 game.MoveBombs(platform.Width, platform.Location.Y);
 
             }
-            if (level==2)
+            if (level == 2)
             {
                 game.obstacles.Move(
 
@@ -548,14 +547,15 @@ namespace BubbleTrouble
                 {
                     barrier2_1.Visible = false;
                 }
-                game.MoveBombs(Width,Height);
+                game.MoveBombs(Width, Height);
             }
             if (level == 3)
             {
                 //   brickWallUp.Location = new Point(brickWallUp.Location.X, brickWallUp.Location.Y + 1);
-                brickWallUp.Height++;
-               game.obstacles.Move(Width, Height, 0, brickWallUp.Location.Y+brickWallUp.Height);
-                game.MoveBombs(Width, brickWallUp.Location.Y + brickWallUp.Height);
+            //  if (game.timeMili%3==0)
+                    brickWallUp.Height++;
+                game.obstacles.Move(Width, Height, 0, brickWallUp.Location.Y + brickWallUp.Height);
+                game.MoveBombs(Width, brickWallUp.Location.Y + brickWallUp.Height );
 
                 if (brickWallUp.Location.Y + brickWallUp.Height >= player.Location.Y)
                     endGame();
@@ -588,15 +588,12 @@ namespace BubbleTrouble
 
 
             game.updateBombs(e.Graphics, Height - 100);
+           
+
+
 
         }
 
-
-
-        private void player_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void saveFile()
         {
@@ -690,30 +687,17 @@ namespace BubbleTrouble
 
         }
 
-        private void Form1_ResizeEnd(object sender, EventArgs e)
-        {
 
-
-        }
-
-        private void statusStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
-        {
-
-        }
 
         private void statusStrip1_Paint(object sender, PaintEventArgs e)
         {
-           
-          //  progressBarLives.Value = livesLeft;
+
+            //  progressBarLives.Value = livesLeft;
             labelPoints.Text = String.Format("Points: {0} ", game.points);
             labelTime.Text = String.Format("Time left: {0}s", progressBarTime.Value);
             labelLives.Text = String.Format("Lives left: {0}", livesLeft);
         }
 
-        private void money1_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -750,7 +734,25 @@ namespace BubbleTrouble
 
         private void pictureBox1_Paint(object sender, PaintEventArgs e)
         {
+
+
+
             game.updateBombs(e.Graphics, Height - 100);
+
+
+          /*  Pen pen = new Pen(Color.Gray, 10);
+            e.Graphics.DrawLine(pen, 20, Height - 100, 20, platform.Location.Y);
+            e.Graphics.DrawLine(pen, 120, Height - 100, 120, platform.Location.Y);
+            */
+
+
+        }
+
+        private void level4ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            level = 4;
+            livesLeft = 5;
+            lifeLost();
         }
 
         private void level3ToolStripMenuItem_Click(object sender, EventArgs e)
@@ -769,7 +771,7 @@ namespace BubbleTrouble
         }
 
 
-       
+
 
         private void highScoresToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -792,12 +794,12 @@ namespace BubbleTrouble
                 up = form.keys.ElementAt(2);
                 down = form.keys.ElementAt(3);
                 shoot = form.keys.ElementAt(4);
-                
+
                 selectedPlayer = form.selectedPlayer;
                 player.Image = minions[selectedPlayer].normal;
                 BackgroundImage = playGroundBox.Image = minions[selectedPlayer].backgrounds.ElementAt((level - 1) % minions[selectedPlayer].backgrounds.Count);
             }
-            
+
             timer1.Start();
 
         }

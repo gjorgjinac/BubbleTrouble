@@ -13,7 +13,7 @@ namespace BubbleTrouble
         Point StartPosition;
         int height;
         int width;
-        public Bomb(Point position) : base (10, Color.Red, position, -1)
+        public Bomb(Point position) : base(10, Color.Red, position, -1)
         {
             StartPosition = position;
         }
@@ -21,15 +21,15 @@ namespace BubbleTrouble
         {
 
 
-            return distance(Position, p) < Radius*2 ;
+            return distance(Position, p) < Radius * 2;
 
 
         }
         public Boolean HitsPlayer(Point p)
         {
-            return distance(Position, new Point(p.X + 40, p.Y + 40)) <= Radius + Math.Sqrt(3200)  && StartPosition.Y>height;
+            return distance(Position, new Point(p.X + 40, p.Y + 40)) <= Radius + Math.Sqrt(3200) && StartPosition.Y > height;
         }
-        public void Move(int width,int height)
+        public void Move(int width, int height)
         {
             this.height = height; this.width = width;
             if (Position.X < width && Position.Y - 60 < height)
@@ -37,15 +37,15 @@ namespace BubbleTrouble
                 if (StartPosition.Y > height && Direction == -1) Direction = 1;
             }
 
-Position = new Point(Position.X, Position.Y + 30 * Direction);
+            Position = new Point(Position.X, Position.Y + 30 * Direction);
         }
-        public void Move ()
+        public void Move()
         {
             Position = new Point(Position.X, Position.Y + 30 * Direction);
         }
 
 
-            public double distance(Point A, Point B)
+        public double distance(Point A, Point B)
         {
             return Math.Sqrt(Math.Pow(A.X - B.X, 2) + Math.Pow(A.Y - B.Y, 2));
         }

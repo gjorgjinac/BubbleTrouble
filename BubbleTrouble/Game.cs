@@ -21,7 +21,7 @@ namespace BubbleTrouble
         public int level;
         public Boolean specialObstaclePassed;
 
-        public void AddBullet (int width, int height)
+        public void AddBullet(int width, int height)
         {
             bullets.Add(new Bullet(10, Color.Yellow, new Point(width, height), 1));
         }
@@ -49,8 +49,8 @@ namespace BubbleTrouble
         {
             foreach (Bomb b in bombs)
             {
-                if (level == 1 || level ==3) b.Move(width, height);
-                if (level == 2 ) b.Move();
+                if (level == 1 || level == 3) b.Move(width, height);
+                if (level == 2) b.Move();
 
             }
 
@@ -65,20 +65,23 @@ namespace BubbleTrouble
 
         public Boolean checkEnd()
         {
-            return (obstacles.ObstacleList.Count == 0 && level != 1)||(obstacles.ObstacleList.Count == 0 && specialObstaclePassed && level==1) || livesLeft == 0 || timeMili < 10;
+            return (obstacles.ObstacleList.Count == 0 && level != 1) || (obstacles.ObstacleList.Count == 0 && specialObstaclePassed && level == 1) || livesLeft == 0 || timeMili < 10;
         }
 
         public Boolean AddBomb(Point p)
         {
             if (bombs.Count <= 3)
-            { bombs.Add(new Bomb(new Point(p.X + 40, p.Y - 40))); return true; }
+            {
+                bombs.Add(new Bomb(new Point(p.X + 40, p.Y - 40)));
+                return true;
+            }
             return false;
 
         }
 
         public Boolean PlayerHit(Point p, int width, int height)
         {
-          foreach (Bomb b in bombs)
+            foreach (Bomb b in bombs)
             {
                 if (b.HitsPlayer(p)) return true;
             }
@@ -88,7 +91,7 @@ namespace BubbleTrouble
             }
 
 
-            return false|| obstacles.isPlayerHit(p, width, height);
+            return false || obstacles.isPlayerHit(p, width, height);
 
         }
 

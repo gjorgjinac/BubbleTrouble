@@ -51,7 +51,7 @@ namespace BubbleTrouble
 
         public void Move(int right, int bottom, int left, int top, int speed)
         {
-         
+
             int X = Position.X;
             int Y = Position.Y;
 
@@ -90,7 +90,7 @@ namespace BubbleTrouble
 
 
 
-       
-        
+
+
     }
 }

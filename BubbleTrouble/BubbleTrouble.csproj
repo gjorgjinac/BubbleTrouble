@@ -242,6 +242,8 @@
     <None Include="img\dragon.gif" />
     <None Include="img\dragon1.gif" />
     <None Include="img\fire spit.gif" />
+    <None Include="img\dragon2.gif" />
+    <None Include="img\darkyard-background-with-dragon.gif" />
     <Content Include="img\money.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
