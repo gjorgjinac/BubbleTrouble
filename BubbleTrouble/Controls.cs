@@ -16,13 +16,15 @@ namespace BubbleTrouble
         public List<PictureBox> pictures;
         public String selectedPlayer;
         public PictureBox playerPicture;
-
+        public int Difficulty { get; set; }
+        
         Dictionary<String, Minion> minions;
         public Controls(Keys l, Keys r, Keys u, Keys d, Keys s, String player, Dictionary<String, Minion> mins)
         {
 
 
             InitializeComponent();
+            
             FormBorderStyle = FormBorderStyle.FixedSingle;
             StartPosition = FormStartPosition.CenterScreen;
             keys = new List<Keys>() { l, r, u, d, s };

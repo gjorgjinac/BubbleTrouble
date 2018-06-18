@@ -71,6 +71,8 @@
             this.label19 = new System.Windows.Forms.Label();
             this.playGroundBox = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label20 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.John)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Mary)).BeginInit();
@@ -502,12 +504,36 @@
             this.panel1.Size = new System.Drawing.Size(210, 360);
             this.panel1.TabIndex = 44;
             // 
+            // label20
+            // 
+            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label20.Location = new System.Drawing.Point(642, 76);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(125, 20);
+            this.label20.TabIndex = 46;
+            this.label20.Text = "Difficulty";
+            this.label20.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Easy",
+            "Medium",
+            "Hard"});
+            this.comboBox1.Location = new System.Drawing.Point(647, 121);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 21);
+            this.comboBox1.TabIndex = 47;
+            // 
             // Controls
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::BubbleTrouble.Properties.Resources.old_town_background;
             this.ClientSize = new System.Drawing.Size(802, 403);
+            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.label20);
             this.Controls.Add(this.label19);
             this.Controls.Add(this.label15);
             this.Controls.Add(this.label16);
@@ -614,5 +640,7 @@
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.PictureBox playGroundBox;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }

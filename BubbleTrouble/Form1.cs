@@ -551,11 +551,11 @@ namespace BubbleTrouble
             if (level == 3)
             {
                 //   brickWallUp.Location = new Point(brickWallUp.Location.X, brickWallUp.Location.Y + 1);
-                //  if (game.timeMili%3==0)
-                brickWallUp.Height++;
-                game.obstacles.Move(Width, Height, 0, brickWallUp.Location.Y + brickWallUp.Height);
+               // if (game.timeMili%3==0)
+               
+                game.obstacles.Move(Width, Height, 0, brickWallUp.Location.Y + brickWallUp.Height );
                 game.MoveBombs(Width, brickWallUp.Location.Y + brickWallUp.Height);
-
+ brickWallUp.Height++;
                 if (brickWallUp.Location.Y + brickWallUp.Height >= player.Location.Y)
                     endGame();
 
@@ -653,6 +653,7 @@ namespace BubbleTrouble
                     player.Location = game.playerPosition;
                     livesLeft = game.livesLeft;
                     resetEnv();
+                    FileName = null;
                 }
 
             }

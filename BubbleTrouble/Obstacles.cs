@@ -36,7 +36,7 @@ namespace BubbleTrouble
             ObstacleList = new List<Obstacle>();
             if (level == 1)
             {
-                ObstacleList.Add(new Obstacle(60, Color.Black, new Point(600, 300), -1, 1));
+                ObstacleList.Add(new Obstacle(80, Color.Black, new Point(600, 300), -1, 1));
                 ObstacleList.Add(new Obstacle(40, Color.Black, new Point(100, 100), 1, 1));
                 specialObstacle = new Obstacle(20, Color.Black, new Point(40, 40), 1, -1);
             }
@@ -50,9 +50,9 @@ namespace BubbleTrouble
             }
             if (level == 3)
             {
-                ObstacleList.Add(new Obstacle(20, Color.Black, new Point(100, 100), 1, 1, 0));
-                ObstacleList.Add(new Obstacle(20, Color.Black, new Point(400, 100), 1, 1, 1));
-                ObstacleList.Add(new Obstacle(20, Color.Black, new Point(700, 100), 1, 1, 2));
+                ObstacleList.Add(new Obstacle(20, Color.Black, new Point(300, 300), 1, 1, 0));
+                ObstacleList.Add(new Obstacle(20, Color.Black, new Point(500, 300), 1, 1, 1));
+                ObstacleList.Add(new Obstacle(20, Color.Black, new Point(700, 300), 1, 1, 2));
 
 
             }
@@ -114,17 +114,7 @@ namespace BubbleTrouble
 
             return false;
         }
-        public void Move3(int width, int height, int barrierX, int barrierY)
-        {
-            foreach (Obstacle c in ObstacleList)
-            {
-                c.Move(width, height - 70, 0, 0, 10);
-
-
-
-
-            }
-        }
+       
 
         public void Move(int width, int height, int specialWidth, int specialHeight)
         {
@@ -134,7 +124,7 @@ namespace BubbleTrouble
             {
                 foreach (Obstacle c in ObstacleList)
                 {
-                    c.Move(width - 70, height - 70 - 70, 0, 0, 10);
+                    c.Move(width - 70, height - 140, 0, 0, 10);
 
                 }
                 specialObstacle.Move(specialWidth - 70, specialHeight + 50 - 70, 0, 0, 10);
@@ -144,7 +134,7 @@ namespace BubbleTrouble
             {
                 foreach (Obstacle c in ObstacleList)
                 {
-                    c.Move(width - 70, height - 70 - 70, specialWidth, specialHeight, 10);
+                    c.Move(width - 70, height-140 , specialWidth, specialHeight, 10);
 
                 }
             }

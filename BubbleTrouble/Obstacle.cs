@@ -54,7 +54,7 @@ namespace BubbleTrouble
 
             int X = Position.X;
             int Y = Position.Y;
-
+            top += (int)Radius ;
             if (DirectionHorizontal == 1) // desno
             {
                 if (X < right && X > left) X += speed;
@@ -72,15 +72,15 @@ namespace BubbleTrouble
 
             if (DirectionVertical == 1)
             {
-                if (Y < bottom && Y > top) Y += speed;
+                if (Y <= bottom && Y > top) Y += speed;
                 else if (Y >= bottom - 100) { Y -= speed; DirectionVertical *= -1; }
 
 
             }
             else if (DirectionVertical == -1)
             {
-                if (Y < bottom && Y > top) Y -= speed;
-                else if (Y <= 200 + Radius) { Y += speed; DirectionVertical *= -1; }
+                if (Y < bottom && Y > top+speed) Y -= speed;
+                else if (Y <= top + Radius) { Y += speed; DirectionVertical *= -1; }
 
 
             }
