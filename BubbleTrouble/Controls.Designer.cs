@@ -521,9 +521,9 @@
             "Easy",
             "Medium",
             "Hard"});
-            this.difficultyList.Location = new System.Drawing.Point(646, 114);
+            this.difficultyList.Location = new System.Drawing.Point(642, 110);
             this.difficultyList.Name = "difficultyList";
-            this.difficultyList.Size = new System.Drawing.Size(121, 21);
+            this.difficultyList.Size = new System.Drawing.Size(125, 21);
             this.difficultyList.TabIndex = 47;
             this.difficultyList.SelectedIndexChanged += new System.EventHandler(this.difficultyList_SelectedIndexChanged);
             // 

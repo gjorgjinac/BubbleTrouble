@@ -40,6 +40,7 @@
             this.openGameToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.saveGameToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.newGameToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.manualToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.level2ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.level1ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.level2ToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
@@ -51,7 +52,6 @@
             this.pauseToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.muteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.manualToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.life10 = new System.Windows.Forms.PictureBox();
             this.life9 = new System.Windows.Forms.PictureBox();
             this.life8 = new System.Windows.Forms.PictureBox();
@@ -65,7 +65,6 @@
             this.brickWallDown = new System.Windows.Forms.PictureBox();
             this.brickWallUp = new System.Windows.Forms.PictureBox();
             this.tank = new System.Windows.Forms.PictureBox();
-            this.tankStand = new System.Windows.Forms.PictureBox();
             this.barrier2_1 = new System.Windows.Forms.PictureBox();
             this.barrier1_1 = new System.Windows.Forms.PictureBox();
             this.barrier2 = new System.Windows.Forms.PictureBox();
@@ -94,7 +93,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.brickWallDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.brickWallUp)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tank)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tankStand)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.barrier2_1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.barrier1_1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.barrier2)).BeginInit();
@@ -177,23 +175,30 @@
             // openGameToolStripMenuItem1
             // 
             this.openGameToolStripMenuItem1.Name = "openGameToolStripMenuItem1";
-            this.openGameToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.openGameToolStripMenuItem1.Size = new System.Drawing.Size(137, 22);
             this.openGameToolStripMenuItem1.Text = "Open Game";
             this.openGameToolStripMenuItem1.Click += new System.EventHandler(this.openGameToolStripMenuItem1_Click);
             // 
             // saveGameToolStripMenuItem
             // 
             this.saveGameToolStripMenuItem.Name = "saveGameToolStripMenuItem";
-            this.saveGameToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.saveGameToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
             this.saveGameToolStripMenuItem.Text = "Save Game";
             this.saveGameToolStripMenuItem.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
             // 
             // newGameToolStripMenuItem1
             // 
             this.newGameToolStripMenuItem1.Name = "newGameToolStripMenuItem1";
-            this.newGameToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.newGameToolStripMenuItem1.Size = new System.Drawing.Size(137, 22);
             this.newGameToolStripMenuItem1.Text = "New Game";
             this.newGameToolStripMenuItem1.Click += new System.EventHandler(this.newGameToolStripMenuItem_Click);
+            // 
+            // manualToolStripMenuItem
+            // 
+            this.manualToolStripMenuItem.Name = "manualToolStripMenuItem";
+            this.manualToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
+            this.manualToolStripMenuItem.Text = "Manual";
+            this.manualToolStripMenuItem.Click += new System.EventHandler(this.manualToolStripMenuItem_Click);
             // 
             // level2ToolStripMenuItem
             // 
@@ -208,21 +213,21 @@
             // level1ToolStripMenuItem
             // 
             this.level1ToolStripMenuItem.Name = "level1ToolStripMenuItem";
-            this.level1ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.level1ToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
             this.level1ToolStripMenuItem.Text = "level 1";
             this.level1ToolStripMenuItem.Click += new System.EventHandler(this.level1ToolStripMenuItem_Click);
             // 
             // level2ToolStripMenuItem1
             // 
             this.level2ToolStripMenuItem1.Name = "level2ToolStripMenuItem1";
-            this.level2ToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.level2ToolStripMenuItem1.Size = new System.Drawing.Size(107, 22);
             this.level2ToolStripMenuItem1.Text = "level 2";
             this.level2ToolStripMenuItem1.Click += new System.EventHandler(this.level2ToolStripMenuItem1_Click);
             // 
             // level3ToolStripMenuItem
             // 
             this.level3ToolStripMenuItem.Name = "level3ToolStripMenuItem";
-            this.level3ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.level3ToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
             this.level3ToolStripMenuItem.Text = "level 3";
             this.level3ToolStripMenuItem.Click += new System.EventHandler(this.level3ToolStripMenuItem_Click);
             // 
@@ -251,34 +256,27 @@
             // changeControlsToolStripMenuItem
             // 
             this.changeControlsToolStripMenuItem.Name = "changeControlsToolStripMenuItem";
-            this.changeControlsToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.changeControlsToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
             this.changeControlsToolStripMenuItem.Text = "Settings";
             this.changeControlsToolStripMenuItem.Click += new System.EventHandler(this.controlsToolStripMenuItem_Click);
             // 
             // pauseToolStripMenuItem1
             // 
             this.pauseToolStripMenuItem1.Name = "pauseToolStripMenuItem1";
-            this.pauseToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.pauseToolStripMenuItem1.Size = new System.Drawing.Size(116, 22);
             this.pauseToolStripMenuItem1.Text = "Pause";
             this.pauseToolStripMenuItem1.Click += new System.EventHandler(this.pauseToolStripMenuItem_Click);
             // 
             // muteToolStripMenuItem
             // 
             this.muteToolStripMenuItem.Name = "muteToolStripMenuItem";
-            this.muteToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.muteToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
             this.muteToolStripMenuItem.Text = "Mute";
             this.muteToolStripMenuItem.Click += new System.EventHandler(this.muteToolStripMenuItem_Click);
             // 
             // timer1
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // manualToolStripMenuItem
-            // 
-            this.manualToolStripMenuItem.Name = "manualToolStripMenuItem";
-            this.manualToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.manualToolStripMenuItem.Text = "Manual";
-            this.manualToolStripMenuItem.Click += new System.EventHandler(this.manualToolStripMenuItem_Click);
             // 
             // life10
             // 
@@ -402,15 +400,6 @@
             this.tank.TabIndex = 22;
             this.tank.TabStop = false;
             // 
-            // tankStand
-            // 
-            this.tankStand.Image = global::BubbleTrouble.Properties.Resources.platform;
-            this.tankStand.Location = new System.Drawing.Point(708, 161);
-            this.tankStand.Name = "tankStand";
-            this.tankStand.Size = new System.Drawing.Size(100, 36);
-            this.tankStand.TabIndex = 21;
-            this.tankStand.TabStop = false;
-            // 
             // barrier2_1
             // 
             this.barrier2_1.Image = global::BubbleTrouble.Properties.Resources.barrier2;
@@ -460,7 +449,7 @@
             // 
             this.player.Image = global::BubbleTrouble.Properties.Resources.soldier;
             this.player.InitialImage = ((System.Drawing.Image)(resources.GetObject("player.InitialImage")));
-            this.player.Location = new System.Drawing.Point(126, 313);
+            this.player.Location = new System.Drawing.Point(148, 313);
             this.player.Name = "player";
             this.player.Size = new System.Drawing.Size(80, 80);
             this.player.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -555,7 +544,6 @@
             this.Controls.Add(this.brickWallDown);
             this.Controls.Add(this.brickWallUp);
             this.Controls.Add(this.tank);
-            this.Controls.Add(this.tankStand);
             this.Controls.Add(this.barrier2_1);
             this.Controls.Add(this.barrier1_1);
             this.Controls.Add(this.barrier2);
@@ -594,7 +582,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.brickWallDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.brickWallUp)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tank)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tankStand)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.barrier2_1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.barrier1_1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.barrier2)).EndInit();
@@ -645,7 +632,6 @@
         private System.Windows.Forms.ToolStripMenuItem changeControlsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem pauseToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem muteToolStripMenuItem;
-        private System.Windows.Forms.PictureBox tankStand;
         private System.Windows.Forms.PictureBox tank;
         private System.Windows.Forms.PictureBox brickWallUp;
         private System.Windows.Forms.PictureBox brickWallDown;

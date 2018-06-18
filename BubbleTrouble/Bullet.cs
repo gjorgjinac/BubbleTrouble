@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Drawing;
 namespace BubbleTrouble
 {
+    [Serializable]
     class Bullet : Circle
     {
         public Bullet(float radius, Color color, Point position, int direction):base(radius, Color.OrangeRed, position, direction)

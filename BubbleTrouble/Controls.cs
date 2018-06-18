@@ -19,7 +19,7 @@ namespace BubbleTrouble
         public int Difficulty { get; set; }
         
         Dictionary<String, Minion> minions;
-        public Controls(Keys l, Keys r, Keys u, Keys d, Keys s, String player, Dictionary<String, Minion> mins)
+        public Controls(Keys l, Keys r, Keys u, Keys d, Keys s, String player, Dictionary<String, Minion> mins, int difficulty)
         {
 
 
@@ -33,7 +33,7 @@ namespace BubbleTrouble
             pictures = new List<PictureBox>() { John, Mary, Oliver, Dinah, Thor, Wanda, Tony, Natasha, Bruce, Diana, Barry, Harley };
             selectedPlayer = player;
             playerPicture = new PictureBox();
-
+            difficultyList.SelectedIndex = difficulty - 1;
             foreach (PictureBox p in pictures)
             {
                 p.BackColor = Color.Transparent;

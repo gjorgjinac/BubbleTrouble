@@ -1,14 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Runtime.Serialization;
 using System.Runtime.Serialization.Formatters.Binary;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace BubbleTrouble
@@ -59,7 +55,7 @@ namespace BubbleTrouble
 
             musicOn = true;
             this.Text = "Bubble Trouble";
-            difficulty = 1;
+            difficulty = 2;
             livesLeft = 5;
             level = 1;
             DoubleBuffered = true;
@@ -123,7 +119,7 @@ namespace BubbleTrouble
                 barrier2.Visible = false;
                 barrier2_1.Visible = false;
                 tank.Visible = true;
-                tankStand.Visible = true;
+              
                 brickWallDown.Visible = false;
                 brickWallUp.Visible = false;
 
@@ -137,7 +133,7 @@ namespace BubbleTrouble
                 barrier2_1.Visible = true;
                 barrier1_1.Visible = true;
                 tank.Visible = false;
-                tankStand.Visible = false;
+               
                 brickWallDown.Visible = false;
                 brickWallUp.Visible = false;
 
@@ -151,7 +147,7 @@ namespace BubbleTrouble
                 barrier2_1.Visible = false;
                 barrier1_1.Visible = false;
                 tank.Visible = false;
-                tankStand.Visible = false;
+             
                 brickWallDown.Visible = true;
                 brickWallUp.Visible = true;
                 brickWallUp.Height = 50;
@@ -194,6 +190,7 @@ namespace BubbleTrouble
                 if (MessageBox.Show("You have no more lives left. GAME OVER \n START NEW GAME?", "Game over", MessageBoxButtons.YesNo) == DialogResult.Yes)
                 {
                     newGame();
+                    level = 1;
                     totalPoints = 0;
                 }
                 else
@@ -201,7 +198,7 @@ namespace BubbleTrouble
                     this.Close();
                 }
             }
-            player.Location = new Point(100, Height - 175);
+            player.Location = new Point(150, Height - 175);
             for (int i = 0; i < 10; i++)
             {
                 if (i < livesLeft) lives.ElementAt(i).Visible = true;
@@ -526,7 +523,7 @@ namespace BubbleTrouble
             labelPoints.Text = String.Format("Points: {0} ", game.points);
 
 
-            if (level == 1 || level == 4)
+            if (level == 1)
             {
                 game.obstacles.Move(Width, Height, platform.Width, platform.Location.Y);
                 game.MoveBombs(platform.Width, platform.Location.Y);
@@ -586,11 +583,6 @@ namespace BubbleTrouble
         {
 
 
-            game.updateBombs(e.Graphics, Height - 100);
-
-
-
-
         }
 
 
@@ -616,6 +608,7 @@ namespace BubbleTrouble
                     IFormatter formatter = new BinaryFormatter();
                     game.playerPosition = player.Location;
                     game.livesLeft = livesLeft;
+                    game.selectedPlayer = selectedPlayer;
                     formatter.Serialize(stream, game);
                     FileName = null;
                 }
@@ -624,6 +617,7 @@ namespace BubbleTrouble
             catch (Exception exception)
             {
                 MessageBox.Show("Unable to complete saving");
+
             }
             Invalidate(true);
         }
@@ -640,27 +634,32 @@ namespace BubbleTrouble
                 {
                     FileName = openFileDialog.FileName;
 
+
                 }
-            }
-
-
-            try
-            {
-                using (FileStream stream = new FileStream(FileName, FileMode.Open))
+              
+            }  try
                 {
-                    IFormatter formatter = new BinaryFormatter();
-                    game = (Game)formatter.Deserialize(stream);
-                    player.Location = game.playerPosition;
-                    livesLeft = game.livesLeft;
+                    using (FileStream stream = new FileStream(FileName, FileMode.Open))
+                    {
+                        IFormatter formatter = new BinaryFormatter();
+                        game = (Game)formatter.Deserialize(stream);
+                        player.Location = game.playerPosition;
+                        livesLeft = game.livesLeft;
+                        level = game.level;
+                    selectedPlayer = game.selectedPlayer;
                     resetEnv();
-                    FileName = null;
+                        //lifeLost();
+                        
+
+                    }
+
+                }
+                catch (Exception exception)
+                {
+                    MessageBox.Show("Unable to complete opening");
+
                 }
 
-            }
-            catch (Exception exception)
-            {
-                MessageBox.Show("Unable to complete opening");
-            }
             FileName = null;
             Invalidate(true);
 
@@ -783,7 +782,7 @@ namespace BubbleTrouble
         private void controlsToolStripMenuItem_Click(object sender, EventArgs e)
         {
             timer1.Stop();
-            Controls form = new Controls(left, right, up, down, shoot, selectedPlayer, minions);
+            Controls form = new Controls(left, right, up, down, shoot, selectedPlayer, minions, difficulty);
             if (form.ShowDialog() == DialogResult.OK)
 
             {

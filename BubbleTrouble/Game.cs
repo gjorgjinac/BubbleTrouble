@@ -21,7 +21,7 @@ namespace BubbleTrouble
         public int level;
         public Boolean specialObstaclePassed;
         public int difficulty;
-
+        public String selectedPlayer;
         public void AddBullet(int width, int height)
         {
             bullets.Add(new Bullet(10, Color.Yellow, new Point(width, height), 1));

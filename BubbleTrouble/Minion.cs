@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 using System.Drawing;
 namespace BubbleTrouble
 {
-   public class Minion
+    [Serializable]
+    public class Minion
     {
         public String name { get; set; }
         public Image normal { get; set; }
