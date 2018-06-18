@@ -40,15 +40,15 @@
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Black;
-            this.label1.Font = new System.Drawing.Font("Calibri", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.DeepPink;
-            this.label1.Location = new System.Drawing.Point(217, 57);
+            this.label1.Location = new System.Drawing.Point(180, 69);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(169, 33);
+            this.label1.Size = new System.Drawing.Size(245, 31);
             this.label1.TabIndex = 1;
             this.label1.Text = "HOW TO PLAY";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // right
             // 
@@ -91,10 +91,10 @@
             this.manualText.BackColor = System.Drawing.Color.Black;
             this.manualText.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.manualText.ForeColor = System.Drawing.Color.White;
-            this.manualText.Location = new System.Drawing.Point(183, 99);
+            this.manualText.Location = new System.Drawing.Point(180, 99);
             this.manualText.Name = "manualText";
             this.manualText.Padding = new System.Windows.Forms.Padding(10);
-            this.manualText.Size = new System.Drawing.Size(245, 209);
+            this.manualText.Size = new System.Drawing.Size(245, 210);
             this.manualText.TabIndex = 5;
             this.manualText.Text = "label2";
             // 
@@ -116,7 +116,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.left)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 

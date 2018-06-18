@@ -20,7 +20,7 @@ namespace BubbleTrouble
 
         public override string ToString()
         {
-            return String.Format("Name: {0} \t Points: {1} \n", Name, Points);
+            return String.Format("Name: {0:10} \t Points: {1} \n", Name, Points);
         }
     }
 }

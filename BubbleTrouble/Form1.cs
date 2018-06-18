@@ -64,17 +64,17 @@ namespace BubbleTrouble
             level = 1;
             DoubleBuffered = true;
             goodies = new List<PictureBox>() { money1, pizza, coins, time, shield };
-           
+
             player.BackColor = Color.Transparent;
             ladder.BackColor = Color.Transparent;
-          
+
             tank.BackColor = Color.Transparent;
-      
+
             FormBorderStyle = FormBorderStyle.FixedSingle;
             StartPosition = FormStartPosition.CenterScreen;
             totalPoints = 0;
             FileName = null;
-            selectedPlayer = "Diana";
+            selectedPlayer = "John";
 
             BackgroundImage = playGroundBox.Image = minions[selectedPlayer].backgrounds.ElementAt((level - 1) % (minions[selectedPlayer].backgrounds.Count));
 
@@ -126,7 +126,7 @@ namespace BubbleTrouble
                 tankStand.Visible = true;
                 brickWallDown.Visible = false;
                 brickWallUp.Visible = false;
-               
+
             }
             if (level == 2)
             {
@@ -140,7 +140,7 @@ namespace BubbleTrouble
                 tankStand.Visible = false;
                 brickWallDown.Visible = false;
                 brickWallUp.Visible = false;
-               
+
             }
             if (level == 3)
             {
@@ -155,14 +155,14 @@ namespace BubbleTrouble
                 brickWallDown.Visible = true;
                 brickWallUp.Visible = true;
                 brickWallUp.Height = 50;
-               
+
             }
-          
+
 
             BackgroundImage = playGroundBox.Image = minions[selectedPlayer].backgrounds.ElementAt((level - 1) % (minions[selectedPlayer].backgrounds.Count));
 
-           
-            
+
+
 
 
             resetGoodies();
@@ -173,7 +173,7 @@ namespace BubbleTrouble
             timer1.Start();
             pauseToolStripMenuItem1.Text = "Pause";
             progressBarTime.Value = progressBarTime.Maximum;
-    
+
 
 
             goodieUnique = true;
@@ -256,7 +256,6 @@ namespace BubbleTrouble
             sad_violin.Stop();
 
 
-            //   progressBarLives.Value = game.livesLeft;
 
 
 
@@ -278,7 +277,7 @@ namespace BubbleTrouble
 
                 }
                 //Postojat razlicini implementacii za prvo i vtoro nivo bidejki ima razlicni barieri
-                if (level == 1 )
+                if (level == 1)
                 {
                     //Pri dvizenje levo ili desno na prvo nivo, samo treba da se onevozmozi izleguvanjeto na igracot od prozorecot
                     if (e.KeyCode == left && player.Location.X > 0)
@@ -379,7 +378,7 @@ namespace BubbleTrouble
                 }
 
 
-                if (level == 3 )
+                if (level == 3)
                 {
                     //Pri dvizenje levo ili desno na prvo nivo, samo treba da se onevozmozi izleguvanjeto na igracot od prozorecot
                     if (e.KeyCode == left && player.Location.X > 0)
@@ -552,16 +551,16 @@ namespace BubbleTrouble
             if (level == 3)
             {
                 //   brickWallUp.Location = new Point(brickWallUp.Location.X, brickWallUp.Location.Y + 1);
-            //  if (game.timeMili%3==0)
-                    brickWallUp.Height++;
+                //  if (game.timeMili%3==0)
+                brickWallUp.Height++;
                 game.obstacles.Move(Width, Height, 0, brickWallUp.Location.Y + brickWallUp.Height);
-                game.MoveBombs(Width, brickWallUp.Location.Y + brickWallUp.Height );
+                game.MoveBombs(Width, brickWallUp.Location.Y + brickWallUp.Height);
 
                 if (brickWallUp.Location.Y + brickWallUp.Height >= player.Location.Y)
                     endGame();
 
             }
-            //  game.MoveBombs(platform.Width, platform.Location.Y);
+
             game.CheckHits();
 
 
@@ -588,7 +587,7 @@ namespace BubbleTrouble
 
 
             game.updateBombs(e.Graphics, Height - 100);
-           
+
 
 
 
@@ -692,7 +691,6 @@ namespace BubbleTrouble
         private void statusStrip1_Paint(object sender, PaintEventArgs e)
         {
 
-            //  progressBarLives.Value = livesLeft;
             labelPoints.Text = String.Format("Points: {0} ", game.points);
             labelTime.Text = String.Format("Time left: {0}s", progressBarTime.Value);
             labelLives.Text = String.Format("Lives left: {0}", livesLeft);
@@ -721,6 +719,7 @@ namespace BubbleTrouble
         private void level1ToolStripMenuItem_Click(object sender, EventArgs e)
         {
             level = 1;
+            selectedPlayer = "John";
             livesLeft = 5;
             lifeLost();
         }
@@ -728,10 +727,18 @@ namespace BubbleTrouble
         private void level2ToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             level = 2;
+
             livesLeft = 5;
             lifeLost();
         }
+        private void level3ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            level = 3;
+            selectedPlayer = "Diana";
+            livesLeft = 5;
+            lifeLost();
 
+        }
         private void pictureBox1_Paint(object sender, PaintEventArgs e)
         {
 
@@ -739,21 +746,8 @@ namespace BubbleTrouble
 
             game.updateBombs(e.Graphics, Height - 100);
 
-
-          /*  Pen pen = new Pen(Color.Gray, 10);
-            e.Graphics.DrawLine(pen, 20, Height - 100, 20, platform.Location.Y);
-            e.Graphics.DrawLine(pen, 120, Height - 100, 120, platform.Location.Y);
-            */
-
-
         }
 
-        private void level4ToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            level = 4;
-            livesLeft = 5;
-            lifeLost();
-        }
 
         private void manualToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -764,13 +758,7 @@ namespace BubbleTrouble
                 timer1.Start();
         }
 
-        private void level3ToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            level = 3;
-            livesLeft = 5;
-            lifeLost();
 
-        }
 
         private void openGameToolStripMenuItem1_Click(object sender, EventArgs e)
         {

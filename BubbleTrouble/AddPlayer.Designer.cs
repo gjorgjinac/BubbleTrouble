@@ -34,7 +34,9 @@
             this.buttonInsert = new System.Windows.Forms.Button();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.buttonCancel = new System.Windows.Forms.Button();
+            this.playGroundBox = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.playGroundBox)).BeginInit();
             this.SuspendLayout();
             // 
             // textBox1
@@ -79,6 +81,17 @@
             this.buttonCancel.UseVisualStyleBackColor = true;
             this.buttonCancel.Click += new System.EventHandler(this.buttonCancel_Click);
             // 
+            // playGroundBox
+            // 
+            this.playGroundBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.playGroundBox.Image = global::BubbleTrouble.Properties.Resources.old_town_background;
+            this.playGroundBox.Location = new System.Drawing.Point(-40, -20);
+            this.playGroundBox.Margin = new System.Windows.Forms.Padding(0);
+            this.playGroundBox.Name = "playGroundBox";
+            this.playGroundBox.Size = new System.Drawing.Size(510, 337);
+            this.playGroundBox.TabIndex = 26;
+            this.playGroundBox.TabStop = false;
+            // 
             // AddPlayer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -89,9 +102,11 @@
             this.Controls.Add(this.buttonInsert);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.playGroundBox);
             this.Name = "AddPlayer";
             this.Text = "AddPlayer";
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.playGroundBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -104,5 +119,6 @@
         private System.Windows.Forms.Button buttonInsert;
         private System.Windows.Forms.ErrorProvider errorProvider1;
         private System.Windows.Forms.Button buttonCancel;
+        private System.Windows.Forms.PictureBox playGroundBox;
     }
 }

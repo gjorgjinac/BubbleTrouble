@@ -19,6 +19,8 @@ namespace BubbleTrouble
         public AddPlayer(int points)
         {
             InitializeComponent();
+            FormBorderStyle = FormBorderStyle.FixedSingle;
+            StartPosition = FormStartPosition.CenterScreen;
             this.points = points;
         }
 
@@ -30,7 +32,7 @@ namespace BubbleTrouble
 
         private void buttonInsert_Click(object sender, EventArgs e)
         {
-            newPlayer = new Player(textBox1.Text,points);
+            newPlayer = new Player(textBox1.Text.Trim(),points);
             DialogResult = DialogResult.OK;
         }
 

@@ -26,6 +26,8 @@ namespace BubbleTrouble
         public Manual()
         {
             InitializeComponent();
+            FormBorderStyle = FormBorderStyle.FixedSingle;
+            StartPosition = FormStartPosition.CenterScreen;
             left.BackColor = Color.Transparent;
             right.BackColor = Color.Transparent;
             currentPage = 0;

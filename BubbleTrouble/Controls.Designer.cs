@@ -69,6 +69,8 @@
             this.label17 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
+            this.playGroundBox = new System.Windows.Forms.PictureBox();
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.John)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Mary)).BeginInit();
@@ -82,6 +84,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.Barry)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Oliver)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Dinah)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.playGroundBox)).BeginInit();
             this.SuspendLayout();
             // 
             // textBoxLeft
@@ -480,12 +483,31 @@
             this.label19.Text = "Change controls";
             this.label19.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // playGroundBox
+            // 
+            this.playGroundBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.playGroundBox.Image = global::BubbleTrouble.Properties.Resources.old_town_background;
+            this.playGroundBox.Location = new System.Drawing.Point(0, 0);
+            this.playGroundBox.Margin = new System.Windows.Forms.Padding(0);
+            this.playGroundBox.Name = "playGroundBox";
+            this.playGroundBox.Size = new System.Drawing.Size(835, 505);
+            this.playGroundBox.TabIndex = 43;
+            this.playGroundBox.TabStop = false;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.Black;
+            this.panel1.Location = new System.Drawing.Point(33, 7);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(210, 360);
+            this.panel1.TabIndex = 44;
+            // 
             // Controls
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::BubbleTrouble.Properties.Resources.gradient1;
-            this.ClientSize = new System.Drawing.Size(774, 365);
+            this.BackgroundImage = global::BubbleTrouble.Properties.Resources.old_town_background;
+            this.ClientSize = new System.Drawing.Size(802, 403);
             this.Controls.Add(this.label19);
             this.Controls.Add(this.label15);
             this.Controls.Add(this.label16);
@@ -525,6 +547,8 @@
             this.Controls.Add(this.textBoxUp);
             this.Controls.Add(this.textBoxRight);
             this.Controls.Add(this.textBoxLeft);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.playGroundBox);
             this.Name = "Controls";
             this.Text = "Controls";
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
@@ -540,6 +564,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.Barry)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Oliver)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Dinah)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.playGroundBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -587,5 +612,7 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.PictureBox playGroundBox;
+        private System.Windows.Forms.Panel panel1;
     }
 }

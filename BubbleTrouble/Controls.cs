@@ -23,6 +23,8 @@ namespace BubbleTrouble
 
 
             InitializeComponent();
+            FormBorderStyle = FormBorderStyle.FixedSingle;
+            StartPosition = FormStartPosition.CenterScreen;
             keys = new List<Keys>() { l, r, u, d, s };
             resetKeys();
             minions = mins;

@@ -17,17 +17,19 @@ namespace BubbleTrouble
     public partial class HighScores : Form
     {
         public List<Player> Players { get; set; } = new List<Player>() {  };
-        String FileName = "HighScores";
+        String FileName = "High scores";
         
         public HighScores()
         {
             InitializeComponent();
-           
+            FormBorderStyle = FormBorderStyle.FixedSingle;
+            StartPosition = FormStartPosition.CenterScreen;
+           // saveFile();
             openFile();
             Players = Players.OrderByDescending(x => x.Points).ToList();
            
   
-                for (int i = 0; i < 10; i++)
+              for (int i = 0; i < ((Players.Count>10)?10:Players.Count); i++)
                 {
                     playerList.Items.Add(Players.ElementAt(i));
 
@@ -46,7 +48,7 @@ namespace BubbleTrouble
             Players = Players.OrderByDescending(x => x.Points).ToList();
 
             playerList.Items.Clear();
-            for (int i = 0; i < 10; i++)
+            for (int i = 0; i < ((Players.Count > 10) ? 10 : Players.Count); i++)
             {
                 playerList.Items.Add(Players.ElementAt(i));
 

@@ -51,6 +51,7 @@
             this.pauseToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.muteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.manualToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.life10 = new System.Windows.Forms.PictureBox();
             this.life9 = new System.Windows.Forms.PictureBox();
             this.life8 = new System.Windows.Forms.PictureBox();
@@ -78,7 +79,6 @@
             this.coins = new System.Windows.Forms.PictureBox();
             this.pizza = new System.Windows.Forms.PictureBox();
             this.playGroundBox = new System.Windows.Forms.PictureBox();
-            this.manualToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.life10)).BeginInit();
@@ -258,14 +258,14 @@
             // pauseToolStripMenuItem1
             // 
             this.pauseToolStripMenuItem1.Name = "pauseToolStripMenuItem1";
-            this.pauseToolStripMenuItem1.Size = new System.Drawing.Size(161, 22);
+            this.pauseToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
             this.pauseToolStripMenuItem1.Text = "Pause";
             this.pauseToolStripMenuItem1.Click += new System.EventHandler(this.pauseToolStripMenuItem_Click);
             // 
             // muteToolStripMenuItem
             // 
             this.muteToolStripMenuItem.Name = "muteToolStripMenuItem";
-            this.muteToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
+            this.muteToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.muteToolStripMenuItem.Text = "Mute";
             this.muteToolStripMenuItem.Click += new System.EventHandler(this.muteToolStripMenuItem_Click);
             // 
@@ -273,10 +273,17 @@
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // manualToolStripMenuItem
+            // 
+            this.manualToolStripMenuItem.Name = "manualToolStripMenuItem";
+            this.manualToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.manualToolStripMenuItem.Text = "Manual";
+            this.manualToolStripMenuItem.Click += new System.EventHandler(this.manualToolStripMenuItem_Click);
+            // 
             // life10
             // 
             this.life10.Image = global::BubbleTrouble.Properties.Resources.life;
-            this.life10.Location = new System.Drawing.Point(763, 431);
+            this.life10.Location = new System.Drawing.Point(763, 434);
             this.life10.Name = "life10";
             this.life10.Size = new System.Drawing.Size(32, 32);
             this.life10.TabIndex = 35;
@@ -286,7 +293,7 @@
             // life9
             // 
             this.life9.Image = global::BubbleTrouble.Properties.Resources.life;
-            this.life9.Location = new System.Drawing.Point(729, 431);
+            this.life9.Location = new System.Drawing.Point(729, 434);
             this.life9.Name = "life9";
             this.life9.Size = new System.Drawing.Size(32, 32);
             this.life9.TabIndex = 34;
@@ -296,7 +303,7 @@
             // life8
             // 
             this.life8.Image = global::BubbleTrouble.Properties.Resources.life;
-            this.life8.Location = new System.Drawing.Point(696, 431);
+            this.life8.Location = new System.Drawing.Point(696, 434);
             this.life8.Name = "life8";
             this.life8.Size = new System.Drawing.Size(32, 32);
             this.life8.TabIndex = 33;
@@ -306,7 +313,7 @@
             // life7
             // 
             this.life7.Image = global::BubbleTrouble.Properties.Resources.life;
-            this.life7.Location = new System.Drawing.Point(662, 431);
+            this.life7.Location = new System.Drawing.Point(662, 434);
             this.life7.Name = "life7";
             this.life7.Size = new System.Drawing.Size(32, 32);
             this.life7.TabIndex = 32;
@@ -316,7 +323,7 @@
             // life6
             // 
             this.life6.Image = global::BubbleTrouble.Properties.Resources.life;
-            this.life6.Location = new System.Drawing.Point(629, 431);
+            this.life6.Location = new System.Drawing.Point(629, 434);
             this.life6.Name = "life6";
             this.life6.Size = new System.Drawing.Size(32, 32);
             this.life6.TabIndex = 31;
@@ -326,7 +333,7 @@
             // life5
             // 
             this.life5.Image = global::BubbleTrouble.Properties.Resources.life;
-            this.life5.Location = new System.Drawing.Point(595, 431);
+            this.life5.Location = new System.Drawing.Point(595, 434);
             this.life5.Name = "life5";
             this.life5.Size = new System.Drawing.Size(32, 32);
             this.life5.TabIndex = 30;
@@ -335,7 +342,7 @@
             // life4
             // 
             this.life4.Image = global::BubbleTrouble.Properties.Resources.life;
-            this.life4.Location = new System.Drawing.Point(561, 431);
+            this.life4.Location = new System.Drawing.Point(561, 434);
             this.life4.Name = "life4";
             this.life4.Size = new System.Drawing.Size(32, 32);
             this.life4.TabIndex = 29;
@@ -344,7 +351,7 @@
             // life3
             // 
             this.life3.Image = global::BubbleTrouble.Properties.Resources.life;
-            this.life3.Location = new System.Drawing.Point(527, 431);
+            this.life3.Location = new System.Drawing.Point(527, 434);
             this.life3.Name = "life3";
             this.life3.Size = new System.Drawing.Size(32, 32);
             this.life3.TabIndex = 28;
@@ -353,7 +360,7 @@
             // life2
             // 
             this.life2.Image = global::BubbleTrouble.Properties.Resources.life;
-            this.life2.Location = new System.Drawing.Point(493, 431);
+            this.life2.Location = new System.Drawing.Point(493, 434);
             this.life2.Name = "life2";
             this.life2.Size = new System.Drawing.Size(32, 32);
             this.life2.TabIndex = 27;
@@ -362,7 +369,7 @@
             // life1
             // 
             this.life1.Image = global::BubbleTrouble.Properties.Resources.life;
-            this.life1.Location = new System.Drawing.Point(459, 431);
+            this.life1.Location = new System.Drawing.Point(459, 434);
             this.life1.Name = "life1";
             this.life1.Size = new System.Drawing.Size(32, 32);
             this.life1.TabIndex = 26;
@@ -520,7 +527,7 @@
             // playGroundBox
             // 
             this.playGroundBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.playGroundBox.Image = global::BubbleTrouble.Properties.Resources.waterfal_backgound;
+            this.playGroundBox.Image = global::BubbleTrouble.Properties.Resources.military_base;
             this.playGroundBox.Location = new System.Drawing.Point(0, 0);
             this.playGroundBox.Margin = new System.Windows.Forms.Padding(0);
             this.playGroundBox.Name = "playGroundBox";
@@ -528,13 +535,6 @@
             this.playGroundBox.TabIndex = 25;
             this.playGroundBox.TabStop = false;
             this.playGroundBox.Paint += new System.Windows.Forms.PaintEventHandler(this.pictureBox1_Paint);
-            // 
-            // manualToolStripMenuItem
-            // 
-            this.manualToolStripMenuItem.Name = "manualToolStripMenuItem";
-            this.manualToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.manualToolStripMenuItem.Text = "Manual";
-            this.manualToolStripMenuItem.Click += new System.EventHandler(this.manualToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -577,7 +577,6 @@
             this.Load += new System.EventHandler(this.Form1_Load);
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.Form1_Paint);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
-            this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
