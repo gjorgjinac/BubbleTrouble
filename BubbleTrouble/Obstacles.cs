@@ -123,7 +123,7 @@ namespace BubbleTrouble
             int speed = 0;
             if (level == 1)
 
-            {speed = (difficulty==3?difficulty-1:difficulty) * 10;
+            {speed = (difficulty==3? difficulty-1: difficulty) * 10;
                 foreach (Obstacle c in ObstacleList)
                 {
                     c.Move(width - 70, height - 140, 0, 0, speed);
@@ -134,7 +134,7 @@ namespace BubbleTrouble
 
             if (level == 3)
             {
-                speed = (difficulty-1) * 10;
+                speed = (difficulty != 1 ? difficulty - 1 : difficulty) * 10;
                 foreach (Obstacle c in ObstacleList)
                 {
                     c.Move(width - 70, height-140 , specialWidth, specialHeight, speed);

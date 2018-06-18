@@ -168,8 +168,11 @@ namespace BubbleTrouble
             activeGoodie = null;
             timer1.Start();
             pauseToolStripMenuItem1.Text = "Pause";
-            progressBarTime.Value = progressBarTime.Maximum;
-
+            try
+            {
+                progressBarTime.Value = 30;
+            }
+            catch (Exception e) { }
 
 
             goodieUnique = true;
@@ -189,9 +192,10 @@ namespace BubbleTrouble
             {
                 if (MessageBox.Show("You have no more lives left. GAME OVER \n START NEW GAME?", "Game over", MessageBoxButtons.YesNo) == DialogResult.Yes)
                 {
-                    newGame();
                     level = 1;
                     totalPoints = 0;
+                    newGame();
+
                 }
                 else
                 {
@@ -238,7 +242,7 @@ namespace BubbleTrouble
             livesLeft--;
             String msg = "";
 
-            if (progressBarTime.Value > 0 && game.timeMili > 10) msg = "Player killed.";
+            if (game.timeMili > 10) msg = "Player killed.";
             else msg = "Time ran out.";
 
 
@@ -252,7 +256,7 @@ namespace BubbleTrouble
             }
             sad_violin.Stop();
             lifeLost();
-   }
+        }
 
         private void Form1_KeyDown(object sender, KeyEventArgs e)
         {// Ako na igracot mu e dozvoleno da go pomrdne coveceto 
@@ -278,19 +282,19 @@ namespace BubbleTrouble
                     /*Igracot e pictureBox so visina 80
                     Za dvizenje nagore se proveruva dali igracot se naogja pod ili na skalata (razlikata megju X koordinatite da bide pomala od 100)
                    Vtoriot del od uslovot (player.Location.Y + 70 > platform.Location.Y) go sprecuva igracot da se iskaci nad nivoto na platformata, da ne lebdi*/
-                   if (player.Location.X - ladder.Location.X < 100 && player.Location.Y + 70 > platform.Location.Y && e.KeyCode==up)
-                       player.Location = new Point(player.Location.X, player.Location.Y - 10);
-                                                          
+                    if (player.Location.X - ladder.Location.X < 100 && player.Location.Y + 70 > platform.Location.Y && e.KeyCode == up)
+                        player.Location = new Point(player.Location.X, player.Location.Y - 10);
+
                     /*Za dvizenje nadolu isto taka se proveruva dali igracot se naogja na skalata 
                       Vtoriot del od uslovot (player.Location.Y + 70 < Height - 100) go sprecuva igracot da se spusti premnogu nisko vo prozorecot*/
                     if (player.Location.X - ladder.Location.X < 100 && player.Location.Y + 70 < Height - 100 && e.KeyCode == down)
                         player.Location = new Point(player.Location.X, player.Location.Y + 10);
-                        
-                    
-                    
+
+
+
                     /* Sledniot uslov go ovozmozuva pagjaneto na igracot ako toj pri simnuvanjeto izleze od granicite na skalata
                      * ili pri dvizenjeto desno na platformata izleze od nejziniot rab */
-                     // Coveceto se naogja nad platformata i negovata X koordianta e pogolema od sirinata na platformata
+                    // Coveceto se naogja nad platformata i negovata X koordianta e pogolema od sirinata na platformata
                     if ((player.Location.Y < platform.Location.Y && player.Location.X > platform.Width)
                     //Coveceto se naogja pod platformata, a nad zemjata, a X koordinatata mu e pogolema od krajnata tocka na skalata 
                     //Izlezeno e od rabot na skalata
@@ -339,8 +343,8 @@ namespace BubbleTrouble
                         //Coveceto se pomrdnuva na desno
                         if (canMove)
                             player.Location = new Point(player.Location.X + 10, player.Location.Y);
-                  }
-              }
+                    }
+                }
 
 
                 if (level == 3)
@@ -632,8 +636,8 @@ namespace BubbleTrouble
         {
             timer1.Enabled = !timer1.Enabled;
             if (pauseToolStripMenuItem1.Text.Equals("Pause"))
-                pauseToolStripMenuItem1.Text = "Start";
-            else pauseToolStripMenuItem1.Text = "Pause";
+            { controlLock = true; pauseToolStripMenuItem1.Text = "Start"; }
+            else { controlLock = false; pauseToolStripMenuItem1.Text = "Pause"; }
         }
 
         private void newGameToolStripMenuItem_Click(object sender, EventArgs e)
@@ -711,6 +715,32 @@ namespace BubbleTrouble
 
         }
 
+        private void easyToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            difficulty = 1;
+            lifeLost();
+        }
+
+        private void normalToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            difficulty = 2;
+            lifeLost();
+        }
+
+        private void hardToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            difficulty = 3;
+            lifeLost();
+        }
+
+        private void quitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            timer1.Stop();
+            if (MessageBox.Show("Are you sure?", "Quit?", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                this.Close();
+            else timer1.Start();
+
+        }
 
         private void manualToolStripMenuItem_Click(object sender, EventArgs e)
         {
