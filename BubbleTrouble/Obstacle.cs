@@ -73,7 +73,7 @@ namespace BubbleTrouble
             if (DirectionVertical == 1)
             {
                 if (Y <= bottom && Y > top) Y += speed;
-                else if (Y >= bottom - 100) { Y -= speed; DirectionVertical *= -1; }
+                else if (Y >= bottom - 2*Radius) { Y -= speed; DirectionVertical *= -1; }
 
 
             }

@@ -352,5 +352,10 @@ namespace BubbleTrouble
         {
             Choose(Harley);
         }
+
+        private void difficultyList_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Difficulty = difficultyList.SelectedIndex + 1;
+        }
     }
 }

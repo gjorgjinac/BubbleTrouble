@@ -14,6 +14,7 @@ namespace BubbleTrouble
         public List<Obstacle> ObstacleList { get; set; }
         public Obstacle specialObstacle { get; set; }
         public int level;
+        public int difficulty;
 
         public void AddObstacle(Obstacle c)
         {
@@ -30,29 +31,30 @@ namespace BubbleTrouble
 
 
 
-        public Obstacles(int level)
+        public Obstacles(int level, int difficulty)
         {
             this.level = level;
+            this.difficulty = difficulty;
             ObstacleList = new List<Obstacle>();
             if (level == 1)
             {
-                ObstacleList.Add(new Obstacle(80, Color.Black, new Point(600, 300), -1, 1));
-                ObstacleList.Add(new Obstacle(40, Color.Black, new Point(100, 100), 1, 1));
+                ObstacleList.Add(new Obstacle(20*difficulty, Color.Black, new Point(600, 300), -1, 1));
+                ObstacleList.Add(new Obstacle(20 * difficulty, Color.Black, new Point(100, 100), 1, 1));
                 specialObstacle = new Obstacle(20, Color.Black, new Point(40, 40), 1, -1);
             }
             if (level == 2)
             {
-                ObstacleList.Add(new Obstacle(40, Color.DarkCyan, new Point(100, 100), 1, 1, 0));
-                ObstacleList.Add(new Obstacle(40, Color.DarkOrange, new Point(400, 200), 1, 1, 1));
-                ObstacleList.Add(new Obstacle(40, Color.Turquoise, new Point(700, 300), 1, 1, 2));
+                ObstacleList.Add(new Obstacle(20 * difficulty, Color.DarkCyan, new Point(100, 100), 1, 1, 0));
+                ObstacleList.Add(new Obstacle(20 * difficulty, Color.DarkOrange, new Point(400, 200), 1, 1, 1));
+                ObstacleList.Add(new Obstacle(20 * difficulty, Color.Turquoise, new Point(700, 300), 1, 1, 2));
 
 
             }
             if (level == 3)
             {
-                ObstacleList.Add(new Obstacle(20, Color.Black, new Point(300, 300), 1, 1, 0));
-                ObstacleList.Add(new Obstacle(20, Color.Black, new Point(500, 300), 1, 1, 1));
-                ObstacleList.Add(new Obstacle(20, Color.Black, new Point(700, 300), 1, 1, 2));
+                ObstacleList.Add(new Obstacle(10 * (difficulty + 1), Color.Black, new Point(300, 300), 1, 1, 0));
+                ObstacleList.Add(new Obstacle(10 * (difficulty + 1), Color.Black, new Point(500, 300), 1, 1, 1));
+                ObstacleList.Add(new Obstacle(10 * (difficulty+1), Color.Black, new Point(700, 300), 1, 1, 2));
 
 
             }
@@ -70,7 +72,7 @@ namespace BubbleTrouble
             {
                 Obstacle obstacle = ObstacleList.ElementAt(i);
 
-                obstacle.Move(barriers.ElementAt(2 * obstacle.Parent + 1) - (int)obstacle.Radius, height - 150, barriers.ElementAt(2 * obstacle.Parent) + (int)obstacle.Radius, 0, 10);
+                obstacle.Move(barriers.ElementAt(2 * obstacle.Parent + 1) - (int)obstacle.Radius, height - 150, barriers.ElementAt(2 * obstacle.Parent) + (int)obstacle.Radius, 0, 10 + (difficulty - 1) * 5);
 
 
 
@@ -118,13 +120,13 @@ namespace BubbleTrouble
 
         public void Move(int width, int height, int specialWidth, int specialHeight)
         {
-
+            int speed = 10 +( difficulty-1)*5;
             if (level == 1)
 
             {
                 foreach (Obstacle c in ObstacleList)
                 {
-                    c.Move(width - 70, height - 140, 0, 0, 10);
+                    c.Move(width - 70, height - 140, 0, 0, speed);
 
                 }
                 specialObstacle.Move(specialWidth - 70, specialHeight + 50 - 70, 0, 0, 10);
@@ -134,7 +136,7 @@ namespace BubbleTrouble
             {
                 foreach (Obstacle c in ObstacleList)
                 {
-                    c.Move(width - 70, height-140 , specialWidth, specialHeight, 10);
+                    c.Move(width - 70, height-140 , specialWidth, specialHeight, speed);
 
                 }
             }

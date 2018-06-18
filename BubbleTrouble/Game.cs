@@ -20,6 +20,7 @@ namespace BubbleTrouble
         public int points;
         public int level;
         public Boolean specialObstaclePassed;
+        public int difficulty;
 
         public void AddBullet(int width, int height)
         {
@@ -27,13 +28,13 @@ namespace BubbleTrouble
         }
 
 
-        public Game(int level)
+        public Game(int level, int difficulty)
         {
             this.level = level;
-            obstacles = new Obstacles(level);
+            obstacles = new Obstacles(level,difficulty);
             specialObstaclePassed = false;
             timeMili = 300;
-
+            this.difficulty = difficulty;
             bombs = new List<Bomb>();
             bullets = new List<Bullet>();
             points = 0;
@@ -108,7 +109,7 @@ namespace BubbleTrouble
                     {
                         if (c.Radius > 20)
                         {
-                            if (level == 1)
+                            if (level == 1 || level == 3)
                             {
                                 obstacles.AddObstacle(new Obstacle(c.Radius / 2, c.Color, new Point(c.Position.X - 20, c.Position.Y - 20), -1, -1));
                                 obstacles.AddObstacle(new Obstacle(c.Radius / 2, c.Color, new Point(c.Position.X + 20, c.Position.Y - 20), 1, -1));

@@ -23,7 +23,7 @@ namespace BubbleTrouble
         String selectedPlayer;
         Boolean goodieUnique;
         Rectangle playground;
-
+        int difficulty;
 
         Boolean controlLock;
         PictureBox activeGoodie;
@@ -59,7 +59,7 @@ namespace BubbleTrouble
 
             musicOn = true;
             this.Text = "Bubble Trouble";
-
+            difficulty = 1;
             livesLeft = 5;
             level = 1;
             DoubleBuffered = true;
@@ -187,7 +187,7 @@ namespace BubbleTrouble
         {
 
 
-            game = new Game(level);
+            game = new Game(level, difficulty);
             if (livesLeft > 0) resetEnv();
             else
             {
@@ -551,11 +551,11 @@ namespace BubbleTrouble
             if (level == 3)
             {
                 //   brickWallUp.Location = new Point(brickWallUp.Location.X, brickWallUp.Location.Y + 1);
-               // if (game.timeMili%3==0)
-               
-                game.obstacles.Move(Width, Height, 0, brickWallUp.Location.Y + brickWallUp.Height );
+                // if (game.timeMili%3==0)
+
+                game.obstacles.Move(Width, Height, 0, brickWallUp.Location.Y + brickWallUp.Height);
                 game.MoveBombs(Width, brickWallUp.Location.Y + brickWallUp.Height);
- brickWallUp.Height++;
+                brickWallUp.Height++;
                 if (brickWallUp.Location.Y + brickWallUp.Height >= player.Location.Y)
                     endGame();
 
@@ -792,10 +792,11 @@ namespace BubbleTrouble
                 up = form.keys.ElementAt(2);
                 down = form.keys.ElementAt(3);
                 shoot = form.keys.ElementAt(4);
-
+                difficulty = form.Difficulty;
                 selectedPlayer = form.selectedPlayer;
                 player.Image = minions[selectedPlayer].normal;
                 BackgroundImage = playGroundBox.Image = minions[selectedPlayer].backgrounds.ElementAt((level - 1) % minions[selectedPlayer].backgrounds.Count);
+                lifeLost();
             }
 
             timer1.Start();
