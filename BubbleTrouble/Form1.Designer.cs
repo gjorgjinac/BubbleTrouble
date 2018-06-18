@@ -78,6 +78,7 @@
             this.coins = new System.Windows.Forms.PictureBox();
             this.pizza = new System.Windows.Forms.PictureBox();
             this.playGroundBox = new System.Windows.Forms.PictureBox();
+            this.manualToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.life10)).BeginInit();
@@ -167,7 +168,8 @@
             this.gameToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.openGameToolStripMenuItem1,
             this.saveGameToolStripMenuItem,
-            this.newGameToolStripMenuItem1});
+            this.newGameToolStripMenuItem1,
+            this.manualToolStripMenuItem});
             this.gameToolStripMenuItem.Name = "gameToolStripMenuItem";
             this.gameToolStripMenuItem.Size = new System.Drawing.Size(50, 20);
             this.gameToolStripMenuItem.Text = "Game";
@@ -249,8 +251,8 @@
             // changeControlsToolStripMenuItem
             // 
             this.changeControlsToolStripMenuItem.Name = "changeControlsToolStripMenuItem";
-            this.changeControlsToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
-            this.changeControlsToolStripMenuItem.Text = "Change controls";
+            this.changeControlsToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.changeControlsToolStripMenuItem.Text = "Settings";
             this.changeControlsToolStripMenuItem.Click += new System.EventHandler(this.controlsToolStripMenuItem_Click);
             // 
             // pauseToolStripMenuItem1
@@ -527,6 +529,13 @@
             this.playGroundBox.TabStop = false;
             this.playGroundBox.Paint += new System.Windows.Forms.PaintEventHandler(this.pictureBox1_Paint);
             // 
+            // manualToolStripMenuItem
+            // 
+            this.manualToolStripMenuItem.Name = "manualToolStripMenuItem";
+            this.manualToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.manualToolStripMenuItem.Text = "Manual";
+            this.manualToolStripMenuItem.Click += new System.EventHandler(this.manualToolStripMenuItem_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -655,5 +664,6 @@
         private System.Windows.Forms.PictureBox life7;
         private System.Windows.Forms.PictureBox life10;
         private System.Windows.Forms.PictureBox life9;
+        private System.Windows.Forms.ToolStripMenuItem manualToolStripMenuItem;
     }
 }

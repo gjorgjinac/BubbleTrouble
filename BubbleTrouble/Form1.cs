@@ -74,7 +74,7 @@ namespace BubbleTrouble
             StartPosition = FormStartPosition.CenterScreen;
             totalPoints = 0;
             FileName = null;
-            selectedPlayer = "Harley";
+            selectedPlayer = "Diana";
 
             BackgroundImage = playGroundBox.Image = minions[selectedPlayer].backgrounds.ElementAt((level - 1) % (minions[selectedPlayer].backgrounds.Count));
 
@@ -753,6 +753,15 @@ namespace BubbleTrouble
             level = 4;
             livesLeft = 5;
             lifeLost();
+        }
+
+        private void manualToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            timer1.Stop();
+            Manual form = new Manual();
+            DialogResult d = form.ShowDialog();
+            if (d == DialogResult.OK || d == DialogResult.Cancel)
+                timer1.Start();
         }
 
         private void level3ToolStripMenuItem_Click(object sender, EventArgs e)

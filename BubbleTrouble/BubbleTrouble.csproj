@@ -73,6 +73,12 @@
     <Compile Include="HighScores.Designer.cs">
       <DependentUpon>HighScores.cs</DependentUpon>
     </Compile>
+    <Compile Include="Manual.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manual.Designer.cs">
+      <DependentUpon>Manual.cs</DependentUpon>
+    </Compile>
     <Compile Include="Minion.cs" />
     <Compile Include="Obstacle.cs" />
     <Compile Include="Obstacles.cs" />
@@ -90,6 +96,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="HighScores.resx">
       <DependentUpon>HighScores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manual.resx">
+      <DependentUpon>Manual.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
@@ -244,6 +253,12 @@
     <None Include="img\fire spit.gif" />
     <None Include="img\dragon2.gif" />
     <None Include="img\darkyard-background-with-dragon.gif" />
+    <None Include="img\arrow left.png" />
+    <None Include="img\arrow right.png" />
+    <None Include="img\arrow left1.png" />
+    <None Include="img\arrow right1.png" />
+    <None Include="img\arrow left2.png" />
+    <None Include="img\arrow right2.png" />
     <Content Include="img\money.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
