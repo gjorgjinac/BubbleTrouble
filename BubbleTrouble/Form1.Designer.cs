@@ -41,6 +41,7 @@
             this.saveGameToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.newGameToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.manualToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.quitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.level2ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.level1ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.level2ToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
@@ -51,6 +52,10 @@
             this.changeControlsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pauseToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.muteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.difficultyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.easyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.normalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.hardToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.life10 = new System.Windows.Forms.PictureBox();
             this.life9 = new System.Windows.Forms.PictureBox();
@@ -78,11 +83,6 @@
             this.coins = new System.Windows.Forms.PictureBox();
             this.pizza = new System.Windows.Forms.PictureBox();
             this.playGroundBox = new System.Windows.Forms.PictureBox();
-            this.difficultyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.easyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.normalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.hardToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.quitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.life10)).BeginInit();
@@ -207,6 +207,13 @@
             this.manualToolStripMenuItem.Text = "Manual";
             this.manualToolStripMenuItem.Click += new System.EventHandler(this.manualToolStripMenuItem_Click);
             // 
+            // quitToolStripMenuItem
+            // 
+            this.quitToolStripMenuItem.Name = "quitToolStripMenuItem";
+            this.quitToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
+            this.quitToolStripMenuItem.Text = "Quit";
+            this.quitToolStripMenuItem.Click += new System.EventHandler(this.quitToolStripMenuItem_Click);
+            // 
             // level2ToolStripMenuItem
             // 
             this.level2ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -220,21 +227,21 @@
             // level1ToolStripMenuItem
             // 
             this.level1ToolStripMenuItem.Name = "level1ToolStripMenuItem";
-            this.level1ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.level1ToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
             this.level1ToolStripMenuItem.Text = "level 1";
             this.level1ToolStripMenuItem.Click += new System.EventHandler(this.level1ToolStripMenuItem_Click);
             // 
             // level2ToolStripMenuItem1
             // 
             this.level2ToolStripMenuItem1.Name = "level2ToolStripMenuItem1";
-            this.level2ToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.level2ToolStripMenuItem1.Size = new System.Drawing.Size(107, 22);
             this.level2ToolStripMenuItem1.Text = "level 2";
             this.level2ToolStripMenuItem1.Click += new System.EventHandler(this.level2ToolStripMenuItem1_Click);
             // 
             // level3ToolStripMenuItem
             // 
             this.level3ToolStripMenuItem.Name = "level3ToolStripMenuItem";
-            this.level3ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.level3ToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
             this.level3ToolStripMenuItem.Text = "level 3";
             this.level3ToolStripMenuItem.Click += new System.EventHandler(this.level3ToolStripMenuItem_Click);
             // 
@@ -263,23 +270,56 @@
             // changeControlsToolStripMenuItem
             // 
             this.changeControlsToolStripMenuItem.Name = "changeControlsToolStripMenuItem";
-            this.changeControlsToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.changeControlsToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
             this.changeControlsToolStripMenuItem.Text = "Settings";
             this.changeControlsToolStripMenuItem.Click += new System.EventHandler(this.controlsToolStripMenuItem_Click);
             // 
             // pauseToolStripMenuItem1
             // 
             this.pauseToolStripMenuItem1.Name = "pauseToolStripMenuItem1";
-            this.pauseToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.pauseToolStripMenuItem1.Size = new System.Drawing.Size(116, 22);
             this.pauseToolStripMenuItem1.Text = "Pause";
             this.pauseToolStripMenuItem1.Click += new System.EventHandler(this.pauseToolStripMenuItem_Click);
             // 
             // muteToolStripMenuItem
             // 
             this.muteToolStripMenuItem.Name = "muteToolStripMenuItem";
-            this.muteToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.muteToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
             this.muteToolStripMenuItem.Text = "Mute";
             this.muteToolStripMenuItem.Click += new System.EventHandler(this.muteToolStripMenuItem_Click);
+            // 
+            // difficultyToolStripMenuItem
+            // 
+            this.difficultyToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.easyToolStripMenuItem,
+            this.normalToolStripMenuItem,
+            this.hardToolStripMenuItem});
+            this.difficultyToolStripMenuItem.Name = "difficultyToolStripMenuItem";
+            this.difficultyToolStripMenuItem.Size = new System.Drawing.Size(67, 20);
+            this.difficultyToolStripMenuItem.Text = "Difficulty";
+            // 
+            // easyToolStripMenuItem
+            // 
+            this.easyToolStripMenuItem.Name = "easyToolStripMenuItem";
+            this.easyToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.easyToolStripMenuItem.Text = "Easy";
+            this.easyToolStripMenuItem.Click += new System.EventHandler(this.easyToolStripMenuItem_Click);
+            // 
+            // normalToolStripMenuItem
+            // 
+            this.normalToolStripMenuItem.Checked = true;
+            this.normalToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.normalToolStripMenuItem.Name = "normalToolStripMenuItem";
+            this.normalToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.normalToolStripMenuItem.Text = "Middle";
+            this.normalToolStripMenuItem.Click += new System.EventHandler(this.normalToolStripMenuItem_Click);
+            // 
+            // hardToolStripMenuItem
+            // 
+            this.hardToolStripMenuItem.Name = "hardToolStripMenuItem";
+            this.hardToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.hardToolStripMenuItem.Text = "Hard";
+            this.hardToolStripMenuItem.Click += new System.EventHandler(this.hardToolStripMenuItem_Click);
             // 
             // timer1
             // 
@@ -532,44 +572,6 @@
             this.playGroundBox.TabStop = false;
             this.playGroundBox.Paint += new System.Windows.Forms.PaintEventHandler(this.pictureBox1_Paint);
             // 
-            // difficultyToolStripMenuItem
-            // 
-            this.difficultyToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.easyToolStripMenuItem,
-            this.normalToolStripMenuItem,
-            this.hardToolStripMenuItem});
-            this.difficultyToolStripMenuItem.Name = "difficultyToolStripMenuItem";
-            this.difficultyToolStripMenuItem.Size = new System.Drawing.Size(67, 20);
-            this.difficultyToolStripMenuItem.Text = "Difficulty";
-            // 
-            // easyToolStripMenuItem
-            // 
-            this.easyToolStripMenuItem.Name = "easyToolStripMenuItem";
-            this.easyToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.easyToolStripMenuItem.Text = "Easy";
-            this.easyToolStripMenuItem.Click += new System.EventHandler(this.easyToolStripMenuItem_Click);
-            // 
-            // normalToolStripMenuItem
-            // 
-            this.normalToolStripMenuItem.Name = "normalToolStripMenuItem";
-            this.normalToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.normalToolStripMenuItem.Text = "Middle";
-            this.normalToolStripMenuItem.Click += new System.EventHandler(this.normalToolStripMenuItem_Click);
-            // 
-            // hardToolStripMenuItem
-            // 
-            this.hardToolStripMenuItem.Name = "hardToolStripMenuItem";
-            this.hardToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.hardToolStripMenuItem.Text = "Hard";
-            this.hardToolStripMenuItem.Click += new System.EventHandler(this.hardToolStripMenuItem_Click);
-            // 
-            // quitToolStripMenuItem
-            // 
-            this.quitToolStripMenuItem.Name = "quitToolStripMenuItem";
-            this.quitToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.quitToolStripMenuItem.Text = "Quit";
-            this.quitToolStripMenuItem.Click += new System.EventHandler(this.quitToolStripMenuItem_Click);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -607,7 +609,6 @@
             this.DoubleBuffered = true;
             this.Name = "Form1";
             this.Text = "Bubble trouble";
-            this.Load += new System.EventHandler(this.Form1_Load);
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.Form1_Paint);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
             this.statusStrip1.ResumeLayout(false);

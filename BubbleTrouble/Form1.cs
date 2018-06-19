@@ -166,7 +166,7 @@ namespace BubbleTrouble
             controlLock = false;
             player.Image = minions[selectedPlayer].now;
             activeGoodie = null;
-            timer1.Start();
+
             pauseToolStripMenuItem1.Text = "Pause";
             try
             {
@@ -187,21 +187,9 @@ namespace BubbleTrouble
 
 
             game = new Game(level, difficulty);
-            if (livesLeft > 0) resetEnv();
-            else
-            {
-                if (MessageBox.Show("You have no more lives left. GAME OVER \n START NEW GAME?", "Game over", MessageBoxButtons.YesNo) == DialogResult.Yes)
-                {
-                    level = 1;
-                    totalPoints = 0;
-                    newGame();
-
-                }
-                else
-                {
-                    this.Close();
-                }
-            }
+            game.livesLeft = livesLeft;
+            resetEnv();
+            timer1.Start();
             player.Location = new Point(150, Height - 175);
             for (int i = 0; i < 10; i++)
             {
@@ -221,16 +209,29 @@ namespace BubbleTrouble
 
             game.points += progressBarTime.Value * 10;
             totalPoints += game.points;
-
-            if (MessageBox.Show(String.Format("You won level {0} with a total of {1} points! Save score?", level, totalPoints), "You won", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            if (level == 3)
             {
-                HighScores form = new HighScores();
+                if (MessageBox.Show(String.Format("You won the whole game with {0} points ! Save score?", totalPoints), "You won", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                {
+                    HighScores form = new HighScores();
 
-                form.AddPlayer(totalPoints);
-                form.ShowDialog();
+                    form.AddPlayer(totalPoints);
+                    form.ShowDialog();
+                }
+                level = 1;
+                newGame();
             }
-            if (level < 3) level++;
-            newGame();
+
+
+            else
+            {
+                MessageBox.Show(String.Format("Congrats on winning level {0}! Points won: {1} Lives left: {2}", level, totalPoints,livesLeft));
+
+                level++;
+                lifeLost();
+            }
+
+           
         }
 
         public void endGame()
@@ -244,8 +245,38 @@ namespace BubbleTrouble
 
             if (game.timeMili > 10) msg = "Player killed.";
             else msg = "Time ran out.";
+            if (livesLeft > 0) MessageBox.Show(String.Format("{0} You have {1} lives left.", msg, livesLeft));
+
+            else
+            {
 
 
+                if (MessageBox.Show(String.Format("Game over. Points won: {0} ! Save score?", totalPoints), "Game over", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                {
+                    HighScores form = new HighScores();
+
+                    form.AddPlayer(totalPoints + game.points);
+                    form.ShowDialog();
+                }
+
+
+                if (MessageBox.Show("START NEW GAME?", "Game over", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                {
+                    level = 1;
+                    totalPoints = 0;
+                    newGame();
+
+                }
+                else
+                {
+                    this.Close();
+                }
+
+
+            }
+
+
+            /*
             if (MessageBox.Show(String.Format("{0} You got {1} points! Save score?", msg, game.points), "Game over", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
                 HighScores form = new HighScores();
@@ -253,9 +284,10 @@ namespace BubbleTrouble
                 form.AddPlayer(totalPoints + game.points);
                 form.ShowDialog();
 
-            }
+            }*/
             sad_violin.Stop();
             lifeLost();
+            resetEnv();
         }
 
         private void Form1_KeyDown(object sender, KeyEventArgs e)
@@ -513,8 +545,7 @@ namespace BubbleTrouble
             }
             if (level == 3)
             {
-                //   brickWallUp.Location = new Point(brickWallUp.Location.X, brickWallUp.Location.Y + 1);
-                // if (game.timeMili%3==0)
+
 
                 game.obstacles.Move(Width, Height, 0, brickWallUp.Location.Y + brickWallUp.Height);
                 game.MoveBombs(Width, brickWallUp.Location.Y + brickWallUp.Height);
@@ -664,10 +695,7 @@ namespace BubbleTrouble
         }
 
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
 
-        }
 
         private void toolStripMenuItem1_Click(object sender, EventArgs e)
         {
@@ -685,6 +713,7 @@ namespace BubbleTrouble
 
         private void level1ToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            totalPoints = 0;
             level = 1;
             selectedPlayer = "John";
             livesLeft = 5;
@@ -693,13 +722,15 @@ namespace BubbleTrouble
 
         private void level2ToolStripMenuItem1_Click(object sender, EventArgs e)
         {
+            totalPoints = 0;
             level = 2;
-
+            selectedPlayer = "Bruce";
             livesLeft = 5;
             lifeLost();
         }
         private void level3ToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            totalPoints = 0;
             level = 3;
             selectedPlayer = "Diana";
             livesLeft = 5;
@@ -717,18 +748,28 @@ namespace BubbleTrouble
 
         private void easyToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            easyToolStripMenuItem.Checked = true;
+            normalToolStripMenuItem.Checked = false;
+            hardToolStripMenuItem.Checked = false;
+
             difficulty = 1;
             lifeLost();
         }
 
         private void normalToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            easyToolStripMenuItem.Checked = false;
+            normalToolStripMenuItem.Checked = true;
+            hardToolStripMenuItem.Checked = false;
             difficulty = 2;
             lifeLost();
         }
 
         private void hardToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            easyToolStripMenuItem.Checked = false;
+            normalToolStripMenuItem.Checked = false;
+            hardToolStripMenuItem.Checked = true;
             difficulty = 3;
             lifeLost();
         }
@@ -785,6 +826,16 @@ namespace BubbleTrouble
                 down = form.keys.ElementAt(3);
                 shoot = form.keys.ElementAt(4);
                 difficulty = form.Difficulty;
+                easyToolStripMenuItem.Checked = normalToolStripMenuItem.Checked = hardToolStripMenuItem.Checked = false;
+
+                if (difficulty == 1)
+                    easyToolStripMenuItem.Checked = true;
+
+                if (difficulty == 2)
+                    normalToolStripMenuItem.Checked = true;
+                if (difficulty == 3)
+                    hardToolStripMenuItem.Checked = true;
+
                 selectedPlayer = form.selectedPlayer;
                 player.Image = minions[selectedPlayer].normal;
                 BackgroundImage = playGroundBox.Image = minions[selectedPlayer].backgrounds.ElementAt((level - 1) % minions[selectedPlayer].backgrounds.Count);
