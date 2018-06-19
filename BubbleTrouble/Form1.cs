@@ -160,7 +160,7 @@ namespace BubbleTrouble
 
 
 
-
+          
             resetGoodies();
             shieldTime = 0;
             controlLock = false;
@@ -170,7 +170,7 @@ namespace BubbleTrouble
             pauseToolStripMenuItem1.Text = "Pause";
             try
             {
-                progressBarTime.Value = 30;
+               progressBarTime.Value = (int) game.timeMili/10;  
             }
             catch (Exception e) { }
 
@@ -606,6 +606,7 @@ namespace BubbleTrouble
                     game.playerPosition = player.Location;
                     game.livesLeft = livesLeft;
                     game.selectedPlayer = selectedPlayer;
+                  
                     formatter.Serialize(stream, game);
                     FileName = null;
                 }
@@ -645,6 +646,7 @@ namespace BubbleTrouble
                     livesLeft = game.livesLeft;
                     level = game.level;
                     selectedPlayer = game.selectedPlayer;
+                    
                     resetEnv();
                     //lifeLost();
 
