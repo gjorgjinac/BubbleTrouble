@@ -45,7 +45,7 @@ namespace BubbleTrouble
             if (level == 2)
             {
                 ObstacleList.Add(new Obstacle(20 * difficulty, Color.DarkCyan, new Point(100, 100), 1, 1, 0));
-                ObstacleList.Add(new Obstacle(20 * difficulty, Color.DarkOrange, new Point(400, 200), 1, 1, 1));
+                ObstacleList.Add(new Obstacle(20 * difficulty, Color.DeepPink, new Point(400, 200), 1, 1, 1));
                 ObstacleList.Add(new Obstacle(20 * difficulty, Color.Turquoise, new Point(700, 300), 1, 1, 2));
 
 

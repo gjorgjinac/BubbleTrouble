@@ -459,7 +459,7 @@
             // barrier1_1
             // 
             this.barrier1_1.Image = global::BubbleTrouble.Properties.Resources.barrier2;
-            this.barrier1_1.Location = new System.Drawing.Point(269, 308);
+            this.barrier1_1.Location = new System.Drawing.Point(283, 308);
             this.barrier1_1.Name = "barrier1_1";
             this.barrier1_1.Size = new System.Drawing.Size(38, 103);
             this.barrier1_1.TabIndex = 14;
@@ -477,7 +477,7 @@
             // barrier1
             // 
             this.barrier1.Image = global::BubbleTrouble.Properties.Resources.barrier1;
-            this.barrier1.Location = new System.Drawing.Point(269, 24);
+            this.barrier1.Location = new System.Drawing.Point(283, 24);
             this.barrier1.Name = "barrier1";
             this.barrier1.Size = new System.Drawing.Size(38, 288);
             this.barrier1.TabIndex = 11;

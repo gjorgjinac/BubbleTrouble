@@ -51,7 +51,7 @@ namespace BubbleTrouble
             minions.Add("Bruce", new Minion("Bruce", Properties.Resources.batman, Properties.Resources.batman_screaming, Properties.Resources.batman_dead, Properties.Resources.batman_shield, Properties.Resources.batman_glow, Properties.Resources.batman_selected, new List<Image>() { Properties.Resources.bat1_background }));
             minions.Add("Diana", new Minion("Diana", Properties.Resources.diana, Properties.Resources.diana_screaming, Properties.Resources.diana_dead, Properties.Resources.diana_shield, Properties.Resources.diana_glow, Properties.Resources.diana_selected, new List<Image>() { Properties.Resources.waterfal_backgound }));
             minions.Add("Barry", new Minion("Barry", Properties.Resources.flash, Properties.Resources.flash_screaming, Properties.Resources.flash_dead, Properties.Resources.flash_shield, Properties.Resources.flash_glow, Properties.Resources.flash_selected, new List<Image>() { Properties.Resources.military_base }));
-            minions.Add("Harley", new Minion("Harley", Properties.Resources.harley, Properties.Resources.harley_screaming, Properties.Resources.harley_dead, Properties.Resources.harley_shield, Properties.Resources.harley_glow, Properties.Resources.harley_selected, new List<Image>() { Properties.Resources.nightclub_background, Properties.Resources.old_town_background }));
+            minions.Add("Harley", new Minion("Harley", Properties.Resources.harley, Properties.Resources.harley_screaming, Properties.Resources.harley_dead, Properties.Resources.harley_shield, Properties.Resources.harley_glow, Properties.Resources.harley_selected, new List<Image>() { Properties.Resources.nightclub_background, Properties.Resources.nightclub_background, Properties.Resources.old_town_background }));
 
             musicOn = true;
             this.Text = "Bubble Trouble";
@@ -166,7 +166,11 @@ namespace BubbleTrouble
             controlLock = false;
             player.Image = minions[selectedPlayer].now;
             activeGoodie = null;
-
+            for (int i = 0; i < 10; i++)
+            {
+                if (i < livesLeft) lives.ElementAt(i).Visible = true;
+                else lives.ElementAt(i).Visible = false;
+            }
             pauseToolStripMenuItem1.Text = "Pause";
             try
             {
@@ -191,11 +195,7 @@ namespace BubbleTrouble
             resetEnv();
             timer1.Start();
             player.Location = new Point(150, Height - 175);
-            for (int i = 0; i < 10; i++)
-            {
-                if (i < livesLeft) lives.ElementAt(i).Visible = true;
-                else lives.ElementAt(i).Visible = false;
-            }
+          
 
 
 
@@ -211,6 +211,7 @@ namespace BubbleTrouble
             totalPoints += game.points;
             if (level == 3)
             {
+                totalPoints += livesLeft * 50;
                 if (MessageBox.Show(String.Format("You won the whole game with {0} points ! Save score?", totalPoints), "You won", MessageBoxButtons.YesNo) == DialogResult.Yes)
                 {
                     HighScores form = new HighScores();
@@ -614,7 +615,7 @@ namespace BubbleTrouble
             }
             catch (Exception exception)
             {
-                MessageBox.Show("Unable to complete saving");
+              //  MessageBox.Show("Unable to complete saving");
 
             }
             Invalidate(true);
@@ -656,7 +657,7 @@ namespace BubbleTrouble
             }
             catch (Exception exception)
             {
-                MessageBox.Show("Unable to complete opening");
+             //   MessageBox.Show("Unable to complete opening");
 
             }
 
@@ -718,7 +719,7 @@ namespace BubbleTrouble
             totalPoints = 0;
             level = 1;
             selectedPlayer = "John";
-            livesLeft = 5;
+          //  livesLeft = 5;
             lifeLost();
         }
 
@@ -726,8 +727,8 @@ namespace BubbleTrouble
         {
             totalPoints = 0;
             level = 2;
-            selectedPlayer = "Bruce";
-            livesLeft = 5;
+            selectedPlayer = "Harley";
+          //  livesLeft = 5;
             lifeLost();
         }
         private void level3ToolStripMenuItem_Click(object sender, EventArgs e)
@@ -735,7 +736,7 @@ namespace BubbleTrouble
             totalPoints = 0;
             level = 3;
             selectedPlayer = "Diana";
-            livesLeft = 5;
+           // livesLeft = 5;
             lifeLost();
 
         }
