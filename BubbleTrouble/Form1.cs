@@ -211,7 +211,7 @@ namespace BubbleTrouble
             totalPoints += game.points;
             if (level == 3)
             {
-                totalPoints += livesLeft * 50;
+                totalPoints += livesLeft * 100;
                 if (MessageBox.Show(String.Format("You won the whole game with {0} points ! Save score?", totalPoints), "You won", MessageBoxButtons.YesNo) == DialogResult.Yes)
                 {
                     HighScores form = new HighScores();
