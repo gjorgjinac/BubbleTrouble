@@ -5,9 +5,10 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace BubbleTrouble
-{ [Serializable]
+{ 
+  [Serializable]
   public  class Player
-    {
+  {
         public String Name { get; set; }
         public int Points { get; set; }
 
@@ -15,7 +16,6 @@ namespace BubbleTrouble
         {
             Name = name;
             Points = points;
-           
         }
 
         public override string ToString()
